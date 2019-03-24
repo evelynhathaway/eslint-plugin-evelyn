@@ -1,0 +1,49 @@
+{
+  "name": "eslint-plugin-evelyn",
+  "version": "0.0.0",
+  "description": "ESLint plugin for my projects with my preferred code style and bugfixes",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "eslint-plugin"
+  ],
+  "homepage": "https://github.com/evelynhathaway/eslint-plugin-evelyn#readme",
+  "bugs": {
+    "url": "https://github.com/evelynhathaway/eslint-plugin-evelyn/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evelynhathaway/eslint-plugin-evelyn.git"
+  },
+  "license": "MIT",
+  "author": "Evelyn Hathaway <npm@evelyn.dev> (https://evelyn.dev)",
+  "files": [
+    "/docs",
+    "/lib"
+  ],
+  "main": "./lib/index.js",
+  "directories": {
+    "lib": "/lib",
+    "doc": "/docs",
+    "test": "/test"
+  },
+  "scripts": {
+    "link": "npm link && npm link eslint-plugin-evelyn",
+    "lint": "npm run link && eslint --ext .js ./",
+    "test": "mocha test --recursive"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.5.0",
+    "@typescript-eslint/parser": "^1.5.0",
+    "eslint": "^5.15.3",
+    "eslint-plugin-mocha": "^5.3.0",
+    "eslint-plugin-node": "^8.0.1",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "mocha": "^6.0.2"
+  },
+  "engines": {
+    "node": "^6.14.0 || ^8.10.0 || >=9.10.0"
+  }
+}
