@@ -29,7 +29,7 @@
   },
   "scripts": {
     "link": "npm link && npm link eslint-plugin-evelyn",
-    "lint": "npm run link && eslint --ext .js ./",
+    "lint": "eslint --ext .js ./",
     "test": "mocha test --recursive"
   },
   "dependencies": {
