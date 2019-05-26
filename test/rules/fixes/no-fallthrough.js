@@ -9,8 +9,8 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-const rule = require("../../../lib/rules/fixes/no-fallthrough"),
-    RuleTester = require("eslint/lib/testers/rule-tester");
+const rule = require("../../../lib/rules/fixes/no-fallthrough");
+const {RuleTester} = require("eslint");
 
 //------------------------------------------------------------------------------
 // Tests
