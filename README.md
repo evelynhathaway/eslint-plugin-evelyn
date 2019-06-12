@@ -3,7 +3,7 @@
 [![npm version](https://badgen.net/npm/v/eslint-plugin-evelyn?icon=npm)](https://www.npmjs.com/package/eslint-plugin-evelyn)
 [![build status](https://badgen.net/travis/evelynhathaway/eslint-plugin-evelyn/master?icon=travis)](https://travis-ci.com/evelynhathaway/eslint-plugin-evelyn)
 [![rules: 1](https://badgen.net/badge/rules/1/blue)](#rules)
-[![configs: 10](https://badgen.net/badge/configs/10/blue)](#configs)
+[![configs: 11](https://badgen.net/badge/configs/11/blue)](#configs)
 [![license](https://badgen.net/badge/license/MIT/blue)](/LICENSE)
 
 *ESLint plugin for my projects with my preferred code style and bugfixes*
@@ -180,6 +180,7 @@ See the `peerDependencies` in [package.json](./package.json) for recommended dep
 | [jsx](./lib/configs/jsx.js)               | JSX features                                                                 |                                                                          |
 | [mocha](./lib/configs/mocha.js)           | Mocha tests                                                                  | eslint-plugin-node, eslint-plugin-mocha                                  |
 | [node](./lib/configs/node.js)             | Node.js env                                                                  | eslint-plugin-node                                                       |
+| [react](./lib/configs/react.js)           | React, browser env, JSX                                                      | eslint-plugin-react                                                      |
 | [source](./lib/configs/source.js)         | Non-built files                                                              | eslint-plugin-node                                                       |
 | [typescript](./lib/configs/typescript.js) | TypeScript files                                                             | @typescript-eslint/eslint-plugin, @typescript-eslint/parser              |
 
