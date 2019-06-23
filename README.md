@@ -17,7 +17,7 @@ My code style is very opinionated, so I only use this package on my projects. Ho
 npm i -D eslint eslint-plugin-unicorn eslint-plugin-evelyn
 ```
 
-### Peer Dependencies
+### Peer dependencies
 
 npm warns about any missing peer dependencies when installing this plugin.
 
@@ -51,7 +51,7 @@ Include as many configs as you'd like to use in your config. Extend them in the 
 
 ### Configs applied to a specific path
 
-Requires eslint `>=6.0.0-alpha.2`.
+Requires eslint `>=6.0.0`.
 
 `.eslintrc`
 
@@ -82,7 +82,7 @@ Requires eslint `>=6.0.0-alpha.2`.
 
 ### Configs applied to a specific path (pre v1.0.0)
 
-Before eslint `v6.0.0-alpha.2`, [a helper function](./lib/extend.js) was required to extend configs when not at the top level of the config. This also requires using `.eslintrc.js` to use `import`/`require`.
+Before eslint `v6.0.0`, [a helper function](./lib/extend.js) was required to extend configs when not at the top level of the config. This also requires using `.eslintrc.js` to use `import`/`require`.
 
 The helper module may be deprecated in a future minor version and removed in the major version thereafter, so using it is no longer recommended.
 
@@ -197,7 +197,7 @@ I've needed some bugfixes that have had their PRs auto closed, so I include the 
 
 ---
 
-## Semantic Versioning Policy
+## Semantic versioning policy
 
 This plugin follows semantic versioning [a-la-ESLint](https://github.com/eslint/eslint#semantic-versioning-policy).
 
