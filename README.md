@@ -3,7 +3,7 @@
 [![npm version](https://badgen.net/npm/v/eslint-plugin-evelyn?icon=npm)](https://www.npmjs.com/package/eslint-plugin-evelyn)
 [![build status](https://badgen.net/travis/evelynhathaway/eslint-plugin-evelyn/master?icon=travis)](https://travis-ci.com/evelynhathaway/eslint-plugin-evelyn)
 [![rules: 1](https://badgen.net/badge/rules/1/blue)](#rules)
-[![configs: 11](https://badgen.net/badge/configs/11/blue)](#configs)
+[![configs: 10](https://badgen.net/badge/configs/10/blue)](#configs)
 [![license](https://badgen.net/badge/license/MIT/blue)](/LICENSE)
 
 *ESLint plugin for my projects with my preferred code style and bugfixes*
@@ -173,7 +173,6 @@ See the `peerDependencies` in [package.json](./package.json) for recommended dep
 
 | Name                                      | Description                                                                  | Peer Dependencies                                                        |
 | ----------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [auto](./lib/configs/auto.js)             | Mono config that includes many configs and uses inferred paths for overrides | eslint-plugin-node, plus the dependencies sub-configs with matched globs |
 | [browser](./lib/configs/browser.js)       | For the browser env                                                          |                                                                          |
 | [built](./lib/configs/built.js)           | Built files from Babel or TypeScript                                         | eslint-plugin-node                                                       |
 | [default](./lib/configs/default.js)       | My style and lint rules from ESLint                                          | eslint-plugin-unicorn                                                    |
