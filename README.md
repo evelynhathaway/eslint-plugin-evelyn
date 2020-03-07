@@ -14,6 +14,10 @@
 
 </div>
 
+## Description
+
+These are my configs, bugfixes, and code related to maintaining ESLint scripts.
+
 My code style is very opinionated, so I only use this package on my projects. However, others are welcome to use, copy, or fork this project.
 
 ## Install
