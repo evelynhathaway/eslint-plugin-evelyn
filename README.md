@@ -9,7 +9,7 @@
 [![npm version](https://badgen.net/npm/v/eslint-plugin-evelyn?icon=npm)](https://www.npmjs.com/package/eslint-plugin-evelyn)
 [![build status](https://badgen.net/travis/evelynhathaway/eslint-plugin-evelyn/master?icon=travis)](https://travis-ci.com/evelynhathaway/eslint-plugin-evelyn)
 [![rules: 1](https://badgen.net/badge/rules/1/blue)](#rules)
-[![configs: 10](https://badgen.net/badge/configs/10/blue)](#configs)
+[![configs: 11](https://badgen.net/badge/configs/11/blue)](#configs)
 [![license: MIT](https://badgen.net/badge/license/MIT/blue)](/LICENSE)
 
 </div>
