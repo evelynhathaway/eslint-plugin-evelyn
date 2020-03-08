@@ -230,3 +230,7 @@ This plugin follows semantic versioning [a-la-ESLint](https://github.com/eslint/
         - Any changes to the low end of any of the `peerDependencies` or the `engines`
     - A rule's default behavior is changed
     - Part of the public API is removed or changed in an incompatible way
+
+## License
+
+Copyright Evelyn Hathaway, [MIT License](/LICENSE)
