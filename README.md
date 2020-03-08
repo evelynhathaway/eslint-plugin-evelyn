@@ -127,11 +127,31 @@ module.exports = {
 
 ## Testing
 
-Any Mocha-compatible tests can be added, ESLint's rule tester works as well if you change the require statements to match [the public API](https://eslint.org/docs/developer-guide/nodejs-api#ruletester).
+Any Mocha-compatible tests can be added.
 
 ```bash
+# Install dependencies
+npm install
+# Symlink itself into node_modules for ESLint
+npm run link
+
+# Run all tests!
 npm run test
 ```
+
+### Config Tests
+
+Non-exhaustive tests to make sure important rules in configs do not change.
+
+You can use @Agoric's [config tester](https://github.com/Agoric/eslint-config-rule-tester), which has a similar API to ESLint's rule tester.
+
+### Rule Tests
+
+You can use ESLint's rule tester if you change the require statements to match [the public API](https://eslint.org/docs/developer-guide/nodejs-api#ruletester).
+
+### Final Config Aray Tests
+
+[final-config-array.eslintrc.js](./test/final-config-array.eslintrc.js) tests to make sure all modules and configs load properly. Without this test, if a parser or plugin doesn't load and is never used to lint a file, ESLint won't report the error.
 
 ## Linting
 
@@ -175,24 +195,31 @@ $ npx eslint --debug
 eslint:cascading-config-array-factory Configuration was determined: ConfigArray [...]
 ```
 
+## Recording Changes to the Final Config Array
+
+[record-changes.eslintrc.js](./record-changes.eslintrc.js) saves the final config array to [record-changes.json](./record-changes.json) with paths removed.
+
+The script is used to track the changes to the final array over time using the pre-commit git hook. This is helpful in reviewing pull requests.
+
 ---
 
 ## Configs
 
 See the `peerDependencies` in [package.json](./package.json) for recommended dependency version ranges.
 
-| Name                                      | Description                                                                  | Peer Dependencies                                                        |
-| ----------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [browser](./lib/configs/browser.js)       | For the browser env                                                          |                                                                          |
-| [built](./lib/configs/built.js)           | Built files from Babel or TypeScript                                         | eslint-plugin-node                                                       |
-| [default](./lib/configs/default.js)       | My style and lint rules from ESLint                                          | eslint-plugin-unicorn                                                    |
-| [jest](./lib/configs/jest.js)             | Jest tests                                                                   | eslint-plugin-node                                                       |
-| [jsx](./lib/configs/jsx.js)               | JSX features                                                                 |                                                                          |
-| [mocha](./lib/configs/mocha.js)           | Mocha tests                                                                  | eslint-plugin-node, eslint-plugin-mocha                                  |
-| [node](./lib/configs/node.js)             | Node.js env                                                                  | eslint-plugin-node                                                       |
-| [react](./lib/configs/react.js)           | React, browser env, JSX                                                      | eslint-plugin-react, eslint-plugin-unicorn                               |
-| [source](./lib/configs/source.js)         | Non-built files                                                              | eslint-plugin-node                                                       |
-| [typescript](./lib/configs/typescript.js) | TypeScript files                                                             | @typescript-eslint/eslint-plugin, @typescript-eslint/parser              |
+| Name                                      | Description                          | Peer Dependencies                                           |
+| ----------------------------------------- | ------------------------------------ | ----------------------------------------------------------- |
+| [babel](./lib/configs/babel.js)           | For files transpiled by Babel        | babel-eslint                                                |
+| [browser](./lib/configs/browser.js)       | For the browser env                  |                                                             |
+| [built](./lib/configs/built.js)           | Built files from Babel or TypeScript | eslint-plugin-node                                          |
+| [default](./lib/configs/default.js)       | My style and lint rules from ESLint  | eslint-plugin-unicorn                                       |
+| [jest](./lib/configs/jest.js)             | Jest tests                           | eslint-plugin-node                                          |
+| [jsx](./lib/configs/jsx.js)               | JSX features                         |                                                             |
+| [mocha](./lib/configs/mocha.js)           | Mocha tests                          | eslint-plugin-node, eslint-plugin-mocha                     |
+| [node](./lib/configs/node.js)             | Node.js env                          | eslint-plugin-node                                          |
+| [react](./lib/configs/react.js)           | React, browser env, JSX              | eslint-plugin-react, eslint-plugin-unicorn                  |
+| [source](./lib/configs/source.js)         | Non-built files                      | eslint-plugin-node                                          |
+| [typescript](./lib/configs/typescript.js) | TypeScript files                     | @typescript-eslint/eslint-plugin, @typescript-eslint/parser |
 
 ## Rules
 
