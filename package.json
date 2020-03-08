@@ -30,7 +30,7 @@
   "scripts": {
     "link": "npm link && npm link eslint-plugin-evelyn",
     "lint": "eslint --ext .js ./",
-    "record-changes": "eslint -c ./record-changes.eslintrc.js ./record-changes.eslintrc.js",
+    "record-changes": "eslint -c ./record-changes.eslintrc.js ./record-changes.eslintrc.js && git add ./record-changes.json",
     "test": "run-s test:*",
     "test:configs": "mocha test/configs --recursive",
     "test:final-config-array": "eslint -c ./test/final-config-array.eslintrc.js ./test/final-config-array.eslintrc.js",
@@ -38,7 +38,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test && npm run lint && npm run record-changes"
+      "pre-commit": "npm run record-changes"
     }
   },
   "dependencies": {
