@@ -149,7 +149,7 @@ You can use @Agoric's [config tester](https://github.com/Agoric/eslint-config-ru
 
 You can use ESLint's rule tester if you change the require statements to match [the public API](https://eslint.org/docs/developer-guide/nodejs-api#ruletester).
 
-### Final Config Aray Tests
+### Final Config Array Tests
 
 [final-config-array.eslintrc.js](./test/final-config-array.eslintrc.js) tests to make sure all modules and configs load properly. Without this test, if a parser or plugin doesn't load and is never used to lint a file, ESLint won't report the error.
 
