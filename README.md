@@ -127,11 +127,31 @@ module.exports = {
 
 ## Testing
 
-Any Mocha-compatible tests can be added, ESLint's rule tester works as well if you change the require statements to match [the public API](https://eslint.org/docs/developer-guide/nodejs-api#ruletester).
+Any Mocha-compatible tests can be added.
 
 ```bash
+# Install dependencies
+npm install
+# Symlink itself into node_modules for ESLint
+npm run link
+
+# Run all tests!
 npm run test
 ```
+
+### Config Tests
+
+Non-exhaustive tests to make sure important rules in configs do not change.
+
+You can use @Agoric's [config tester](https://github.com/Agoric/eslint-config-rule-tester), which has a similar API to ESLint's rule tester.
+
+### Rule Tests
+
+You can use ESLint's rule tester if you change the require statements to match [the public API](https://eslint.org/docs/developer-guide/nodejs-api#ruletester).
+
+### Final Config Aray Tests
+
+[final-config-array.eslintrc.js](./test/final-config-array.eslintrc.js) tests to make sure all modules and configs load properly. Without this test, if a parser or plugin doesn't load and is never used to lint a file, ESLint won't report the error.
 
 ## Linting
 
@@ -175,25 +195,31 @@ $ npx eslint --debug
 eslint:cascading-config-array-factory Configuration was determined: ConfigArray [...]
 ```
 
+## Recording Changes to the Final Config Array
+
+[record-changes.eslintrc.js](./record-changes.eslintrc.js) saves the final config array to [record-changes.json](./record-changes.json) with paths removed.
+
+The script is used to track the changes to the final array over time using the pre-commit git hook. This is helpful in reviewing pull requests.
+
 ---
 
 ## Configs
 
 See the `peerDependencies` in [package.json](./package.json) for recommended dependency version ranges.
 
-| Name                                      | Description                                                                  | Peer Dependencies                                                        |
-| ----------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| [auto](./lib/configs/auto.js)             | Mono config that includes many configs and uses inferred paths for overrides | eslint-plugin-node, plus the dependencies sub-configs with matched globs |
-| [browser](./lib/configs/browser.js)       | For the browser env                                                          |                                                                          |
-| [built](./lib/configs/built.js)           | Built files from Babel or TypeScript                                         | eslint-plugin-node                                                       |
-| [default](./lib/configs/default.js)       | My style and lint rules from ESLint                                          | eslint-plugin-unicorn                                                    |
-| [jest](./lib/configs/jest.js)             | Jest tests                                                                   | eslint-plugin-node                                                       |
-| [jsx](./lib/configs/jsx.js)               | JSX features                                                                 |                                                                          |
-| [mocha](./lib/configs/mocha.js)           | Mocha tests                                                                  | eslint-plugin-node, eslint-plugin-mocha                                  |
-| [node](./lib/configs/node.js)             | Node.js env                                                                  | eslint-plugin-node                                                       |
-| [react](./lib/configs/react.js)           | React, browser env, JSX                                                      | eslint-plugin-react, eslint-plugin-unicorn                               |
-| [source](./lib/configs/source.js)         | Non-built files                                                              | eslint-plugin-node                                                       |
-| [typescript](./lib/configs/typescript.js) | TypeScript files                                                             | @typescript-eslint/eslint-plugin, @typescript-eslint/parser              |
+| Name                                      | Description                          | Peer Dependencies                                                       |
+| ----------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------- |
+| [babel](./lib/configs/babel.js)           | For files transpiled by Babel        | babel-eslint                                                            |
+| [browser](./lib/configs/browser.js)       | For the browser env                  |                                                                         |
+| [built](./lib/configs/built.js)           | Built files from Babel or TypeScript | eslint-plugin-node                                                      |
+| [default](./lib/configs/default.js)       | My style and lint rules from ESLint  | eslint-plugin-unicorn                                                   |
+| [jest](./lib/configs/jest.js)             | Jest tests                           | eslint-plugin-node                                                      |
+| [jsx](./lib/configs/jsx.js)               | JSX features                         |                                                                         |
+| [mocha](./lib/configs/mocha.js)           | Mocha tests                          | eslint-plugin-node, eslint-plugin-mocha                                 |
+| [node](./lib/configs/node.js)             | Node.js env                          | eslint-plugin-node                                                      |
+| [react](./lib/configs/react.js)           | React, browser env, JSX              | eslint-plugin-react, eslint-plugin-unicorn                              |
+| [source](./lib/configs/source.js)         | Non-built files                      | eslint-plugin-node                                                      |
+| [typescript](./lib/configs/typescript.js) | TypeScript files                     | @typescript-eslint/eslint-plugin, @typescript-eslint/parser, typescript |
 
 ## Rules
 
@@ -231,3 +257,7 @@ This plugin follows semantic versioning [a-la-ESLint](https://github.com/eslint/
         - Any changes to the low end of any of the `peerDependencies` or the `engines`
     - A rule's default behavior is changed
     - Part of the public API is removed or changed in an incompatible way
+
+## License
+
+Copyright Evelyn Hathaway, [MIT License](/LICENSE)

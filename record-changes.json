@@ -1,0 +1,1993 @@
+[
+	{
+		"name": "DefaultIgnorePattern",
+		"filePath": "CLEANED",
+		"criteria": null,
+		"ignorePattern": {
+			"patterns": [
+				"/node_modules/*",
+				"/bower_components/*"
+			],
+			"basePath": "CLEANED",
+			"loose": false
+		}
+	},
+	{
+		"name": ".eslintrc.js » plugin:evelyn/default » eslint:recommended",
+		"filePath": "CLEANED",
+		"criteria": null,
+		"rules": {
+			"constructor-super": "error",
+			"for-direction": "error",
+			"getter-return": "error",
+			"no-async-promise-executor": "error",
+			"no-case-declarations": "error",
+			"no-class-assign": "error",
+			"no-compare-neg-zero": "error",
+			"no-cond-assign": "error",
+			"no-const-assign": "error",
+			"no-constant-condition": "error",
+			"no-control-regex": "error",
+			"no-debugger": "error",
+			"no-delete-var": "error",
+			"no-dupe-args": "error",
+			"no-dupe-class-members": "error",
+			"no-dupe-keys": "error",
+			"no-duplicate-case": "error",
+			"no-empty": "error",
+			"no-empty-character-class": "error",
+			"no-empty-pattern": "error",
+			"no-ex-assign": "error",
+			"no-extra-boolean-cast": "error",
+			"no-extra-semi": "error",
+			"no-fallthrough": "error",
+			"no-func-assign": "error",
+			"no-global-assign": "error",
+			"no-inner-declarations": "error",
+			"no-invalid-regexp": "error",
+			"no-irregular-whitespace": "error",
+			"no-misleading-character-class": "error",
+			"no-mixed-spaces-and-tabs": "error",
+			"no-new-symbol": "error",
+			"no-obj-calls": "error",
+			"no-octal": "error",
+			"no-prototype-builtins": "error",
+			"no-redeclare": "error",
+			"no-regex-spaces": "error",
+			"no-self-assign": "error",
+			"no-shadow-restricted-names": "error",
+			"no-sparse-arrays": "error",
+			"no-this-before-super": "error",
+			"no-undef": "error",
+			"no-unexpected-multiline": "error",
+			"no-unreachable": "error",
+			"no-unsafe-finally": "error",
+			"no-unsafe-negation": "error",
+			"no-unused-labels": "error",
+			"no-unused-vars": "error",
+			"no-useless-catch": "error",
+			"no-useless-escape": "error",
+			"no-with": "error",
+			"require-yield": "error",
+			"use-isnan": "error",
+			"valid-typeof": "error"
+		}
+	},
+	{
+		"name": ".eslintrc.js » plugin:evelyn/default » plugin:unicorn/recommended",
+		"filePath": "CLEANED",
+		"criteria": null,
+		"env": {
+			"es6": true
+		},
+		"parserOptions": {
+			"ecmaVersion": 2019,
+			"sourceType": "module"
+		},
+		"plugins": {
+			"unicorn": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "unicorn",
+				"importerName": ".eslintrc.js » plugin:evelyn/default » plugin:unicorn/recommended",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"unicorn/catch-error-name": "error",
+			"unicorn/custom-error-definition": "off",
+			"unicorn/error-message": "error",
+			"unicorn/escape-case": "error",
+			"unicorn/explicit-length-check": "error",
+			"unicorn/filename-case": "error",
+			"unicorn/import-index": "error",
+			"unicorn/new-for-builtins": "error",
+			"unicorn/no-abusive-eslint-disable": "error",
+			"unicorn/no-array-instanceof": "error",
+			"unicorn/no-console-spaces": "error",
+			"unicorn/no-fn-reference-in-iterator": "off",
+			"unicorn/no-for-loop": "error",
+			"unicorn/no-hex-escape": "error",
+			"unicorn/no-new-buffer": "error",
+			"unicorn/no-process-exit": "error",
+			"unicorn/no-unreadable-array-destructuring": "error",
+			"unicorn/no-unsafe-regex": "off",
+			"unicorn/no-unused-properties": "off",
+			"unicorn/no-zero-fractions": "error",
+			"unicorn/number-literal-case": "error",
+			"unicorn/prefer-add-event-listener": "error",
+			"unicorn/prefer-event-key": "error",
+			"unicorn/prefer-exponentiation-operator": "error",
+			"unicorn/prefer-flat-map": "error",
+			"unicorn/prefer-includes": "error",
+			"unicorn/prefer-node-append": "error",
+			"unicorn/prefer-node-remove": "error",
+			"unicorn/prefer-query-selector": "error",
+			"unicorn/prefer-spread": "error",
+			"unicorn/prefer-starts-ends-with": "error",
+			"unicorn/prefer-text-content": "error",
+			"unicorn/prefer-type-error": "error",
+			"unicorn/prevent-abbreviations": "error",
+			"unicorn/regex-shorthand": "error",
+			"unicorn/throw-new-error": "error"
+		}
+	},
+	{
+		"name": ".eslintrc.js » plugin:evelyn/default",
+		"filePath": "CLEANED",
+		"criteria": null,
+		"env": {
+			"es6": true
+		},
+		"parserOptions": {
+			"ecmaVersion": 2019,
+			"sourceType": "module"
+		},
+		"plugins": {
+			"unicorn": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "unicorn",
+				"importerName": ".eslintrc.js » plugin:evelyn/default",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"indent": [
+				"error",
+				"tab",
+				{
+					"SwitchCase": 1,
+					"flatTernaryExpressions": false,
+					"ignoreComments": false
+				}
+			],
+			"linebreak-style": [
+				"error",
+				"unix"
+			],
+			"quotes": [
+				"warn",
+				"double"
+			],
+			"semi": [
+				"error",
+				"always"
+			],
+			"no-extra-semi": "warn",
+			"no-var": "error",
+			"prefer-const": "error",
+			"no-console": "warn",
+			"no-throw-literal": "error",
+			"quote-props": [
+				"warn",
+				"as-needed",
+				{
+					"unnecessary": false,
+					"numbers": true
+				}
+			],
+			"comma-spacing": [
+				"error",
+				{
+					"before": false,
+					"after": true
+				}
+			],
+			"comma-dangle": [
+				"error",
+				{
+					"arrays": "always-multiline",
+					"objects": "always-multiline",
+					"imports": "only-multiline",
+					"exports": "only-multiline",
+					"functions": "only-multiline"
+				}
+			],
+			"evelyn/no-fallthrough": [
+				"error",
+				{
+					"commentPattern": "falls?\\s?through|break"
+				}
+			],
+			"unicorn/prefer-spread": "off",
+			"unicorn/prefer-query-selector": "off",
+			"unicorn/prevent-abbreviations": "off",
+			"unicorn/import-index": "off",
+			"unicorn/explicit-length-check": "off"
+		}
+	},
+	{
+		"name": ".eslintrc.js » plugin:evelyn/node » plugin:node/recommended",
+		"filePath": "CLEANED",
+		"criteria": null,
+		"globals": {
+			"ArrayBuffer": "readonly",
+			"Atomics": "readonly",
+			"DataView": "readonly",
+			"Float32Array": "readonly",
+			"Float64Array": "readonly",
+			"Int16Array": "readonly",
+			"Int32Array": "readonly",
+			"Int8Array": "readonly",
+			"Map": "readonly",
+			"Promise": "readonly",
+			"Proxy": "readonly",
+			"Reflect": "readonly",
+			"Set": "readonly",
+			"SharedArrayBuffer": "readonly",
+			"Symbol": "readonly",
+			"Uint16Array": "readonly",
+			"Uint32Array": "readonly",
+			"Uint8Array": "readonly",
+			"Uint8ClampedArray": "readonly",
+			"WeakMap": "readonly",
+			"WeakSet": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
+			"globalThis": "readonly",
+			"Intl": "readonly",
+			"TextDecoder": "readonly",
+			"TextEncoder": "readonly",
+			"URL": "readonly",
+			"URLSearchParams": "readonly",
+			"WebAssembly": "readonly",
+			"clearInterval": "readonly",
+			"clearTimeout": "readonly",
+			"console": "readonly",
+			"queueMicrotask": "readonly",
+			"setInterval": "readonly",
+			"setTimeout": "readonly",
+			"Buffer": "readonly",
+			"GLOBAL": "readonly",
+			"clearImmediate": "readonly",
+			"global": "readonly",
+			"process": "readonly",
+			"root": "readonly",
+			"setImmediate": "readonly",
+			"__dirname": "readonly",
+			"__filename": "readonly",
+			"exports": "readonly",
+			"module": "readonly",
+			"require": "readonly"
+		},
+		"parserOptions": {
+			"ecmaFeatures": {
+				"globalReturn": true
+			},
+			"ecmaVersion": 2019,
+			"sourceType": "script"
+		},
+		"plugins": {
+			"node": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "node",
+				"importerName": ".eslintrc.js » plugin:evelyn/node » plugin:node/recommended",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"no-process-exit": "error",
+			"node/no-deprecated-api": "error",
+			"node/no-extraneous-require": "error",
+			"node/no-missing-require": "error",
+			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-require": "error",
+			"node/no-unsupported-features/es-builtins": "error",
+			"node/no-unsupported-features/es-syntax": [
+				"error",
+				{
+					"ignores": []
+				}
+			],
+			"node/no-unsupported-features/node-builtins": "error",
+			"node/process-exit-as-throw": "error",
+			"node/shebang": "error",
+			"node/no-extraneous-import": "off",
+			"node/no-missing-import": "off",
+			"node/no-unpublished-import": "off"
+		}
+	},
+	{
+		"name": ".eslintrc.js » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"*.cjs",
+				".*.cjs"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"globals": {
+			"ArrayBuffer": "readonly",
+			"Atomics": "readonly",
+			"DataView": "readonly",
+			"Float32Array": "readonly",
+			"Float64Array": "readonly",
+			"Int16Array": "readonly",
+			"Int32Array": "readonly",
+			"Int8Array": "readonly",
+			"Map": "readonly",
+			"Promise": "readonly",
+			"Proxy": "readonly",
+			"Reflect": "readonly",
+			"Set": "readonly",
+			"SharedArrayBuffer": "readonly",
+			"Symbol": "readonly",
+			"Uint16Array": "readonly",
+			"Uint32Array": "readonly",
+			"Uint8Array": "readonly",
+			"Uint8ClampedArray": "readonly",
+			"WeakMap": "readonly",
+			"WeakSet": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
+			"globalThis": "readonly",
+			"Intl": "readonly",
+			"TextDecoder": "readonly",
+			"TextEncoder": "readonly",
+			"URL": "readonly",
+			"URLSearchParams": "readonly",
+			"WebAssembly": "readonly",
+			"clearInterval": "readonly",
+			"clearTimeout": "readonly",
+			"console": "readonly",
+			"queueMicrotask": "readonly",
+			"setInterval": "readonly",
+			"setTimeout": "readonly",
+			"Buffer": "readonly",
+			"GLOBAL": "readonly",
+			"clearImmediate": "readonly",
+			"global": "readonly",
+			"process": "readonly",
+			"root": "readonly",
+			"setImmediate": "readonly",
+			"__dirname": "readonly",
+			"__filename": "readonly",
+			"exports": "readonly",
+			"module": "readonly",
+			"require": "readonly"
+		},
+		"parserOptions": {
+			"ecmaFeatures": {
+				"globalReturn": true
+			},
+			"ecmaVersion": 2019,
+			"sourceType": "script"
+		},
+		"plugins": {
+			"node": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "node",
+				"importerName": ".eslintrc.js » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"no-process-exit": "error",
+			"node/no-deprecated-api": "error",
+			"node/no-extraneous-require": "error",
+			"node/no-missing-require": "error",
+			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-require": "error",
+			"node/no-unsupported-features/es-builtins": "error",
+			"node/no-unsupported-features/es-syntax": [
+				"error",
+				{
+					"ignores": []
+				}
+			],
+			"node/no-unsupported-features/node-builtins": "error",
+			"node/process-exit-as-throw": "error",
+			"node/shebang": "error",
+			"node/no-extraneous-import": "off",
+			"node/no-missing-import": "off",
+			"node/no-unpublished-import": "off"
+		}
+	},
+	{
+		"name": ".eslintrc.js » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"*.mjs",
+				".*.mjs"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"globals": {
+			"ArrayBuffer": "readonly",
+			"Atomics": "readonly",
+			"DataView": "readonly",
+			"Float32Array": "readonly",
+			"Float64Array": "readonly",
+			"Int16Array": "readonly",
+			"Int32Array": "readonly",
+			"Int8Array": "readonly",
+			"Map": "readonly",
+			"Promise": "readonly",
+			"Proxy": "readonly",
+			"Reflect": "readonly",
+			"Set": "readonly",
+			"SharedArrayBuffer": "readonly",
+			"Symbol": "readonly",
+			"Uint16Array": "readonly",
+			"Uint32Array": "readonly",
+			"Uint8Array": "readonly",
+			"Uint8ClampedArray": "readonly",
+			"WeakMap": "readonly",
+			"WeakSet": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
+			"globalThis": "readonly",
+			"Intl": "readonly",
+			"TextDecoder": "readonly",
+			"TextEncoder": "readonly",
+			"URL": "readonly",
+			"URLSearchParams": "readonly",
+			"WebAssembly": "readonly",
+			"clearInterval": "readonly",
+			"clearTimeout": "readonly",
+			"console": "readonly",
+			"queueMicrotask": "readonly",
+			"setInterval": "readonly",
+			"setTimeout": "readonly",
+			"Buffer": "readonly",
+			"GLOBAL": "readonly",
+			"clearImmediate": "readonly",
+			"global": "readonly",
+			"process": "readonly",
+			"root": "readonly",
+			"setImmediate": "readonly",
+			"__dirname": "off",
+			"__filename": "off",
+			"exports": "off",
+			"module": "off",
+			"require": "off"
+		},
+		"parserOptions": {
+			"ecmaFeatures": {
+				"globalReturn": false
+			},
+			"ecmaVersion": 2019,
+			"sourceType": "module"
+		},
+		"plugins": {
+			"node": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "node",
+				"importerName": ".eslintrc.js » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"no-process-exit": "error",
+			"node/no-deprecated-api": "error",
+			"node/no-extraneous-require": "error",
+			"node/no-missing-require": "error",
+			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-require": "error",
+			"node/no-unsupported-features/es-builtins": "error",
+			"node/no-unsupported-features/es-syntax": [
+				"error",
+				{
+					"ignores": [
+						"modules"
+					]
+				}
+			],
+			"node/no-unsupported-features/node-builtins": "error",
+			"node/process-exit-as-throw": "error",
+			"node/shebang": "error",
+			"node/no-extraneous-import": "error",
+			"node/no-missing-import": "error",
+			"node/no-unpublished-import": "error"
+		}
+	},
+	{
+		"name": ".eslintrc.js » plugin:evelyn/node",
+		"filePath": "CLEANED",
+		"criteria": null,
+		"env": {
+			"es6": true,
+			"node": true
+		},
+		"parserOptions": {
+			"ecmaVersion": 2019,
+			"sourceType": "module"
+		},
+		"plugins": {
+			"node": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "node",
+				"importerName": ".eslintrc.js » plugin:evelyn/node",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"node/no-extraneous-import": "error"
+		}
+	},
+	{
+		"name": ".eslintrc.js",
+		"filePath": "CLEANED",
+		"criteria": null,
+		"plugins": {
+			"evelyn": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "evelyn",
+				"importerName": ".eslintrc.js",
+				"importerPath": "CLEANED"
+			}
+		}
+	},
+	{
+		"name": "--config",
+		"filePath": "CLEANED",
+		"criteria": null,
+		"plugins": {
+			"evelyn": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "evelyn",
+				"importerName": "--config",
+				"importerPath": "CLEANED"
+			}
+		}
+	},
+	{
+		"name": "--config#overrides[0] » plugin:evelyn/babel",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"babel"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"parser": {
+			"error": null,
+			"filePath": "CLEANED",
+			"id": "babel-eslint",
+			"importerName": "--config#overrides[0] » plugin:evelyn/babel",
+			"importerPath": "CLEANED"
+		}
+	},
+	{
+		"name": "--config#overrides[0]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"babel"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"name": "--config#overrides[1] » plugin:evelyn/browser",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"browser"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"env": {
+			"browser": true,
+			"worker": true,
+			"serviceworker": true
+		}
+	},
+	{
+		"name": "--config#overrides[1]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"browser"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"name": "--config#overrides[2] » plugin:evelyn/built",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"built"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"parserOptions": {
+			"sourceType": "script",
+			"ecmaVersion": 5
+		},
+		"plugins": {
+			"node": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "node",
+				"importerName": "--config#overrides[2] » plugin:evelyn/built",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"indent": "off",
+			"no-var": "off",
+			"no-unsafe-finally": "off",
+			"node/no-unsupported-features/es-syntax": "error",
+			"node/no-unsupported-features/es-builtins": "error"
+		}
+	},
+	{
+		"name": "--config#overrides[2]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"built"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"name": "--config#overrides[3] » plugin:evelyn/default » eslint:recommended",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"default"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"rules": {
+			"constructor-super": "error",
+			"for-direction": "error",
+			"getter-return": "error",
+			"no-async-promise-executor": "error",
+			"no-case-declarations": "error",
+			"no-class-assign": "error",
+			"no-compare-neg-zero": "error",
+			"no-cond-assign": "error",
+			"no-const-assign": "error",
+			"no-constant-condition": "error",
+			"no-control-regex": "error",
+			"no-debugger": "error",
+			"no-delete-var": "error",
+			"no-dupe-args": "error",
+			"no-dupe-class-members": "error",
+			"no-dupe-keys": "error",
+			"no-duplicate-case": "error",
+			"no-empty": "error",
+			"no-empty-character-class": "error",
+			"no-empty-pattern": "error",
+			"no-ex-assign": "error",
+			"no-extra-boolean-cast": "error",
+			"no-extra-semi": "error",
+			"no-fallthrough": "error",
+			"no-func-assign": "error",
+			"no-global-assign": "error",
+			"no-inner-declarations": "error",
+			"no-invalid-regexp": "error",
+			"no-irregular-whitespace": "error",
+			"no-misleading-character-class": "error",
+			"no-mixed-spaces-and-tabs": "error",
+			"no-new-symbol": "error",
+			"no-obj-calls": "error",
+			"no-octal": "error",
+			"no-prototype-builtins": "error",
+			"no-redeclare": "error",
+			"no-regex-spaces": "error",
+			"no-self-assign": "error",
+			"no-shadow-restricted-names": "error",
+			"no-sparse-arrays": "error",
+			"no-this-before-super": "error",
+			"no-undef": "error",
+			"no-unexpected-multiline": "error",
+			"no-unreachable": "error",
+			"no-unsafe-finally": "error",
+			"no-unsafe-negation": "error",
+			"no-unused-labels": "error",
+			"no-unused-vars": "error",
+			"no-useless-catch": "error",
+			"no-useless-escape": "error",
+			"no-with": "error",
+			"require-yield": "error",
+			"use-isnan": "error",
+			"valid-typeof": "error"
+		}
+	},
+	{
+		"name": "--config#overrides[3] » plugin:evelyn/default » plugin:unicorn/recommended",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"default"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"env": {
+			"es6": true
+		},
+		"parserOptions": {
+			"ecmaVersion": 2019,
+			"sourceType": "module"
+		},
+		"plugins": {
+			"unicorn": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "unicorn",
+				"importerName": "--config#overrides[3] » plugin:evelyn/default » plugin:unicorn/recommended",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"unicorn/catch-error-name": "error",
+			"unicorn/custom-error-definition": "off",
+			"unicorn/error-message": "error",
+			"unicorn/escape-case": "error",
+			"unicorn/explicit-length-check": "error",
+			"unicorn/filename-case": "error",
+			"unicorn/import-index": "error",
+			"unicorn/new-for-builtins": "error",
+			"unicorn/no-abusive-eslint-disable": "error",
+			"unicorn/no-array-instanceof": "error",
+			"unicorn/no-console-spaces": "error",
+			"unicorn/no-fn-reference-in-iterator": "off",
+			"unicorn/no-for-loop": "error",
+			"unicorn/no-hex-escape": "error",
+			"unicorn/no-new-buffer": "error",
+			"unicorn/no-process-exit": "error",
+			"unicorn/no-unreadable-array-destructuring": "error",
+			"unicorn/no-unsafe-regex": "off",
+			"unicorn/no-unused-properties": "off",
+			"unicorn/no-zero-fractions": "error",
+			"unicorn/number-literal-case": "error",
+			"unicorn/prefer-add-event-listener": "error",
+			"unicorn/prefer-event-key": "error",
+			"unicorn/prefer-exponentiation-operator": "error",
+			"unicorn/prefer-flat-map": "error",
+			"unicorn/prefer-includes": "error",
+			"unicorn/prefer-node-append": "error",
+			"unicorn/prefer-node-remove": "error",
+			"unicorn/prefer-query-selector": "error",
+			"unicorn/prefer-spread": "error",
+			"unicorn/prefer-starts-ends-with": "error",
+			"unicorn/prefer-text-content": "error",
+			"unicorn/prefer-type-error": "error",
+			"unicorn/prevent-abbreviations": "error",
+			"unicorn/regex-shorthand": "error",
+			"unicorn/throw-new-error": "error"
+		}
+	},
+	{
+		"name": "--config#overrides[3] » plugin:evelyn/default",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"default"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"env": {
+			"es6": true
+		},
+		"parserOptions": {
+			"ecmaVersion": 2019,
+			"sourceType": "module"
+		},
+		"plugins": {
+			"unicorn": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "unicorn",
+				"importerName": "--config#overrides[3] » plugin:evelyn/default",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"indent": [
+				"error",
+				"tab",
+				{
+					"SwitchCase": 1,
+					"flatTernaryExpressions": false,
+					"ignoreComments": false
+				}
+			],
+			"linebreak-style": [
+				"error",
+				"unix"
+			],
+			"quotes": [
+				"warn",
+				"double"
+			],
+			"semi": [
+				"error",
+				"always"
+			],
+			"no-extra-semi": "warn",
+			"no-var": "error",
+			"prefer-const": "error",
+			"no-console": "warn",
+			"no-throw-literal": "error",
+			"quote-props": [
+				"warn",
+				"as-needed",
+				{
+					"unnecessary": false,
+					"numbers": true
+				}
+			],
+			"comma-spacing": [
+				"error",
+				{
+					"before": false,
+					"after": true
+				}
+			],
+			"comma-dangle": [
+				"error",
+				{
+					"arrays": "always-multiline",
+					"objects": "always-multiline",
+					"imports": "only-multiline",
+					"exports": "only-multiline",
+					"functions": "only-multiline"
+				}
+			],
+			"evelyn/no-fallthrough": [
+				"error",
+				{
+					"commentPattern": "falls?\\s?through|break"
+				}
+			],
+			"unicorn/prefer-spread": "off",
+			"unicorn/prefer-query-selector": "off",
+			"unicorn/prevent-abbreviations": "off",
+			"unicorn/import-index": "off",
+			"unicorn/explicit-length-check": "off"
+		}
+	},
+	{
+		"name": "--config#overrides[3]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"default"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"name": "--config#overrides[4] » plugin:evelyn/jest",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"jest"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"env": {
+			"jest": true
+		},
+		"rules": {
+			"node/no-unpublished-require": "off"
+		}
+	},
+	{
+		"name": "--config#overrides[4]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"jest"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"name": "--config#overrides[5] » plugin:evelyn/jsx",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"jsx"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"parserOptions": {
+			"ecmaVersion": 2019,
+			"ecmaFeatures": {
+				"jsx": true
+			},
+			"sourceType": "module"
+		}
+	},
+	{
+		"name": "--config#overrides[5]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"jsx"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"name": "--config#overrides[6] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"mocha"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"globals": {
+			"ArrayBuffer": "readonly",
+			"Atomics": "readonly",
+			"DataView": "readonly",
+			"Float32Array": "readonly",
+			"Float64Array": "readonly",
+			"Int16Array": "readonly",
+			"Int32Array": "readonly",
+			"Int8Array": "readonly",
+			"Map": "readonly",
+			"Promise": "readonly",
+			"Proxy": "readonly",
+			"Reflect": "readonly",
+			"Set": "readonly",
+			"SharedArrayBuffer": "readonly",
+			"Symbol": "readonly",
+			"Uint16Array": "readonly",
+			"Uint32Array": "readonly",
+			"Uint8Array": "readonly",
+			"Uint8ClampedArray": "readonly",
+			"WeakMap": "readonly",
+			"WeakSet": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
+			"globalThis": "readonly",
+			"Intl": "readonly",
+			"TextDecoder": "readonly",
+			"TextEncoder": "readonly",
+			"URL": "readonly",
+			"URLSearchParams": "readonly",
+			"WebAssembly": "readonly",
+			"clearInterval": "readonly",
+			"clearTimeout": "readonly",
+			"console": "readonly",
+			"queueMicrotask": "readonly",
+			"setInterval": "readonly",
+			"setTimeout": "readonly",
+			"Buffer": "readonly",
+			"GLOBAL": "readonly",
+			"clearImmediate": "readonly",
+			"global": "readonly",
+			"process": "readonly",
+			"root": "readonly",
+			"setImmediate": "readonly",
+			"__dirname": "readonly",
+			"__filename": "readonly",
+			"exports": "readonly",
+			"module": "readonly",
+			"require": "readonly"
+		},
+		"parserOptions": {
+			"ecmaFeatures": {
+				"globalReturn": true
+			},
+			"ecmaVersion": 2019,
+			"sourceType": "script"
+		},
+		"plugins": {
+			"node": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "node",
+				"importerName": "--config#overrides[6] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"no-process-exit": "error",
+			"node/no-deprecated-api": "error",
+			"node/no-extraneous-require": "error",
+			"node/no-missing-require": "error",
+			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-require": "error",
+			"node/no-unsupported-features/es-builtins": "error",
+			"node/no-unsupported-features/es-syntax": [
+				"error",
+				{
+					"ignores": []
+				}
+			],
+			"node/no-unsupported-features/node-builtins": "error",
+			"node/process-exit-as-throw": "error",
+			"node/shebang": "error",
+			"node/no-extraneous-import": "off",
+			"node/no-missing-import": "off",
+			"node/no-unpublished-import": "off"
+		}
+	},
+	{
+		"name": "--config#overrides[6] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"mocha"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"*.cjs",
+						".*.cjs"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		},
+		"globals": {
+			"ArrayBuffer": "readonly",
+			"Atomics": "readonly",
+			"DataView": "readonly",
+			"Float32Array": "readonly",
+			"Float64Array": "readonly",
+			"Int16Array": "readonly",
+			"Int32Array": "readonly",
+			"Int8Array": "readonly",
+			"Map": "readonly",
+			"Promise": "readonly",
+			"Proxy": "readonly",
+			"Reflect": "readonly",
+			"Set": "readonly",
+			"SharedArrayBuffer": "readonly",
+			"Symbol": "readonly",
+			"Uint16Array": "readonly",
+			"Uint32Array": "readonly",
+			"Uint8Array": "readonly",
+			"Uint8ClampedArray": "readonly",
+			"WeakMap": "readonly",
+			"WeakSet": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
+			"globalThis": "readonly",
+			"Intl": "readonly",
+			"TextDecoder": "readonly",
+			"TextEncoder": "readonly",
+			"URL": "readonly",
+			"URLSearchParams": "readonly",
+			"WebAssembly": "readonly",
+			"clearInterval": "readonly",
+			"clearTimeout": "readonly",
+			"console": "readonly",
+			"queueMicrotask": "readonly",
+			"setInterval": "readonly",
+			"setTimeout": "readonly",
+			"Buffer": "readonly",
+			"GLOBAL": "readonly",
+			"clearImmediate": "readonly",
+			"global": "readonly",
+			"process": "readonly",
+			"root": "readonly",
+			"setImmediate": "readonly",
+			"__dirname": "readonly",
+			"__filename": "readonly",
+			"exports": "readonly",
+			"module": "readonly",
+			"require": "readonly"
+		},
+		"parserOptions": {
+			"ecmaFeatures": {
+				"globalReturn": true
+			},
+			"ecmaVersion": 2019,
+			"sourceType": "script"
+		},
+		"plugins": {
+			"node": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "node",
+				"importerName": "--config#overrides[6] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"no-process-exit": "error",
+			"node/no-deprecated-api": "error",
+			"node/no-extraneous-require": "error",
+			"node/no-missing-require": "error",
+			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-require": "error",
+			"node/no-unsupported-features/es-builtins": "error",
+			"node/no-unsupported-features/es-syntax": [
+				"error",
+				{
+					"ignores": []
+				}
+			],
+			"node/no-unsupported-features/node-builtins": "error",
+			"node/process-exit-as-throw": "error",
+			"node/shebang": "error",
+			"node/no-extraneous-import": "off",
+			"node/no-missing-import": "off",
+			"node/no-unpublished-import": "off"
+		}
+	},
+	{
+		"name": "--config#overrides[6] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"mocha"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"*.mjs",
+						".*.mjs"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		},
+		"globals": {
+			"ArrayBuffer": "readonly",
+			"Atomics": "readonly",
+			"DataView": "readonly",
+			"Float32Array": "readonly",
+			"Float64Array": "readonly",
+			"Int16Array": "readonly",
+			"Int32Array": "readonly",
+			"Int8Array": "readonly",
+			"Map": "readonly",
+			"Promise": "readonly",
+			"Proxy": "readonly",
+			"Reflect": "readonly",
+			"Set": "readonly",
+			"SharedArrayBuffer": "readonly",
+			"Symbol": "readonly",
+			"Uint16Array": "readonly",
+			"Uint32Array": "readonly",
+			"Uint8Array": "readonly",
+			"Uint8ClampedArray": "readonly",
+			"WeakMap": "readonly",
+			"WeakSet": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
+			"globalThis": "readonly",
+			"Intl": "readonly",
+			"TextDecoder": "readonly",
+			"TextEncoder": "readonly",
+			"URL": "readonly",
+			"URLSearchParams": "readonly",
+			"WebAssembly": "readonly",
+			"clearInterval": "readonly",
+			"clearTimeout": "readonly",
+			"console": "readonly",
+			"queueMicrotask": "readonly",
+			"setInterval": "readonly",
+			"setTimeout": "readonly",
+			"Buffer": "readonly",
+			"GLOBAL": "readonly",
+			"clearImmediate": "readonly",
+			"global": "readonly",
+			"process": "readonly",
+			"root": "readonly",
+			"setImmediate": "readonly",
+			"__dirname": "off",
+			"__filename": "off",
+			"exports": "off",
+			"module": "off",
+			"require": "off"
+		},
+		"parserOptions": {
+			"ecmaFeatures": {
+				"globalReturn": false
+			},
+			"ecmaVersion": 2019,
+			"sourceType": "module"
+		},
+		"plugins": {
+			"node": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "node",
+				"importerName": "--config#overrides[6] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"no-process-exit": "error",
+			"node/no-deprecated-api": "error",
+			"node/no-extraneous-require": "error",
+			"node/no-missing-require": "error",
+			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-require": "error",
+			"node/no-unsupported-features/es-builtins": "error",
+			"node/no-unsupported-features/es-syntax": [
+				"error",
+				{
+					"ignores": [
+						"modules"
+					]
+				}
+			],
+			"node/no-unsupported-features/node-builtins": "error",
+			"node/process-exit-as-throw": "error",
+			"node/shebang": "error",
+			"node/no-extraneous-import": "error",
+			"node/no-missing-import": "error",
+			"node/no-unpublished-import": "error"
+		}
+	},
+	{
+		"name": "--config#overrides[6] » plugin:evelyn/mocha » plugin:evelyn/node",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"mocha"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"env": {
+			"es6": true,
+			"node": true
+		},
+		"parserOptions": {
+			"ecmaVersion": 2019,
+			"sourceType": "module"
+		},
+		"plugins": {
+			"node": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "node",
+				"importerName": "--config#overrides[6] » plugin:evelyn/mocha » plugin:evelyn/node",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"node/no-extraneous-import": "error"
+		}
+	},
+	{
+		"name": "--config#overrides[6] » plugin:evelyn/mocha",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"mocha"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"env": {
+			"mocha": true
+		},
+		"plugins": {
+			"mocha": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "mocha",
+				"importerName": "--config#overrides[6] » plugin:evelyn/mocha",
+				"importerPath": "CLEANED"
+			},
+			"node": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "node",
+				"importerName": "--config#overrides[6] » plugin:evelyn/mocha",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"node/no-unpublished-require": "off",
+			"node/no-unsupported-features/es-builtins": "off",
+			"node/no-unsupported-features/es-syntax": "off",
+			"mocha/handle-done-callback": "error",
+			"mocha/no-exclusive-tests": "error",
+			"mocha/no-global-tests": "warn",
+			"mocha/no-identical-title": "error",
+			"mocha/no-mocha-arrows": "warn",
+			"mocha/no-nested-tests": "error",
+			"mocha/no-pending-tests": "warn",
+			"mocha/no-return-and-callback": "error",
+			"mocha/no-sibling-hooks": "error",
+			"mocha/no-skipped-tests": "warn",
+			"mocha/no-top-level-hooks": "error"
+		}
+	},
+	{
+		"name": "--config#overrides[6]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"mocha"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"name": "--config#overrides[7] » plugin:evelyn/node » plugin:node/recommended",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"node"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"globals": {
+			"ArrayBuffer": "readonly",
+			"Atomics": "readonly",
+			"DataView": "readonly",
+			"Float32Array": "readonly",
+			"Float64Array": "readonly",
+			"Int16Array": "readonly",
+			"Int32Array": "readonly",
+			"Int8Array": "readonly",
+			"Map": "readonly",
+			"Promise": "readonly",
+			"Proxy": "readonly",
+			"Reflect": "readonly",
+			"Set": "readonly",
+			"SharedArrayBuffer": "readonly",
+			"Symbol": "readonly",
+			"Uint16Array": "readonly",
+			"Uint32Array": "readonly",
+			"Uint8Array": "readonly",
+			"Uint8ClampedArray": "readonly",
+			"WeakMap": "readonly",
+			"WeakSet": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
+			"globalThis": "readonly",
+			"Intl": "readonly",
+			"TextDecoder": "readonly",
+			"TextEncoder": "readonly",
+			"URL": "readonly",
+			"URLSearchParams": "readonly",
+			"WebAssembly": "readonly",
+			"clearInterval": "readonly",
+			"clearTimeout": "readonly",
+			"console": "readonly",
+			"queueMicrotask": "readonly",
+			"setInterval": "readonly",
+			"setTimeout": "readonly",
+			"Buffer": "readonly",
+			"GLOBAL": "readonly",
+			"clearImmediate": "readonly",
+			"global": "readonly",
+			"process": "readonly",
+			"root": "readonly",
+			"setImmediate": "readonly",
+			"__dirname": "readonly",
+			"__filename": "readonly",
+			"exports": "readonly",
+			"module": "readonly",
+			"require": "readonly"
+		},
+		"parserOptions": {
+			"ecmaFeatures": {
+				"globalReturn": true
+			},
+			"ecmaVersion": 2019,
+			"sourceType": "script"
+		},
+		"plugins": {
+			"node": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "node",
+				"importerName": "--config#overrides[7] » plugin:evelyn/node » plugin:node/recommended",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"no-process-exit": "error",
+			"node/no-deprecated-api": "error",
+			"node/no-extraneous-require": "error",
+			"node/no-missing-require": "error",
+			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-require": "error",
+			"node/no-unsupported-features/es-builtins": "error",
+			"node/no-unsupported-features/es-syntax": [
+				"error",
+				{
+					"ignores": []
+				}
+			],
+			"node/no-unsupported-features/node-builtins": "error",
+			"node/process-exit-as-throw": "error",
+			"node/shebang": "error",
+			"node/no-extraneous-import": "off",
+			"node/no-missing-import": "off",
+			"node/no-unpublished-import": "off"
+		}
+	},
+	{
+		"name": "--config#overrides[7] » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"node"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"*.cjs",
+						".*.cjs"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		},
+		"globals": {
+			"ArrayBuffer": "readonly",
+			"Atomics": "readonly",
+			"DataView": "readonly",
+			"Float32Array": "readonly",
+			"Float64Array": "readonly",
+			"Int16Array": "readonly",
+			"Int32Array": "readonly",
+			"Int8Array": "readonly",
+			"Map": "readonly",
+			"Promise": "readonly",
+			"Proxy": "readonly",
+			"Reflect": "readonly",
+			"Set": "readonly",
+			"SharedArrayBuffer": "readonly",
+			"Symbol": "readonly",
+			"Uint16Array": "readonly",
+			"Uint32Array": "readonly",
+			"Uint8Array": "readonly",
+			"Uint8ClampedArray": "readonly",
+			"WeakMap": "readonly",
+			"WeakSet": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
+			"globalThis": "readonly",
+			"Intl": "readonly",
+			"TextDecoder": "readonly",
+			"TextEncoder": "readonly",
+			"URL": "readonly",
+			"URLSearchParams": "readonly",
+			"WebAssembly": "readonly",
+			"clearInterval": "readonly",
+			"clearTimeout": "readonly",
+			"console": "readonly",
+			"queueMicrotask": "readonly",
+			"setInterval": "readonly",
+			"setTimeout": "readonly",
+			"Buffer": "readonly",
+			"GLOBAL": "readonly",
+			"clearImmediate": "readonly",
+			"global": "readonly",
+			"process": "readonly",
+			"root": "readonly",
+			"setImmediate": "readonly",
+			"__dirname": "readonly",
+			"__filename": "readonly",
+			"exports": "readonly",
+			"module": "readonly",
+			"require": "readonly"
+		},
+		"parserOptions": {
+			"ecmaFeatures": {
+				"globalReturn": true
+			},
+			"ecmaVersion": 2019,
+			"sourceType": "script"
+		},
+		"plugins": {
+			"node": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "node",
+				"importerName": "--config#overrides[7] » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"no-process-exit": "error",
+			"node/no-deprecated-api": "error",
+			"node/no-extraneous-require": "error",
+			"node/no-missing-require": "error",
+			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-require": "error",
+			"node/no-unsupported-features/es-builtins": "error",
+			"node/no-unsupported-features/es-syntax": [
+				"error",
+				{
+					"ignores": []
+				}
+			],
+			"node/no-unsupported-features/node-builtins": "error",
+			"node/process-exit-as-throw": "error",
+			"node/shebang": "error",
+			"node/no-extraneous-import": "off",
+			"node/no-missing-import": "off",
+			"node/no-unpublished-import": "off"
+		}
+	},
+	{
+		"name": "--config#overrides[7] » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"node"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"*.mjs",
+						".*.mjs"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		},
+		"globals": {
+			"ArrayBuffer": "readonly",
+			"Atomics": "readonly",
+			"DataView": "readonly",
+			"Float32Array": "readonly",
+			"Float64Array": "readonly",
+			"Int16Array": "readonly",
+			"Int32Array": "readonly",
+			"Int8Array": "readonly",
+			"Map": "readonly",
+			"Promise": "readonly",
+			"Proxy": "readonly",
+			"Reflect": "readonly",
+			"Set": "readonly",
+			"SharedArrayBuffer": "readonly",
+			"Symbol": "readonly",
+			"Uint16Array": "readonly",
+			"Uint32Array": "readonly",
+			"Uint8Array": "readonly",
+			"Uint8ClampedArray": "readonly",
+			"WeakMap": "readonly",
+			"WeakSet": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
+			"globalThis": "readonly",
+			"Intl": "readonly",
+			"TextDecoder": "readonly",
+			"TextEncoder": "readonly",
+			"URL": "readonly",
+			"URLSearchParams": "readonly",
+			"WebAssembly": "readonly",
+			"clearInterval": "readonly",
+			"clearTimeout": "readonly",
+			"console": "readonly",
+			"queueMicrotask": "readonly",
+			"setInterval": "readonly",
+			"setTimeout": "readonly",
+			"Buffer": "readonly",
+			"GLOBAL": "readonly",
+			"clearImmediate": "readonly",
+			"global": "readonly",
+			"process": "readonly",
+			"root": "readonly",
+			"setImmediate": "readonly",
+			"__dirname": "off",
+			"__filename": "off",
+			"exports": "off",
+			"module": "off",
+			"require": "off"
+		},
+		"parserOptions": {
+			"ecmaFeatures": {
+				"globalReturn": false
+			},
+			"ecmaVersion": 2019,
+			"sourceType": "module"
+		},
+		"plugins": {
+			"node": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "node",
+				"importerName": "--config#overrides[7] » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"no-process-exit": "error",
+			"node/no-deprecated-api": "error",
+			"node/no-extraneous-require": "error",
+			"node/no-missing-require": "error",
+			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-require": "error",
+			"node/no-unsupported-features/es-builtins": "error",
+			"node/no-unsupported-features/es-syntax": [
+				"error",
+				{
+					"ignores": [
+						"modules"
+					]
+				}
+			],
+			"node/no-unsupported-features/node-builtins": "error",
+			"node/process-exit-as-throw": "error",
+			"node/shebang": "error",
+			"node/no-extraneous-import": "error",
+			"node/no-missing-import": "error",
+			"node/no-unpublished-import": "error"
+		}
+	},
+	{
+		"name": "--config#overrides[7] » plugin:evelyn/node",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"node"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"env": {
+			"es6": true,
+			"node": true
+		},
+		"parserOptions": {
+			"ecmaVersion": 2019,
+			"sourceType": "module"
+		},
+		"plugins": {
+			"node": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "node",
+				"importerName": "--config#overrides[7] » plugin:evelyn/node",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"node/no-extraneous-import": "error"
+		}
+	},
+	{
+		"name": "--config#overrides[7]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"node"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"name": "--config#overrides[8] » plugin:evelyn/react » plugin:evelyn/browser",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"react"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"env": {
+			"browser": true,
+			"worker": true,
+			"serviceworker": true
+		}
+	},
+	{
+		"name": "--config#overrides[8] » plugin:evelyn/react » plugin:evelyn/jsx",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"react"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"parserOptions": {
+			"ecmaVersion": 2019,
+			"ecmaFeatures": {
+				"jsx": true
+			},
+			"sourceType": "module"
+		}
+	},
+	{
+		"name": "--config#overrides[8] » plugin:evelyn/react » plugin:react/recommended",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"react"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"parserOptions": {
+			"ecmaFeatures": {
+				"jsx": true
+			}
+		},
+		"plugins": {
+			"react": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "react",
+				"importerName": "--config#overrides[8] » plugin:evelyn/react » plugin:react/recommended",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"react/display-name": 2,
+			"react/jsx-key": 2,
+			"react/jsx-no-comment-textnodes": 2,
+			"react/jsx-no-duplicate-props": 2,
+			"react/jsx-no-target-blank": 2,
+			"react/jsx-no-undef": 2,
+			"react/jsx-uses-react": 2,
+			"react/jsx-uses-vars": 2,
+			"react/no-children-prop": 2,
+			"react/no-danger-with-children": 2,
+			"react/no-deprecated": 2,
+			"react/no-direct-mutation-state": 2,
+			"react/no-find-dom-node": 2,
+			"react/no-is-mounted": 2,
+			"react/no-render-return-value": 2,
+			"react/no-string-refs": 2,
+			"react/no-unescaped-entities": 2,
+			"react/no-unknown-property": 2,
+			"react/no-unsafe": 0,
+			"react/prop-types": 2,
+			"react/react-in-jsx-scope": 2,
+			"react/require-render-return": 2
+		}
+	},
+	{
+		"name": "--config#overrides[8] » plugin:evelyn/react",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"react"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"plugins": {
+			"react": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "react",
+				"importerName": "--config#overrides[8] » plugin:evelyn/react",
+				"importerPath": "CLEANED"
+			},
+			"unicorn": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "unicorn",
+				"importerName": "--config#overrides[8] » plugin:evelyn/react",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"unicorn/filename-case": "off"
+		},
+		"settings": {
+			"react": {
+				"pragma": "React",
+				"version": "detect",
+				"flowVersion": "detect"
+			}
+		}
+	},
+	{
+		"name": "--config#overrides[8]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"react"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"name": "--config#overrides[9] » plugin:evelyn/source",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"source"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"plugins": {
+			"node": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "node",
+				"importerName": "--config#overrides[9] » plugin:evelyn/source",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"node/no-unsupported-features/es-syntax": "off",
+			"node/no-unsupported-features/es-builtins": "off"
+		}
+	},
+	{
+		"name": "--config#overrides[9]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"source"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"name": "--config#overrides[10] » plugin:evelyn/typescript",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"typescript"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"parser": {
+			"error": null,
+			"filePath": "CLEANED",
+			"id": "@typescript-eslint/parser",
+			"importerName": "--config#overrides[10] » plugin:evelyn/typescript",
+			"importerPath": "CLEANED"
+		},
+		"plugins": {
+			"@typescript-eslint": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "@typescript-eslint",
+				"importerName": "--config#overrides[10] » plugin:evelyn/typescript",
+				"importerPath": "CLEANED"
+			},
+			"node": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "node",
+				"importerName": "--config#overrides[10] » plugin:evelyn/typescript",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"no-unused-vars": "warn",
+			"node/no-unsupported-features/es-syntax": "off",
+			"node/no-unsupported-features/es-builtins": "off",
+			"node/exports-style": [
+				"error",
+				"exports"
+			],
+			"@typescript-eslint/member-ordering": "error",
+			"@typescript-eslint/adjacent-overload-signatures": "error",
+			"@typescript-eslint/array-type": "error",
+			"@typescript-eslint/ban-types": "error",
+			"@typescript-eslint/ban-ts-ignore": "error",
+			"@typescript-eslint/camelcase": "error",
+			"@typescript-eslint/class-name-casing": "error",
+			"@typescript-eslint/explicit-function-return-type": "error",
+			"@typescript-eslint/explicit-member-accessibility": "error",
+			"@typescript-eslint/indent": "error",
+			"@typescript-eslint/interface-name-prefix": "error",
+			"@typescript-eslint/member-delimiter-style": "error",
+			"@typescript-eslint/no-angle-bracket-type-assertion": "error",
+			"@typescript-eslint/no-array-constructor": "error",
+			"@typescript-eslint/no-empty-interface": "error",
+			"@typescript-eslint/no-explicit-any": "error",
+			"@typescript-eslint/no-inferrable-types": "error",
+			"@typescript-eslint/no-misused-new": "error",
+			"@typescript-eslint/no-namespace": "error",
+			"@typescript-eslint/no-non-null-assertion": "error",
+			"@typescript-eslint/no-object-literal-type-assertion": "error",
+			"@typescript-eslint/no-parameter-properties": "error",
+			"@typescript-eslint/no-require-imports": "error",
+			"@typescript-eslint/no-triple-slash-reference": "error",
+			"@typescript-eslint/no-unused-vars": "error",
+			"@typescript-eslint/no-use-before-define": "error",
+			"@typescript-eslint/no-var-requires": "error",
+			"@typescript-eslint/prefer-interface": "error",
+			"@typescript-eslint/prefer-namespace-keyword": "error",
+			"@typescript-eslint/promise-function-async": "error",
+			"@typescript-eslint/type-annotation-spacing": "error"
+		}
+	},
+	{
+		"name": "--config#overrides[10]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"typescript"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"name": ".eslintignore",
+		"filePath": "CLEANED",
+		"criteria": null,
+		"ignorePattern": {
+			"patterns": [
+				"lib/rules/fixes/*",
+				"test/rules/fixes/*"
+			],
+			"basePath": "CLEANED",
+			"loose": true
+		}
+	}
+]
