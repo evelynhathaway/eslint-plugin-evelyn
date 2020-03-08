@@ -1,16 +1,26 @@
-# eslint-plugin-evelyn
+<div align="center">
+
+<img alt="ESLint Plugin Evelyn icon" width="128" height="128" align="center" src=".github/icon.png"/>
+
+# ESLint Plugin Evelyn
+
+**ESLint plugin for my projects with my preferred code style and bugfixes**
 
 [![npm version](https://badgen.net/npm/v/eslint-plugin-evelyn?icon=npm)](https://www.npmjs.com/package/eslint-plugin-evelyn)
 [![build status](https://badgen.net/travis/evelynhathaway/eslint-plugin-evelyn/master?icon=travis)](https://travis-ci.com/evelynhathaway/eslint-plugin-evelyn)
 [![rules: 1](https://badgen.net/badge/rules/1/blue)](#rules)
 [![configs: 10](https://badgen.net/badge/configs/10/blue)](#configs)
-[![license](https://badgen.net/badge/license/MIT/blue)](/LICENSE)
+[![license: MIT](https://badgen.net/badge/license/MIT/blue)](/LICENSE)
 
-*ESLint plugin for my projects with my preferred code style and bugfixes*
+</div>
+
+## Description
+
+These are my configs, bugfixes, and code related to maintaining ESLint scripts.
 
 My code style is very opinionated, so I only use this package on my projects. However, others are welcome to use, copy, or fork this project.
 
-## Install
+## Installation
 
 ```bash
 # Save ESLint, Unicorn, and this plugin to devDependencies
