@@ -207,19 +207,19 @@ The script is used to track the changes to the final array over time using the p
 
 See the `peerDependencies` in [package.json](./package.json) for recommended dependency version ranges.
 
-| Name                                      | Description                          | Peer Dependencies                                           |
-| ----------------------------------------- | ------------------------------------ | ----------------------------------------------------------- |
-| [babel](./lib/configs/babel.js)           | For files transpiled by Babel        | babel-eslint                                                |
-| [browser](./lib/configs/browser.js)       | For the browser env                  |                                                             |
-| [built](./lib/configs/built.js)           | Built files from Babel or TypeScript | eslint-plugin-node                                          |
-| [default](./lib/configs/default.js)       | My style and lint rules from ESLint  | eslint-plugin-unicorn                                       |
-| [jest](./lib/configs/jest.js)             | Jest tests                           | eslint-plugin-node                                          |
-| [jsx](./lib/configs/jsx.js)               | JSX features                         |                                                             |
-| [mocha](./lib/configs/mocha.js)           | Mocha tests                          | eslint-plugin-node, eslint-plugin-mocha                     |
-| [node](./lib/configs/node.js)             | Node.js env                          | eslint-plugin-node                                          |
-| [react](./lib/configs/react.js)           | React, browser env, JSX              | eslint-plugin-react, eslint-plugin-unicorn                  |
-| [source](./lib/configs/source.js)         | Non-built files                      | eslint-plugin-node                                          |
-| [typescript](./lib/configs/typescript.js) | TypeScript files                     | @typescript-eslint/eslint-plugin, @typescript-eslint/parser |
+| Name                                      | Description                          | Peer Dependencies                                                       |
+| ----------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------- |
+| [babel](./lib/configs/babel.js)           | For files transpiled by Babel        | babel-eslint                                                            |
+| [browser](./lib/configs/browser.js)       | For the browser env                  |                                                                         |
+| [built](./lib/configs/built.js)           | Built files from Babel or TypeScript | eslint-plugin-node                                                      |
+| [default](./lib/configs/default.js)       | My style and lint rules from ESLint  | eslint-plugin-unicorn                                                   |
+| [jest](./lib/configs/jest.js)             | Jest tests                           | eslint-plugin-node                                                      |
+| [jsx](./lib/configs/jsx.js)               | JSX features                         |                                                                         |
+| [mocha](./lib/configs/mocha.js)           | Mocha tests                          | eslint-plugin-node, eslint-plugin-mocha                                 |
+| [node](./lib/configs/node.js)             | Node.js env                          | eslint-plugin-node                                                      |
+| [react](./lib/configs/react.js)           | React, browser env, JSX              | eslint-plugin-react, eslint-plugin-unicorn                              |
+| [source](./lib/configs/source.js)         | Non-built files                      | eslint-plugin-node                                                      |
+| [typescript](./lib/configs/typescript.js) | TypeScript files                     | @typescript-eslint/eslint-plugin, @typescript-eslint/parser, typescript |
 
 ## Rules
 
