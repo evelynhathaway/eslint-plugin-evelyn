@@ -1,18 +1,19 @@
 [
 	{
+		"type": "config",
 		"name": "DefaultIgnorePattern",
 		"filePath": "CLEANED",
 		"criteria": null,
 		"ignorePattern": {
 			"patterns": [
-				"/node_modules/*",
-				"/bower_components/*"
+				"/**/node_modules/*"
 			],
 			"basePath": "CLEANED",
 			"loose": false
 		}
 	},
 	{
+		"type": "config",
 		"name": ".eslintrc.js » plugin:evelyn/default » eslint:recommended",
 		"filePath": "CLEANED",
 		"criteria": null,
@@ -32,6 +33,7 @@
 			"no-delete-var": "error",
 			"no-dupe-args": "error",
 			"no-dupe-class-members": "error",
+			"no-dupe-else-if": "error",
 			"no-dupe-keys": "error",
 			"no-duplicate-case": "error",
 			"no-empty": "error",
@@ -43,6 +45,7 @@
 			"no-fallthrough": "error",
 			"no-func-assign": "error",
 			"no-global-assign": "error",
+			"no-import-assign": "error",
 			"no-inner-declarations": "error",
 			"no-invalid-regexp": "error",
 			"no-irregular-whitespace": "error",
@@ -55,6 +58,7 @@
 			"no-redeclare": "error",
 			"no-regex-spaces": "error",
 			"no-self-assign": "error",
+			"no-setter-return": "error",
 			"no-shadow-restricted-names": "error",
 			"no-sparse-arrays": "error",
 			"no-this-before-super": "error",
@@ -74,6 +78,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": ".eslintrc.js » plugin:evelyn/default » plugin:unicorn/recommended",
 		"filePath": "CLEANED",
 		"criteria": null,
@@ -81,7 +86,7 @@
 			"es6": true
 		},
 		"parserOptions": {
-			"ecmaVersion": 2019,
+			"ecmaVersion": 2020,
 			"sourceType": "module"
 		},
 		"plugins": {
@@ -94,10 +99,13 @@
 			}
 		},
 		"rules": {
+			"unicorn/better-regex": "error",
 			"unicorn/catch-error-name": "error",
+			"unicorn/consistent-function-scoping": "error",
 			"unicorn/custom-error-definition": "off",
 			"unicorn/error-message": "error",
 			"unicorn/escape-case": "error",
+			"unicorn/expiring-todo-comments": "error",
 			"unicorn/explicit-length-check": "error",
 			"unicorn/filename-case": "error",
 			"unicorn/import-index": "error",
@@ -105,10 +113,14 @@
 			"unicorn/no-abusive-eslint-disable": "error",
 			"unicorn/no-array-instanceof": "error",
 			"unicorn/no-console-spaces": "error",
-			"unicorn/no-fn-reference-in-iterator": "off",
+			"unicorn/no-fn-reference-in-iterator": "error",
 			"unicorn/no-for-loop": "error",
 			"unicorn/no-hex-escape": "error",
+			"unicorn/no-keyword-prefix": "off",
+			"no-nested-ternary": "off",
+			"unicorn/no-nested-ternary": "error",
 			"unicorn/no-new-buffer": "error",
+			"unicorn/no-null": "error",
 			"unicorn/no-process-exit": "error",
 			"unicorn/no-unreadable-array-destructuring": "error",
 			"unicorn/no-unsafe-regex": "off",
@@ -116,23 +128,32 @@
 			"unicorn/no-zero-fractions": "error",
 			"unicorn/number-literal-case": "error",
 			"unicorn/prefer-add-event-listener": "error",
+			"unicorn/prefer-dataset": "error",
 			"unicorn/prefer-event-key": "error",
-			"unicorn/prefer-exponentiation-operator": "error",
 			"unicorn/prefer-flat-map": "error",
 			"unicorn/prefer-includes": "error",
+			"unicorn/prefer-modern-dom-apis": "error",
+			"unicorn/prefer-negative-index": "error",
 			"unicorn/prefer-node-append": "error",
 			"unicorn/prefer-node-remove": "error",
+			"unicorn/prefer-number-properties": "error",
 			"unicorn/prefer-query-selector": "error",
+			"unicorn/prefer-reflect-apply": "error",
+			"unicorn/prefer-replace-all": "off",
+			"unicorn/prefer-set-has": "error",
 			"unicorn/prefer-spread": "error",
 			"unicorn/prefer-starts-ends-with": "error",
+			"unicorn/prefer-string-slice": "error",
 			"unicorn/prefer-text-content": "error",
+			"unicorn/prefer-trim-start-end": "error",
 			"unicorn/prefer-type-error": "error",
 			"unicorn/prevent-abbreviations": "error",
-			"unicorn/regex-shorthand": "error",
+			"unicorn/string-content": "off",
 			"unicorn/throw-new-error": "error"
 		}
 	},
 	{
+		"type": "config",
 		"name": ".eslintrc.js » plugin:evelyn/default",
 		"filePath": "CLEANED",
 		"criteria": null,
@@ -140,7 +161,7 @@
 			"es6": true
 		},
 		"parserOptions": {
-			"ecmaVersion": 2019,
+			"ecmaVersion": 2020,
 			"sourceType": "module"
 		},
 		"plugins": {
@@ -159,6 +180,7 @@
 				{
 					"SwitchCase": 1,
 					"flatTernaryExpressions": false,
+					"offsetTernaryExpressions": false,
 					"ignoreComments": false
 				}
 			],
@@ -218,12 +240,16 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": ".eslintrc.js » plugin:evelyn/node » plugin:node/recommended",
 		"filePath": "CLEANED",
 		"criteria": null,
 		"globals": {
 			"ArrayBuffer": "readonly",
 			"Atomics": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
 			"DataView": "readonly",
 			"Float32Array": "readonly",
 			"Float64Array": "readonly",
@@ -243,9 +269,6 @@
 			"Uint8ClampedArray": "readonly",
 			"WeakMap": "readonly",
 			"WeakSet": "readonly",
-			"BigInt": "readonly",
-			"BigInt64Array": "readonly",
-			"BigUint64Array": "readonly",
 			"globalThis": "readonly",
 			"Intl": "readonly",
 			"TextDecoder": "readonly",
@@ -268,7 +291,7 @@
 			"setImmediate": "readonly",
 			"__dirname": "readonly",
 			"__filename": "readonly",
-			"exports": "readonly",
+			"exports": "writable",
 			"module": "readonly",
 			"require": "readonly"
 		},
@@ -291,9 +314,13 @@
 		"rules": {
 			"no-process-exit": "error",
 			"node/no-deprecated-api": "error",
+			"node/no-extraneous-import": "error",
 			"node/no-extraneous-require": "error",
+			"node/no-exports-assign": "error",
+			"node/no-missing-import": "error",
 			"node/no-missing-require": "error",
 			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-import": "error",
 			"node/no-unpublished-require": "error",
 			"node/no-unsupported-features/es-builtins": "error",
 			"node/no-unsupported-features/es-syntax": [
@@ -304,13 +331,11 @@
 			],
 			"node/no-unsupported-features/node-builtins": "error",
 			"node/process-exit-as-throw": "error",
-			"node/shebang": "error",
-			"node/no-extraneous-import": "off",
-			"node/no-missing-import": "off",
-			"node/no-unpublished-import": "off"
+			"node/shebang": "error"
 		}
 	},
 	{
+		"type": "config",
 		"name": ".eslintrc.js » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -324,6 +349,9 @@
 		"globals": {
 			"ArrayBuffer": "readonly",
 			"Atomics": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
 			"DataView": "readonly",
 			"Float32Array": "readonly",
 			"Float64Array": "readonly",
@@ -343,9 +371,6 @@
 			"Uint8ClampedArray": "readonly",
 			"WeakMap": "readonly",
 			"WeakSet": "readonly",
-			"BigInt": "readonly",
-			"BigInt64Array": "readonly",
-			"BigUint64Array": "readonly",
 			"globalThis": "readonly",
 			"Intl": "readonly",
 			"TextDecoder": "readonly",
@@ -368,7 +393,7 @@
 			"setImmediate": "readonly",
 			"__dirname": "readonly",
 			"__filename": "readonly",
-			"exports": "readonly",
+			"exports": "writable",
 			"module": "readonly",
 			"require": "readonly"
 		},
@@ -391,9 +416,13 @@
 		"rules": {
 			"no-process-exit": "error",
 			"node/no-deprecated-api": "error",
+			"node/no-extraneous-import": "error",
 			"node/no-extraneous-require": "error",
+			"node/no-exports-assign": "error",
+			"node/no-missing-import": "error",
 			"node/no-missing-require": "error",
 			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-import": "error",
 			"node/no-unpublished-require": "error",
 			"node/no-unsupported-features/es-builtins": "error",
 			"node/no-unsupported-features/es-syntax": [
@@ -404,13 +433,11 @@
 			],
 			"node/no-unsupported-features/node-builtins": "error",
 			"node/process-exit-as-throw": "error",
-			"node/shebang": "error",
-			"node/no-extraneous-import": "off",
-			"node/no-missing-import": "off",
-			"node/no-unpublished-import": "off"
+			"node/shebang": "error"
 		}
 	},
 	{
+		"type": "config",
 		"name": ".eslintrc.js » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -424,6 +451,9 @@
 		"globals": {
 			"ArrayBuffer": "readonly",
 			"Atomics": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
 			"DataView": "readonly",
 			"Float32Array": "readonly",
 			"Float64Array": "readonly",
@@ -443,9 +473,6 @@
 			"Uint8ClampedArray": "readonly",
 			"WeakMap": "readonly",
 			"WeakSet": "readonly",
-			"BigInt": "readonly",
-			"BigInt64Array": "readonly",
-			"BigUint64Array": "readonly",
 			"globalThis": "readonly",
 			"Intl": "readonly",
 			"TextDecoder": "readonly",
@@ -491,9 +518,13 @@
 		"rules": {
 			"no-process-exit": "error",
 			"node/no-deprecated-api": "error",
+			"node/no-extraneous-import": "error",
 			"node/no-extraneous-require": "error",
+			"node/no-exports-assign": "error",
+			"node/no-missing-import": "error",
 			"node/no-missing-require": "error",
 			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-import": "error",
 			"node/no-unpublished-require": "error",
 			"node/no-unsupported-features/es-builtins": "error",
 			"node/no-unsupported-features/es-syntax": [
@@ -506,13 +537,11 @@
 			],
 			"node/no-unsupported-features/node-builtins": "error",
 			"node/process-exit-as-throw": "error",
-			"node/shebang": "error",
-			"node/no-extraneous-import": "error",
-			"node/no-missing-import": "error",
-			"node/no-unpublished-import": "error"
+			"node/shebang": "error"
 		}
 	},
 	{
+		"type": "config",
 		"name": ".eslintrc.js » plugin:evelyn/node",
 		"filePath": "CLEANED",
 		"criteria": null,
@@ -521,7 +550,7 @@
 			"node": true
 		},
 		"parserOptions": {
-			"ecmaVersion": 2019,
+			"ecmaVersion": 2020,
 			"sourceType": "module"
 		},
 		"plugins": {
@@ -538,6 +567,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": ".eslintrc.js",
 		"filePath": "CLEANED",
 		"criteria": null,
@@ -552,6 +582,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config",
 		"filePath": "CLEANED",
 		"criteria": null,
@@ -566,6 +597,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[0] » plugin:evelyn/babel",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -584,6 +616,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -595,6 +628,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[1] » plugin:evelyn/browser",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -611,6 +645,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[1]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -622,6 +657,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[2] » plugin:evelyn/built",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -653,6 +689,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[2]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -664,6 +701,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[3] » plugin:evelyn/default » eslint:recommended",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -689,6 +727,7 @@
 			"no-delete-var": "error",
 			"no-dupe-args": "error",
 			"no-dupe-class-members": "error",
+			"no-dupe-else-if": "error",
 			"no-dupe-keys": "error",
 			"no-duplicate-case": "error",
 			"no-empty": "error",
@@ -700,6 +739,7 @@
 			"no-fallthrough": "error",
 			"no-func-assign": "error",
 			"no-global-assign": "error",
+			"no-import-assign": "error",
 			"no-inner-declarations": "error",
 			"no-invalid-regexp": "error",
 			"no-irregular-whitespace": "error",
@@ -712,6 +752,7 @@
 			"no-redeclare": "error",
 			"no-regex-spaces": "error",
 			"no-self-assign": "error",
+			"no-setter-return": "error",
 			"no-shadow-restricted-names": "error",
 			"no-sparse-arrays": "error",
 			"no-this-before-super": "error",
@@ -731,6 +772,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[3] » plugin:evelyn/default » plugin:unicorn/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -744,7 +786,7 @@
 			"es6": true
 		},
 		"parserOptions": {
-			"ecmaVersion": 2019,
+			"ecmaVersion": 2020,
 			"sourceType": "module"
 		},
 		"plugins": {
@@ -757,10 +799,13 @@
 			}
 		},
 		"rules": {
+			"unicorn/better-regex": "error",
 			"unicorn/catch-error-name": "error",
+			"unicorn/consistent-function-scoping": "error",
 			"unicorn/custom-error-definition": "off",
 			"unicorn/error-message": "error",
 			"unicorn/escape-case": "error",
+			"unicorn/expiring-todo-comments": "error",
 			"unicorn/explicit-length-check": "error",
 			"unicorn/filename-case": "error",
 			"unicorn/import-index": "error",
@@ -768,10 +813,14 @@
 			"unicorn/no-abusive-eslint-disable": "error",
 			"unicorn/no-array-instanceof": "error",
 			"unicorn/no-console-spaces": "error",
-			"unicorn/no-fn-reference-in-iterator": "off",
+			"unicorn/no-fn-reference-in-iterator": "error",
 			"unicorn/no-for-loop": "error",
 			"unicorn/no-hex-escape": "error",
+			"unicorn/no-keyword-prefix": "off",
+			"no-nested-ternary": "off",
+			"unicorn/no-nested-ternary": "error",
 			"unicorn/no-new-buffer": "error",
+			"unicorn/no-null": "error",
 			"unicorn/no-process-exit": "error",
 			"unicorn/no-unreadable-array-destructuring": "error",
 			"unicorn/no-unsafe-regex": "off",
@@ -779,23 +828,32 @@
 			"unicorn/no-zero-fractions": "error",
 			"unicorn/number-literal-case": "error",
 			"unicorn/prefer-add-event-listener": "error",
+			"unicorn/prefer-dataset": "error",
 			"unicorn/prefer-event-key": "error",
-			"unicorn/prefer-exponentiation-operator": "error",
 			"unicorn/prefer-flat-map": "error",
 			"unicorn/prefer-includes": "error",
+			"unicorn/prefer-modern-dom-apis": "error",
+			"unicorn/prefer-negative-index": "error",
 			"unicorn/prefer-node-append": "error",
 			"unicorn/prefer-node-remove": "error",
+			"unicorn/prefer-number-properties": "error",
 			"unicorn/prefer-query-selector": "error",
+			"unicorn/prefer-reflect-apply": "error",
+			"unicorn/prefer-replace-all": "off",
+			"unicorn/prefer-set-has": "error",
 			"unicorn/prefer-spread": "error",
 			"unicorn/prefer-starts-ends-with": "error",
+			"unicorn/prefer-string-slice": "error",
 			"unicorn/prefer-text-content": "error",
+			"unicorn/prefer-trim-start-end": "error",
 			"unicorn/prefer-type-error": "error",
 			"unicorn/prevent-abbreviations": "error",
-			"unicorn/regex-shorthand": "error",
+			"unicorn/string-content": "off",
 			"unicorn/throw-new-error": "error"
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[3] » plugin:evelyn/default",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -809,7 +867,7 @@
 			"es6": true
 		},
 		"parserOptions": {
-			"ecmaVersion": 2019,
+			"ecmaVersion": 2020,
 			"sourceType": "module"
 		},
 		"plugins": {
@@ -828,6 +886,7 @@
 				{
 					"SwitchCase": 1,
 					"flatTernaryExpressions": false,
+					"offsetTernaryExpressions": false,
 					"ignoreComments": false
 				}
 			],
@@ -887,6 +946,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[3]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -898,6 +958,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[4] » plugin:evelyn/jest",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -915,6 +976,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[4]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -926,6 +988,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[5] » plugin:evelyn/jsx",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -936,7 +999,7 @@
 			"basePath": "CLEANED"
 		},
 		"parserOptions": {
-			"ecmaVersion": 2019,
+			"ecmaVersion": 2020,
 			"ecmaFeatures": {
 				"jsx": true
 			},
@@ -944,6 +1007,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[5]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -955,6 +1019,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[6] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -967,6 +1032,9 @@
 		"globals": {
 			"ArrayBuffer": "readonly",
 			"Atomics": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
 			"DataView": "readonly",
 			"Float32Array": "readonly",
 			"Float64Array": "readonly",
@@ -986,9 +1054,6 @@
 			"Uint8ClampedArray": "readonly",
 			"WeakMap": "readonly",
 			"WeakSet": "readonly",
-			"BigInt": "readonly",
-			"BigInt64Array": "readonly",
-			"BigUint64Array": "readonly",
 			"globalThis": "readonly",
 			"Intl": "readonly",
 			"TextDecoder": "readonly",
@@ -1011,7 +1076,7 @@
 			"setImmediate": "readonly",
 			"__dirname": "readonly",
 			"__filename": "readonly",
-			"exports": "readonly",
+			"exports": "writable",
 			"module": "readonly",
 			"require": "readonly"
 		},
@@ -1034,9 +1099,13 @@
 		"rules": {
 			"no-process-exit": "error",
 			"node/no-deprecated-api": "error",
+			"node/no-extraneous-import": "error",
 			"node/no-extraneous-require": "error",
+			"node/no-exports-assign": "error",
+			"node/no-missing-import": "error",
 			"node/no-missing-require": "error",
 			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-import": "error",
 			"node/no-unpublished-require": "error",
 			"node/no-unsupported-features/es-builtins": "error",
 			"node/no-unsupported-features/es-syntax": [
@@ -1047,13 +1116,11 @@
 			],
 			"node/no-unsupported-features/node-builtins": "error",
 			"node/process-exit-as-throw": "error",
-			"node/shebang": "error",
-			"node/no-extraneous-import": "off",
-			"node/no-missing-import": "off",
-			"node/no-unpublished-import": "off"
+			"node/shebang": "error"
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[6] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1077,6 +1144,9 @@
 		"globals": {
 			"ArrayBuffer": "readonly",
 			"Atomics": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
 			"DataView": "readonly",
 			"Float32Array": "readonly",
 			"Float64Array": "readonly",
@@ -1096,9 +1166,6 @@
 			"Uint8ClampedArray": "readonly",
 			"WeakMap": "readonly",
 			"WeakSet": "readonly",
-			"BigInt": "readonly",
-			"BigInt64Array": "readonly",
-			"BigUint64Array": "readonly",
 			"globalThis": "readonly",
 			"Intl": "readonly",
 			"TextDecoder": "readonly",
@@ -1121,7 +1188,7 @@
 			"setImmediate": "readonly",
 			"__dirname": "readonly",
 			"__filename": "readonly",
-			"exports": "readonly",
+			"exports": "writable",
 			"module": "readonly",
 			"require": "readonly"
 		},
@@ -1144,9 +1211,13 @@
 		"rules": {
 			"no-process-exit": "error",
 			"node/no-deprecated-api": "error",
+			"node/no-extraneous-import": "error",
 			"node/no-extraneous-require": "error",
+			"node/no-exports-assign": "error",
+			"node/no-missing-import": "error",
 			"node/no-missing-require": "error",
 			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-import": "error",
 			"node/no-unpublished-require": "error",
 			"node/no-unsupported-features/es-builtins": "error",
 			"node/no-unsupported-features/es-syntax": [
@@ -1157,13 +1228,11 @@
 			],
 			"node/no-unsupported-features/node-builtins": "error",
 			"node/process-exit-as-throw": "error",
-			"node/shebang": "error",
-			"node/no-extraneous-import": "off",
-			"node/no-missing-import": "off",
-			"node/no-unpublished-import": "off"
+			"node/shebang": "error"
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[6] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1187,6 +1256,9 @@
 		"globals": {
 			"ArrayBuffer": "readonly",
 			"Atomics": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
 			"DataView": "readonly",
 			"Float32Array": "readonly",
 			"Float64Array": "readonly",
@@ -1206,9 +1278,6 @@
 			"Uint8ClampedArray": "readonly",
 			"WeakMap": "readonly",
 			"WeakSet": "readonly",
-			"BigInt": "readonly",
-			"BigInt64Array": "readonly",
-			"BigUint64Array": "readonly",
 			"globalThis": "readonly",
 			"Intl": "readonly",
 			"TextDecoder": "readonly",
@@ -1254,9 +1323,13 @@
 		"rules": {
 			"no-process-exit": "error",
 			"node/no-deprecated-api": "error",
+			"node/no-extraneous-import": "error",
 			"node/no-extraneous-require": "error",
+			"node/no-exports-assign": "error",
+			"node/no-missing-import": "error",
 			"node/no-missing-require": "error",
 			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-import": "error",
 			"node/no-unpublished-require": "error",
 			"node/no-unsupported-features/es-builtins": "error",
 			"node/no-unsupported-features/es-syntax": [
@@ -1269,13 +1342,11 @@
 			],
 			"node/no-unsupported-features/node-builtins": "error",
 			"node/process-exit-as-throw": "error",
-			"node/shebang": "error",
-			"node/no-extraneous-import": "error",
-			"node/no-missing-import": "error",
-			"node/no-unpublished-import": "error"
+			"node/shebang": "error"
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[6] » plugin:evelyn/mocha » plugin:evelyn/node",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1290,7 +1361,7 @@
 			"node": true
 		},
 		"parserOptions": {
-			"ecmaVersion": 2019,
+			"ecmaVersion": 2020,
 			"sourceType": "module"
 		},
 		"plugins": {
@@ -1307,6 +1378,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[6] » plugin:evelyn/mocha",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1353,6 +1425,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[6]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1364,6 +1437,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[7] » plugin:evelyn/node » plugin:node/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1376,6 +1450,9 @@
 		"globals": {
 			"ArrayBuffer": "readonly",
 			"Atomics": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
 			"DataView": "readonly",
 			"Float32Array": "readonly",
 			"Float64Array": "readonly",
@@ -1395,9 +1472,6 @@
 			"Uint8ClampedArray": "readonly",
 			"WeakMap": "readonly",
 			"WeakSet": "readonly",
-			"BigInt": "readonly",
-			"BigInt64Array": "readonly",
-			"BigUint64Array": "readonly",
 			"globalThis": "readonly",
 			"Intl": "readonly",
 			"TextDecoder": "readonly",
@@ -1420,7 +1494,7 @@
 			"setImmediate": "readonly",
 			"__dirname": "readonly",
 			"__filename": "readonly",
-			"exports": "readonly",
+			"exports": "writable",
 			"module": "readonly",
 			"require": "readonly"
 		},
@@ -1443,9 +1517,13 @@
 		"rules": {
 			"no-process-exit": "error",
 			"node/no-deprecated-api": "error",
+			"node/no-extraneous-import": "error",
 			"node/no-extraneous-require": "error",
+			"node/no-exports-assign": "error",
+			"node/no-missing-import": "error",
 			"node/no-missing-require": "error",
 			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-import": "error",
 			"node/no-unpublished-require": "error",
 			"node/no-unsupported-features/es-builtins": "error",
 			"node/no-unsupported-features/es-syntax": [
@@ -1456,13 +1534,11 @@
 			],
 			"node/no-unsupported-features/node-builtins": "error",
 			"node/process-exit-as-throw": "error",
-			"node/shebang": "error",
-			"node/no-extraneous-import": "off",
-			"node/no-missing-import": "off",
-			"node/no-unpublished-import": "off"
+			"node/shebang": "error"
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[7] » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1486,6 +1562,9 @@
 		"globals": {
 			"ArrayBuffer": "readonly",
 			"Atomics": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
 			"DataView": "readonly",
 			"Float32Array": "readonly",
 			"Float64Array": "readonly",
@@ -1505,9 +1584,6 @@
 			"Uint8ClampedArray": "readonly",
 			"WeakMap": "readonly",
 			"WeakSet": "readonly",
-			"BigInt": "readonly",
-			"BigInt64Array": "readonly",
-			"BigUint64Array": "readonly",
 			"globalThis": "readonly",
 			"Intl": "readonly",
 			"TextDecoder": "readonly",
@@ -1530,7 +1606,7 @@
 			"setImmediate": "readonly",
 			"__dirname": "readonly",
 			"__filename": "readonly",
-			"exports": "readonly",
+			"exports": "writable",
 			"module": "readonly",
 			"require": "readonly"
 		},
@@ -1553,9 +1629,13 @@
 		"rules": {
 			"no-process-exit": "error",
 			"node/no-deprecated-api": "error",
+			"node/no-extraneous-import": "error",
 			"node/no-extraneous-require": "error",
+			"node/no-exports-assign": "error",
+			"node/no-missing-import": "error",
 			"node/no-missing-require": "error",
 			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-import": "error",
 			"node/no-unpublished-require": "error",
 			"node/no-unsupported-features/es-builtins": "error",
 			"node/no-unsupported-features/es-syntax": [
@@ -1566,13 +1646,11 @@
 			],
 			"node/no-unsupported-features/node-builtins": "error",
 			"node/process-exit-as-throw": "error",
-			"node/shebang": "error",
-			"node/no-extraneous-import": "off",
-			"node/no-missing-import": "off",
-			"node/no-unpublished-import": "off"
+			"node/shebang": "error"
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[7] » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1596,6 +1674,9 @@
 		"globals": {
 			"ArrayBuffer": "readonly",
 			"Atomics": "readonly",
+			"BigInt": "readonly",
+			"BigInt64Array": "readonly",
+			"BigUint64Array": "readonly",
 			"DataView": "readonly",
 			"Float32Array": "readonly",
 			"Float64Array": "readonly",
@@ -1615,9 +1696,6 @@
 			"Uint8ClampedArray": "readonly",
 			"WeakMap": "readonly",
 			"WeakSet": "readonly",
-			"BigInt": "readonly",
-			"BigInt64Array": "readonly",
-			"BigUint64Array": "readonly",
 			"globalThis": "readonly",
 			"Intl": "readonly",
 			"TextDecoder": "readonly",
@@ -1663,9 +1741,13 @@
 		"rules": {
 			"no-process-exit": "error",
 			"node/no-deprecated-api": "error",
+			"node/no-extraneous-import": "error",
 			"node/no-extraneous-require": "error",
+			"node/no-exports-assign": "error",
+			"node/no-missing-import": "error",
 			"node/no-missing-require": "error",
 			"node/no-unpublished-bin": "error",
+			"node/no-unpublished-import": "error",
 			"node/no-unpublished-require": "error",
 			"node/no-unsupported-features/es-builtins": "error",
 			"node/no-unsupported-features/es-syntax": [
@@ -1678,13 +1760,11 @@
 			],
 			"node/no-unsupported-features/node-builtins": "error",
 			"node/process-exit-as-throw": "error",
-			"node/shebang": "error",
-			"node/no-extraneous-import": "error",
-			"node/no-missing-import": "error",
-			"node/no-unpublished-import": "error"
+			"node/shebang": "error"
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[7] » plugin:evelyn/node",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1699,7 +1779,7 @@
 			"node": true
 		},
 		"parserOptions": {
-			"ecmaVersion": 2019,
+			"ecmaVersion": 2020,
 			"sourceType": "module"
 		},
 		"plugins": {
@@ -1716,6 +1796,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[7]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1727,6 +1808,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[8] » plugin:evelyn/react » plugin:evelyn/browser",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1743,6 +1825,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[8] » plugin:evelyn/react » plugin:evelyn/jsx",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1753,7 +1836,7 @@
 			"basePath": "CLEANED"
 		},
 		"parserOptions": {
-			"ecmaVersion": 2019,
+			"ecmaVersion": 2020,
 			"ecmaFeatures": {
 				"jsx": true
 			},
@@ -1761,6 +1844,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[8] » plugin:evelyn/react » plugin:react/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1810,6 +1894,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[8] » plugin:evelyn/react",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1847,6 +1932,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[8]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1858,6 +1944,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[9] » plugin:evelyn/source",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1882,6 +1969,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[9]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1893,6 +1981,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[10] » plugin:evelyn/typescript",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1967,6 +2056,7 @@
 		}
 	},
 	{
+		"type": "config",
 		"name": "--config#overrides[10]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1978,6 +2068,7 @@
 		}
 	},
 	{
+		"type": "ignore",
 		"name": ".eslintignore",
 		"filePath": "CLEANED",
 		"criteria": null,
