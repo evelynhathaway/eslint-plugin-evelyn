@@ -571,6 +571,14 @@
 		"name": ".eslintrc.js",
 		"filePath": "CLEANED",
 		"criteria": null,
+		"ignorePattern": {
+			"patterns": [
+				"lib/rules/fixes/*",
+				"test/rules/fixes/*"
+			],
+			"basePath": "CLEANED",
+			"loose": false
+		},
 		"plugins": {
 			"evelyn": {
 				"error": null,
@@ -2065,20 +2073,6 @@
 			],
 			"excludes": null,
 			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "ignore",
-		"name": ".eslintignore",
-		"filePath": "CLEANED",
-		"criteria": null,
-		"ignorePattern": {
-			"patterns": [
-				"lib/rules/fixes/*",
-				"test/rules/fixes/*"
-			],
-			"basePath": "CLEANED",
-			"loose": true
 		}
 	}
 ]

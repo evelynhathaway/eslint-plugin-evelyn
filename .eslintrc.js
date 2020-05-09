@@ -6,4 +6,8 @@ module.exports = {
 		"plugin:evelyn/default",
 		"plugin:evelyn/node",
 	],
+	"ignorePatterns": [
+		"lib/rules/fixes/*",
+		"test/rules/fixes/*",
+	],
 };
