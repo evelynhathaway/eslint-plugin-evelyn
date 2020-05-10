@@ -87,44 +87,6 @@ Requires eslint `>=6.0.0`.
 };
 ```
 
-<details>
-    <summary>The previous method of extending while overriding</summary>
-
-### Configs applied to a specific path (pre v1.0.0)
-
-Before eslint `v6.0.0`, [a helper function](./lib/extend.js) was required to extend configs when not at the top level of the config. This also requires using `.eslintrc.js` to use `import`/`require`.
-
-The helper module may be deprecated in a future minor version and removed in the major version thereafter, so using it is no longer recommended.
-
-`.eslintrc.js`
-
-```js
-const extend = require("eslint-plugin-evelyn/lib/extend");
-
-module.exports = {
-    "plugins": [
-        "evelyn"
-    ],
-    "extends": [
-        "plugin:evelyn/default"
-    ],
-    "overrides": [
-        // All src files use node and source configs
-        extend(
-            "node",
-            "source",
-            {
-                "files": [
-                    "src/**/*.js",
-                ]
-            }
-        )
-    ]
-};
-```
-
-</details>
-
 ## Testing
 
 Any Mocha-compatible tests can be added.
