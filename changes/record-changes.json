@@ -2892,17 +2892,7 @@
 				"importerPath": "CLEANED"
 			},
 			"flowtype": {
-				"error": {
-					"code": "MODULE_NOT_FOUND",
-					"requireStack": "CLEANED",
-					"messageTemplate": "plugin-missing",
-					"messageData": {
-						"pluginName": "eslint-plugin-flowtype",
-						"resolvePluginsRelativeTo": "C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\changes",
-						"importerName": "--config#overrides[11] » plugin:evelyn/react » eslint-config-react-app"
-					},
-					"message": "CLEANED"
-				},
+				"error": null,
 				"filePath": "CLEANED",
 				"id": "flowtype",
 				"importerName": "--config#overrides[11] » plugin:evelyn/react » eslint-config-react-app",
