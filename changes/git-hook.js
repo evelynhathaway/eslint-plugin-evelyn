@@ -13,22 +13,40 @@ const execAwaitable = function (command) {
 const log = (message) => console.log("record-changes:", message);
 
 (async () => {
-	try {
-		log("Stashing any unstaged changes.");
-		const stash = await execAwaitable("git stash push -k -u -m \"Auto stash from record-changes hook\"");
-		const didStash = /Saved working directory and index state/.test(stash);
+	let didStash;
 
+	try {
+		log("Stashing any unstaged changes...");
+		const stash = await execAwaitable("git stash push -k -u -m \"Auto stash from record-changes hook\"");
+		didStash = /Saved working directory and index state/.test(stash);
+		if (!didStash) {
+			log("No stash created, there were unstaged no changes.");
+		}
+
+		log("Linking myself into node_modules for ESLint...");
+		await execAwaitable("npm run link");
+
+		log("Recording changes to the computed config in this commit...");
 		await execAwaitable("npm run record-changes");
+
+		log("Adding recorded changes to this commit...");
 		await execAwaitable("git add ./changes/record-changes.json");
-		log("Recorded changes to the computed config.");
 
 		if (didStash) {
+			log("Popping the auto-created stash...");
 			await execAwaitable("git stash pop");
-			log("Popping the auto-created stash.");
 		}
+
+		log("Completed! Thanks for being patient. <3");
 	} catch (error) {
 		// eslint-disable-next-line no-console
 		console.error(error);
+
+		if (didStash) {
+			log("An error occured. Popping the auto-created stash...");
+			await execAwaitable("git stash pop");
+		}
+
 		// eslint-disable-next-line no-process-exit, unicorn/no-process-exit
 		process.exit(1);
 	}
