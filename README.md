@@ -7,7 +7,7 @@
 **ESLint plugin for my projects with my preferred code style and bugfixes**
 
 [![npm version](https://badgen.net/npm/v/eslint-plugin-evelyn?icon=npm)](https://www.npmjs.com/package/eslint-plugin-evelyn)
-[![build status](https://badgen.net/travis/evelynhathaway/eslint-plugin-evelyn/master?icon=travis)](https://travis-ci.com/evelynhathaway/eslint-plugin-evelyn)
+[![check status](https://badgen.net/github/checks/evelynhathaway/eslint-plugin-evelyn/master?icon=github)](https://github.com/evelynhathaway/eslint-plugin-evelyn/actions)
 [![rules: 1](https://badgen.net/badge/rules/1/blue)](#rules)
 [![configs: 15](https://badgen.net/badge/configs/15/blue)](#configs)
 [![license: MIT](https://badgen.net/badge/license/MIT/blue)](/LICENSE)
