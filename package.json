@@ -30,7 +30,9 @@
   "scripts": {
     "link": "npm link && npm link eslint-plugin-evelyn",
     "lint": "eslint ./",
-    "record-changes": "eslint -c ./record-changes.eslintrc.js ./record-changes.eslintrc.js && git add ./record-changes.json",
+    "pre-commit:lint-staged": "lint-staged",
+    "pre-commit:record-changes": "node ./changes/git-hook.js",
+    "record-changes": "eslint -c ./changes/record-changes.eslintrc.js ./changes/record-changes.eslintrc.js",
     "test": "run-s test:*",
     "test:configs": "mocha test/configs --recursive",
     "test:final-config-array": "eslint -c ./test/final-config-array.eslintrc.js ./test/final-config-array.eslintrc.js",
@@ -38,8 +40,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run record-changes"
+      "pre-commit": "run-s pre-commit:*"
     }
+  },
+  "lint-staged": {
+    "**/package.json": "sort-package-json"
   },
   "dependencies": {
     "lodash": "^4.17.15"
@@ -56,9 +61,10 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-unicorn": "^19.0.1",
     "husky": "^4.2.5",
-    "typescript": "^3.8.3",
+    "lint-staged": "^10.2.2",
     "mocha": "^7.1.2",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "typescript": "^3.8.3"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.31.0",
