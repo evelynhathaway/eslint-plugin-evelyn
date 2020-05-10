@@ -154,6 +154,48 @@
 	},
 	{
 		"type": "config",
+		"name": ".eslintrc.js » plugin:evelyn/default » plugin:import/errors",
+		"filePath": "CLEANED",
+		"criteria": null,
+		"plugins": {
+			"import": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "import",
+				"importerName": ".eslintrc.js » plugin:evelyn/default » plugin:import/errors",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"import/no-unresolved": 2,
+			"import/named": 2,
+			"import/namespace": 2,
+			"import/default": 2,
+			"import/export": 2
+		}
+	},
+	{
+		"type": "config",
+		"name": ".eslintrc.js » plugin:evelyn/default » plugin:import/warnings",
+		"filePath": "CLEANED",
+		"criteria": null,
+		"plugins": {
+			"import": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "import",
+				"importerName": ".eslintrc.js » plugin:evelyn/default » plugin:import/warnings",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"import/no-named-as-default": 1,
+			"import/no-named-as-default-member": 1,
+			"import/no-duplicates": 1
+		}
+	},
+	{
+		"type": "config",
 		"name": ".eslintrc.js » plugin:evelyn/default",
 		"filePath": "CLEANED",
 		"criteria": null,
@@ -938,6 +980,60 @@
 			"unicorn/prevent-abbreviations": "error",
 			"unicorn/string-content": "off",
 			"unicorn/throw-new-error": "error"
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[3] » plugin:evelyn/default » plugin:import/errors",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"default"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"plugins": {
+			"import": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "import",
+				"importerName": "--config#overrides[3] » plugin:evelyn/default » plugin:import/errors",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"import/no-unresolved": 2,
+			"import/named": 2,
+			"import/namespace": 2,
+			"import/default": 2,
+			"import/export": 2
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[3] » plugin:evelyn/default » plugin:import/warnings",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"default"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"plugins": {
+			"import": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "import",
+				"importerName": "--config#overrides[3] » plugin:evelyn/default » plugin:import/warnings",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"import/no-named-as-default": 1,
+			"import/no-named-as-default-member": 1,
+			"import/no-duplicates": 1
 		}
 	},
 	{
@@ -2360,6 +2456,49 @@
 			],
 			"excludes": null,
 			"basePath": "CLEANED"
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[13] » plugin:evelyn/typescript » plugin:import/typescript",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"typescript"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"settings": {
+			"import/extensions": [
+				".ts",
+				".tsx",
+				".d.ts",
+				".js",
+				".jsx"
+			],
+			"import/external-module-folders": [
+				"node_modules",
+				"node_modules/@types"
+			],
+			"import/parsers": {
+				"@typescript-eslint/parser": [
+					".ts",
+					".tsx",
+					".d.ts"
+				]
+			},
+			"import/resolver": {
+				"node": {
+					"extensions": [
+						".ts",
+						".tsx",
+						".d.ts",
+						".js",
+						".jsx"
+					]
+				}
+			}
 		}
 	},
 	{
