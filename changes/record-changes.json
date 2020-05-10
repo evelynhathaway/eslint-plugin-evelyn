@@ -3350,13 +3350,6 @@
 				"id": "react",
 				"importerName": "--config#overrides[11] » plugin:evelyn/react",
 				"importerPath": "CLEANED"
-			},
-			"unicorn": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "unicorn",
-				"importerName": "--config#overrides[11] » plugin:evelyn/react",
-				"importerPath": "CLEANED"
 			}
 		},
 		"settings": {
