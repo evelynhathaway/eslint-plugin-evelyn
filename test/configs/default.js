@@ -1,3 +1,5 @@
+require("../../lib/util/link");
+
 const config = require("../../lib/configs/default.js");
 const configTester = require("eslint-config-rule-tester");
 

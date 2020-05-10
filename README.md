@@ -7,9 +7,9 @@
 **ESLint plugin for my projects with my preferred code style and bugfixes**
 
 [![npm version](https://badgen.net/npm/v/eslint-plugin-evelyn?icon=npm)](https://www.npmjs.com/package/eslint-plugin-evelyn)
-[![build status](https://badgen.net/travis/evelynhathaway/eslint-plugin-evelyn/master?icon=travis)](https://travis-ci.com/evelynhathaway/eslint-plugin-evelyn)
+[![check status](https://badgen.net/github/checks/evelynhathaway/eslint-plugin-evelyn/master?icon=github)](https://github.com/evelynhathaway/eslint-plugin-evelyn/actions)
 [![rules: 1](https://badgen.net/badge/rules/1/blue)](#rules)
-[![configs: 11](https://badgen.net/badge/configs/11/blue)](#configs)
+[![configs: 15](https://badgen.net/badge/configs/15/blue)](#configs)
 [![license: MIT](https://badgen.net/badge/license/MIT/blue)](/LICENSE)
 
 </div>
@@ -23,8 +23,13 @@ My code style is very opinionated, so I only use this package on my projects. Ho
 ## Installation
 
 ```bash
-# Save ESLint, Unicorn, and this plugin to devDependencies
-npm i -D eslint eslint-plugin-unicorn eslint-plugin-evelyn
+# Save ESLint, Import, Unicorn, and this plugin to devDependencies
+npm i -D eslint eslint-plugin-import eslint-plugin-unicorn eslint-plugin-evelyn
+
+# OR
+
+# Save all this plugin and ALL peerDependencies to devDependencies
+npx install-peerdeps -D eslint-config-evelyn
 ```
 
 ### Peer dependencies
@@ -87,44 +92,6 @@ Requires eslint `>=6.0.0`.
 };
 ```
 
-<details>
-    <summary>The previous method of extending while overriding</summary>
-
-### Configs applied to a specific path (pre v1.0.0)
-
-Before eslint `v6.0.0`, [a helper function](./lib/extend.js) was required to extend configs when not at the top level of the config. This also requires using `.eslintrc.js` to use `import`/`require`.
-
-The helper module may be deprecated in a future minor version and removed in the major version thereafter, so using it is no longer recommended.
-
-`.eslintrc.js`
-
-```js
-const extend = require("eslint-plugin-evelyn/lib/extend");
-
-module.exports = {
-    "plugins": [
-        "evelyn"
-    ],
-    "extends": [
-        "plugin:evelyn/default"
-    ],
-    "overrides": [
-        // All src files use node and source configs
-        extend(
-            "node",
-            "source",
-            {
-                "files": [
-                    "src/**/*.js",
-                ]
-            }
-        )
-    ]
-};
-```
-
-</details>
-
 ## Testing
 
 Any Mocha-compatible tests can be added.
@@ -133,6 +100,7 @@ Any Mocha-compatible tests can be added.
 # Install dependencies
 npm install
 # Symlink itself into node_modules for ESLint
+# As of eslint-plugin-evelyn v3.0.0, this is done fully automatically
 npm run link
 
 # Run all tests!
@@ -161,6 +129,7 @@ This plugin uses itself to lint so we must make sure the working copy of `eslint
 # Install dependencies
 npm install
 # Symlink itself into node_modules for ESLint
+# As of eslint-plugin-evelyn v3.0.0, this is done fully automatically
 npm run link
 
 # Run lint!
@@ -180,7 +149,7 @@ Run the default export from the `save-config.js` file from inside the config fil
 `.eslintrc.js`
 
 ```js
-require("eslint-plugin-evelyn/lib/save-config")();
+require("eslint-plugin-evelyn/lib/util/save-config")();
 
 
 // The rest of your config file
@@ -197,7 +166,7 @@ eslint:cascading-config-array-factory Configuration was determined: ConfigArray 
 
 ## Recording Changes to the Final Config Array
 
-[record-changes.eslintrc.js](./record-changes.eslintrc.js) saves the final config array to [record-changes.json](./record-changes.json) with paths removed.
+[record-changes.eslintrc.js](./changes/record-changes.eslintrc.js) saves the final config array to [record-changes.json](./changes/record-changes.json) with paths removed.
 
 The script is used to track the changes to the final array over time using the pre-commit git hook. This is helpful in reviewing pull requests.
 
@@ -207,19 +176,23 @@ The script is used to track the changes to the final array over time using the p
 
 See the `peerDependencies` in [package.json](./package.json) for recommended dependency version ranges.
 
-| Name                                      | Description                          | Peer Dependencies                                                       |
-| ----------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------- |
-| [babel](./lib/configs/babel.js)           | For files transpiled by Babel        | babel-eslint                                                            |
-| [browser](./lib/configs/browser.js)       | For the browser env                  |                                                                         |
-| [built](./lib/configs/built.js)           | Built files from Babel or TypeScript | eslint-plugin-node                                                      |
-| [default](./lib/configs/default.js)       | My style and lint rules from ESLint  | eslint-plugin-unicorn                                                   |
-| [jest](./lib/configs/jest.js)             | Jest tests                           | eslint-plugin-node                                                      |
-| [jsx](./lib/configs/jsx.js)               | JSX features                         |                                                                         |
-| [mocha](./lib/configs/mocha.js)           | Mocha tests                          | eslint-plugin-node, eslint-plugin-mocha                                 |
-| [node](./lib/configs/node.js)             | Node.js env                          | eslint-plugin-node                                                      |
-| [react](./lib/configs/react.js)           | React, browser env, JSX              | eslint-plugin-react, eslint-plugin-unicorn                              |
-| [source](./lib/configs/source.js)         | Non-built files                      | eslint-plugin-node                                                      |
-| [typescript](./lib/configs/typescript.js) | TypeScript files                     | @typescript-eslint/eslint-plugin, @typescript-eslint/parser, typescript |
+| Name                                            | Description                                                       | Peer Dependencies                                                                                                       |
+| ----------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| [babel](./lib/configs/babel.js)                 | For files transpiled by Babel                                     | babel-eslint                                                                                                            |
+| [browser](./lib/configs/browser.js)             | For the browser env                                               |                                                                                                                         |
+| [built](./lib/configs/built.js)                 | Built files from Babel or TypeScript                              | eslint-plugin-node                                                                                                      |
+| [default](./lib/configs/default.js)             | My style and lint rules from ESLint                               | eslint-plugin-unicorn, eslint-plugin-import                                                                             |
+| [extensions](./lib/configs/extensions.js)       | Enforce ESLint linting all extensions compatible with this plugin |                                                                                                                         |
+| [jest](./lib/configs/jest.js)                   | Jest tests                                                        | eslint-plugin-node                                                                                                      |
+| [json-comments](./lib/configs/json-comments.js) | JSON files with comments                                          | eslint-plugin-json                                                                                                      |
+| [json](./lib/configs/json.js)                   | JSON files                                                        | eslint-plugin-json                                                                                                      |
+| [jsx](./lib/configs/jsx.js)                     | JSX features                                                      | eslint-plugin-jsx-a11y                                                                                                  |
+| [mocha](./lib/configs/mocha.js)                 | Mocha tests                                                       | eslint-plugin-node, eslint-plugin-mocha                                                                                 |
+| [node](./lib/configs/node.js)                   | Node.js env                                                       | eslint-plugin-node                                                                                                      |
+| [react](./lib/configs/react.js)                 | React.js, browser env, JSX                                        | eslint-plugin-react, eslint-config-react-app, eslint-plugin-jsx-a11y, eslint-plugin-react-hooks, eslint-plugin-flowtype |
+| [source](./lib/configs/source.js)               | Non-built files                                                   | eslint-plugin-node                                                                                                      |
+| [typescript](./lib/configs/typescript.js)       | TypeScript files                                                  | @typescript-eslint/eslint-plugin, @typescript-eslint/parser, typescript, eslint-plugin-import, eslint-plugin-node       |
+| [vue](./lib/configs/vue.js)                     | Vue.js files                                                      | babel-eslint, eslint-plugin-vue                                                                                         |
 
 ## Rules
 
