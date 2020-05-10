@@ -23,9 +23,6 @@ const log = (message) => console.log("record-changes:", message);
 			log("No stash created, there were unstaged no changes.");
 		}
 
-		log("Linking myself into node_modules for ESLint...");
-		await execAwaitable("npm run link");
-
 		log("Recording changes to the computed config in this commit...");
 		await execAwaitable("npm run record-changes");
 

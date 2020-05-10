@@ -95,6 +95,7 @@ Any Mocha-compatible tests can be added.
 # Install dependencies
 npm install
 # Symlink itself into node_modules for ESLint
+# As of eslint-plugin-evelyn v3.0.0, this is done fully automatically
 npm run link
 
 # Run all tests!
@@ -123,6 +124,7 @@ This plugin uses itself to lint so we must make sure the working copy of `eslint
 # Install dependencies
 npm install
 # Symlink itself into node_modules for ESLint
+# As of eslint-plugin-evelyn v3.0.0, this is done fully automatically
 npm run link
 
 # Run lint!
@@ -142,7 +144,7 @@ Run the default export from the `save-config.js` file from inside the config fil
 `.eslintrc.js`
 
 ```js
-require("eslint-plugin-evelyn/lib/save-config")();
+require("eslint-plugin-evelyn/lib/util/save-config")();
 
 
 // The rest of your config file
@@ -159,7 +161,7 @@ eslint:cascading-config-array-factory Configuration was determined: ConfigArray 
 
 ## Recording Changes to the Final Config Array
 
-[record-changes.eslintrc.js](./record-changes.eslintrc.js) saves the final config array to [record-changes.json](./record-changes.json) with paths removed.
+[record-changes.eslintrc.js](./changes/record-changes.eslintrc.js) saves the final config array to [record-changes.json](./changes/record-changes.json) with paths removed.
 
 The script is used to track the changes to the final array over time using the pre-commit git hook. This is helpful in reviewing pull requests.
 

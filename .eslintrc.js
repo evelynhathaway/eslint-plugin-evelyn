@@ -1,3 +1,5 @@
+require("./lib/util/link");
+
 module.exports = {
 	"plugins": [
 		"evelyn",

@@ -5,6 +5,5 @@ cache: npm
 install:
   - npm install
 script:
-  - npm run link
   - npm run lint
   - npm run test

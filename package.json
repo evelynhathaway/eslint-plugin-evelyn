@@ -28,7 +28,7 @@
     "/lib"
   ],
   "scripts": {
-    "link": "npm link && npm link eslint-plugin-evelyn",
+    "link": "node ./lib/util/link.js",
     "lint": "eslint ./",
     "pre-commit:lint-staged": "lint-staged",
     "pre-commit:record-changes": "node ./changes/git-hook.js",
