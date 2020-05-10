@@ -199,9 +199,6 @@
 		"name": ".eslintrc.js » plugin:evelyn/default",
 		"filePath": "CLEANED",
 		"criteria": null,
-		"env": {
-			"es6": true
-		},
 		"ignorePattern": {
 			"patterns": [
 				"!**/.*.js",
@@ -214,10 +211,6 @@
 			],
 			"basePath": "CLEANED",
 			"loose": false
-		},
-		"parserOptions": {
-			"ecmaVersion": 2020,
-			"sourceType": "module"
 		},
 		"plugins": {
 			"unicorn": {
@@ -281,6 +274,7 @@
 					"functions": "only-multiline"
 				}
 			],
+			"no-process-exit": "off",
 			"evelyn/no-fallthrough": [
 				"error",
 				{
@@ -291,7 +285,39 @@
 			"unicorn/prefer-query-selector": "off",
 			"unicorn/prevent-abbreviations": "off",
 			"unicorn/import-index": "off",
-			"unicorn/explicit-length-check": "off"
+			"unicorn/explicit-length-check": "off",
+			"unicorn/expiring-todo-comments": [
+				"error",
+				{
+					"allowWarningComments": false,
+					"ignoreDatesOnPullRequests": true
+				}
+			],
+			"unicorn/filename-case": [
+				"error",
+				{
+					"cases": {
+						"kebabCase": true,
+						"pascalCase": true
+					}
+				}
+			]
+		},
+		"settings": {
+			"import/resolver": {
+				"node": {
+					"extensions": [
+						".js",
+						".jsx",
+						".ts",
+						".tsx",
+						".vue"
+					]
+				}
+			},
+			"import/ignore": [
+				"\\.worker(\\.(j|t)s)?$"
+			]
 		}
 	},
 	{
@@ -1047,9 +1073,6 @@
 			"excludes": null,
 			"basePath": "CLEANED"
 		},
-		"env": {
-			"es6": true
-		},
 		"ignorePattern": {
 			"patterns": [
 				"!**/.*.js",
@@ -1062,10 +1085,6 @@
 			],
 			"basePath": "CLEANED",
 			"loose": false
-		},
-		"parserOptions": {
-			"ecmaVersion": 2020,
-			"sourceType": "module"
 		},
 		"plugins": {
 			"unicorn": {
@@ -1129,6 +1148,7 @@
 					"functions": "only-multiline"
 				}
 			],
+			"no-process-exit": "off",
 			"evelyn/no-fallthrough": [
 				"error",
 				{
@@ -1139,7 +1159,39 @@
 			"unicorn/prefer-query-selector": "off",
 			"unicorn/prevent-abbreviations": "off",
 			"unicorn/import-index": "off",
-			"unicorn/explicit-length-check": "off"
+			"unicorn/explicit-length-check": "off",
+			"unicorn/expiring-todo-comments": [
+				"error",
+				{
+					"allowWarningComments": false,
+					"ignoreDatesOnPullRequests": true
+				}
+			],
+			"unicorn/filename-case": [
+				"error",
+				{
+					"cases": {
+						"kebabCase": true,
+						"pascalCase": true
+					}
+				}
+			]
+		},
+		"settings": {
+			"import/resolver": {
+				"node": {
+					"extensions": [
+						".js",
+						".jsx",
+						".ts",
+						".tsx",
+						".vue"
+					]
+				}
+			},
+			"import/ignore": [
+				"\\.worker(\\.(j|t)s)?$"
+			]
 		}
 	},
 	{
@@ -1423,6 +1475,211 @@
 	},
 	{
 		"type": "config",
+		"name": "--config#overrides[8] » plugin:evelyn/jsx » plugin:jsx-a11y/recommended",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"jsx"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"parserOptions": {
+			"ecmaFeatures": {
+				"jsx": true
+			}
+		},
+		"plugins": {
+			"jsx-a11y": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "jsx-a11y",
+				"importerName": "--config#overrides[8] » plugin:evelyn/jsx » plugin:jsx-a11y/recommended",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"jsx-a11y/accessible-emoji": "error",
+			"jsx-a11y/alt-text": "error",
+			"jsx-a11y/anchor-has-content": "error",
+			"jsx-a11y/anchor-is-valid": "error",
+			"jsx-a11y/aria-activedescendant-has-tabindex": "error",
+			"jsx-a11y/aria-props": "error",
+			"jsx-a11y/aria-proptypes": "error",
+			"jsx-a11y/aria-role": "error",
+			"jsx-a11y/aria-unsupported-elements": "error",
+			"jsx-a11y/click-events-have-key-events": "error",
+			"jsx-a11y/control-has-associated-label": [
+				"off",
+				{
+					"ignoreElements": [
+						"audio",
+						"canvas",
+						"embed",
+						"input",
+						"textarea",
+						"tr",
+						"video"
+					],
+					"ignoreRoles": [
+						"grid",
+						"listbox",
+						"menu",
+						"menubar",
+						"radiogroup",
+						"row",
+						"tablist",
+						"toolbar",
+						"tree",
+						"treegrid"
+					],
+					"includeRoles": [
+						"alert",
+						"dialog"
+					]
+				}
+			],
+			"jsx-a11y/heading-has-content": "error",
+			"jsx-a11y/html-has-lang": "error",
+			"jsx-a11y/iframe-has-title": "error",
+			"jsx-a11y/img-redundant-alt": "error",
+			"jsx-a11y/interactive-supports-focus": [
+				"error",
+				{
+					"tabbable": [
+						"button",
+						"checkbox",
+						"link",
+						"searchbox",
+						"spinbutton",
+						"switch",
+						"textbox"
+					]
+				}
+			],
+			"jsx-a11y/label-has-associated-control": "error",
+			"jsx-a11y/label-has-for": "off",
+			"jsx-a11y/media-has-caption": "error",
+			"jsx-a11y/mouse-events-have-key-events": "error",
+			"jsx-a11y/no-access-key": "error",
+			"jsx-a11y/no-autofocus": "error",
+			"jsx-a11y/no-distracting-elements": "error",
+			"jsx-a11y/no-interactive-element-to-noninteractive-role": [
+				"error",
+				{
+					"tr": [
+						"none",
+						"presentation"
+					]
+				}
+			],
+			"jsx-a11y/no-noninteractive-element-interactions": [
+				"error",
+				{
+					"handlers": [
+						"onClick",
+						"onError",
+						"onLoad",
+						"onMouseDown",
+						"onMouseUp",
+						"onKeyPress",
+						"onKeyDown",
+						"onKeyUp"
+					],
+					"alert": [
+						"onKeyUp",
+						"onKeyDown",
+						"onKeyPress"
+					],
+					"body": [
+						"onError",
+						"onLoad"
+					],
+					"dialog": [
+						"onKeyUp",
+						"onKeyDown",
+						"onKeyPress"
+					],
+					"iframe": [
+						"onError",
+						"onLoad"
+					],
+					"img": [
+						"onError",
+						"onLoad"
+					]
+				}
+			],
+			"jsx-a11y/no-noninteractive-element-to-interactive-role": [
+				"error",
+				{
+					"ul": [
+						"listbox",
+						"menu",
+						"menubar",
+						"radiogroup",
+						"tablist",
+						"tree",
+						"treegrid"
+					],
+					"ol": [
+						"listbox",
+						"menu",
+						"menubar",
+						"radiogroup",
+						"tablist",
+						"tree",
+						"treegrid"
+					],
+					"li": [
+						"menuitem",
+						"option",
+						"row",
+						"tab",
+						"treeitem"
+					],
+					"table": [
+						"grid"
+					],
+					"td": [
+						"gridcell"
+					]
+				}
+			],
+			"jsx-a11y/no-noninteractive-tabindex": [
+				"error",
+				{
+					"tags": [],
+					"roles": [
+						"tabpanel"
+					],
+					"allowExpressionValues": true
+				}
+			],
+			"jsx-a11y/no-onchange": "error",
+			"jsx-a11y/no-redundant-roles": "error",
+			"jsx-a11y/no-static-element-interactions": [
+				"error",
+				{
+					"allowExpressionValues": true,
+					"handlers": [
+						"onClick",
+						"onMouseDown",
+						"onMouseUp",
+						"onKeyPress",
+						"onKeyDown",
+						"onKeyUp"
+					]
+				}
+			],
+			"jsx-a11y/role-has-required-aria-props": "error",
+			"jsx-a11y/role-supports-aria-props": "error",
+			"jsx-a11y/scope": "error",
+			"jsx-a11y/tabindex-no-positive": "error"
+		}
+	},
+	{
+		"type": "config",
 		"name": "--config#overrides[8] » plugin:evelyn/jsx",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1438,6 +1695,15 @@
 				"jsx": true
 			},
 			"sourceType": "module"
+		},
+		"plugins": {
+			"jsx-a11y": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "jsx-a11y",
+				"importerName": "--config#overrides[8] » plugin:evelyn/jsx",
+				"importerPath": "CLEANED"
+			}
 		}
 	},
 	{
@@ -2282,6 +2548,211 @@
 	},
 	{
 		"type": "config",
+		"name": "--config#overrides[11] » plugin:evelyn/react » plugin:evelyn/jsx » plugin:jsx-a11y/recommended",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"react"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"parserOptions": {
+			"ecmaFeatures": {
+				"jsx": true
+			}
+		},
+		"plugins": {
+			"jsx-a11y": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "jsx-a11y",
+				"importerName": "--config#overrides[11] » plugin:evelyn/react » plugin:evelyn/jsx » plugin:jsx-a11y/recommended",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"jsx-a11y/accessible-emoji": "error",
+			"jsx-a11y/alt-text": "error",
+			"jsx-a11y/anchor-has-content": "error",
+			"jsx-a11y/anchor-is-valid": "error",
+			"jsx-a11y/aria-activedescendant-has-tabindex": "error",
+			"jsx-a11y/aria-props": "error",
+			"jsx-a11y/aria-proptypes": "error",
+			"jsx-a11y/aria-role": "error",
+			"jsx-a11y/aria-unsupported-elements": "error",
+			"jsx-a11y/click-events-have-key-events": "error",
+			"jsx-a11y/control-has-associated-label": [
+				"off",
+				{
+					"ignoreElements": [
+						"audio",
+						"canvas",
+						"embed",
+						"input",
+						"textarea",
+						"tr",
+						"video"
+					],
+					"ignoreRoles": [
+						"grid",
+						"listbox",
+						"menu",
+						"menubar",
+						"radiogroup",
+						"row",
+						"tablist",
+						"toolbar",
+						"tree",
+						"treegrid"
+					],
+					"includeRoles": [
+						"alert",
+						"dialog"
+					]
+				}
+			],
+			"jsx-a11y/heading-has-content": "error",
+			"jsx-a11y/html-has-lang": "error",
+			"jsx-a11y/iframe-has-title": "error",
+			"jsx-a11y/img-redundant-alt": "error",
+			"jsx-a11y/interactive-supports-focus": [
+				"error",
+				{
+					"tabbable": [
+						"button",
+						"checkbox",
+						"link",
+						"searchbox",
+						"spinbutton",
+						"switch",
+						"textbox"
+					]
+				}
+			],
+			"jsx-a11y/label-has-associated-control": "error",
+			"jsx-a11y/label-has-for": "off",
+			"jsx-a11y/media-has-caption": "error",
+			"jsx-a11y/mouse-events-have-key-events": "error",
+			"jsx-a11y/no-access-key": "error",
+			"jsx-a11y/no-autofocus": "error",
+			"jsx-a11y/no-distracting-elements": "error",
+			"jsx-a11y/no-interactive-element-to-noninteractive-role": [
+				"error",
+				{
+					"tr": [
+						"none",
+						"presentation"
+					]
+				}
+			],
+			"jsx-a11y/no-noninteractive-element-interactions": [
+				"error",
+				{
+					"handlers": [
+						"onClick",
+						"onError",
+						"onLoad",
+						"onMouseDown",
+						"onMouseUp",
+						"onKeyPress",
+						"onKeyDown",
+						"onKeyUp"
+					],
+					"alert": [
+						"onKeyUp",
+						"onKeyDown",
+						"onKeyPress"
+					],
+					"body": [
+						"onError",
+						"onLoad"
+					],
+					"dialog": [
+						"onKeyUp",
+						"onKeyDown",
+						"onKeyPress"
+					],
+					"iframe": [
+						"onError",
+						"onLoad"
+					],
+					"img": [
+						"onError",
+						"onLoad"
+					]
+				}
+			],
+			"jsx-a11y/no-noninteractive-element-to-interactive-role": [
+				"error",
+				{
+					"ul": [
+						"listbox",
+						"menu",
+						"menubar",
+						"radiogroup",
+						"tablist",
+						"tree",
+						"treegrid"
+					],
+					"ol": [
+						"listbox",
+						"menu",
+						"menubar",
+						"radiogroup",
+						"tablist",
+						"tree",
+						"treegrid"
+					],
+					"li": [
+						"menuitem",
+						"option",
+						"row",
+						"tab",
+						"treeitem"
+					],
+					"table": [
+						"grid"
+					],
+					"td": [
+						"gridcell"
+					]
+				}
+			],
+			"jsx-a11y/no-noninteractive-tabindex": [
+				"error",
+				{
+					"tags": [],
+					"roles": [
+						"tabpanel"
+					],
+					"allowExpressionValues": true
+				}
+			],
+			"jsx-a11y/no-onchange": "error",
+			"jsx-a11y/no-redundant-roles": "error",
+			"jsx-a11y/no-static-element-interactions": [
+				"error",
+				{
+					"allowExpressionValues": true,
+					"handlers": [
+						"onClick",
+						"onMouseDown",
+						"onMouseUp",
+						"onKeyPress",
+						"onKeyDown",
+						"onKeyUp"
+					]
+				}
+			],
+			"jsx-a11y/role-has-required-aria-props": "error",
+			"jsx-a11y/role-supports-aria-props": "error",
+			"jsx-a11y/scope": "error",
+			"jsx-a11y/tabindex-no-positive": "error"
+		}
+	},
+	{
+		"type": "config",
 		"name": "--config#overrides[11] » plugin:evelyn/react » plugin:evelyn/jsx",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -2297,6 +2768,15 @@
 				"jsx": true
 			},
 			"sourceType": "module"
+		},
+		"plugins": {
+			"jsx-a11y": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "jsx-a11y",
+				"importerName": "--config#overrides[11] » plugin:evelyn/react » plugin:evelyn/jsx",
+				"importerPath": "CLEANED"
+			}
 		}
 	},
 	{
@@ -2373,6 +2853,487 @@
 	},
 	{
 		"type": "config",
+		"name": "--config#overrides[11] » plugin:evelyn/react » eslint-config-react-app",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"react"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"env": {
+			"browser": true,
+			"commonjs": true,
+			"es6": true,
+			"jest": true,
+			"node": true
+		},
+		"parser": {
+			"error": null,
+			"filePath": "CLEANED",
+			"id": "babel-eslint",
+			"importerName": "--config#overrides[11] » plugin:evelyn/react » eslint-config-react-app",
+			"importerPath": "CLEANED"
+		},
+		"parserOptions": {
+			"ecmaVersion": 2018,
+			"sourceType": "module",
+			"ecmaFeatures": {
+				"jsx": true
+			}
+		},
+		"plugins": {
+			"import": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "import",
+				"importerName": "--config#overrides[11] » plugin:evelyn/react » eslint-config-react-app",
+				"importerPath": "CLEANED"
+			},
+			"flowtype": {
+				"error": {
+					"code": "MODULE_NOT_FOUND",
+					"requireStack": "CLEANED",
+					"messageTemplate": "plugin-missing",
+					"messageData": {
+						"pluginName": "eslint-plugin-flowtype",
+						"resolvePluginsRelativeTo": "C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\changes",
+						"importerName": "--config#overrides[11] » plugin:evelyn/react » eslint-config-react-app"
+					},
+					"message": "CLEANED"
+				},
+				"filePath": "CLEANED",
+				"id": "flowtype",
+				"importerName": "--config#overrides[11] » plugin:evelyn/react » eslint-config-react-app",
+				"importerPath": "CLEANED"
+			},
+			"jsx-a11y": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "jsx-a11y",
+				"importerName": "--config#overrides[11] » plugin:evelyn/react » eslint-config-react-app",
+				"importerPath": "CLEANED"
+			},
+			"react": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "react",
+				"importerName": "--config#overrides[11] » plugin:evelyn/react » eslint-config-react-app",
+				"importerPath": "CLEANED"
+			},
+			"react-hooks": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "react-hooks",
+				"importerName": "--config#overrides[11] » plugin:evelyn/react » eslint-config-react-app",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"array-callback-return": "warn",
+			"default-case": [
+				"warn",
+				{
+					"commentPattern": "^no default$"
+				}
+			],
+			"dot-location": [
+				"warn",
+				"property"
+			],
+			"eqeqeq": [
+				"warn",
+				"smart"
+			],
+			"new-parens": "warn",
+			"no-array-constructor": "warn",
+			"no-caller": "warn",
+			"no-cond-assign": [
+				"warn",
+				"except-parens"
+			],
+			"no-const-assign": "warn",
+			"no-control-regex": "warn",
+			"no-delete-var": "warn",
+			"no-dupe-args": "warn",
+			"no-dupe-class-members": "warn",
+			"no-dupe-keys": "warn",
+			"no-duplicate-case": "warn",
+			"no-empty-character-class": "warn",
+			"no-empty-pattern": "warn",
+			"no-eval": "warn",
+			"no-ex-assign": "warn",
+			"no-extend-native": "warn",
+			"no-extra-bind": "warn",
+			"no-extra-label": "warn",
+			"no-fallthrough": "warn",
+			"no-func-assign": "warn",
+			"no-implied-eval": "warn",
+			"no-invalid-regexp": "warn",
+			"no-iterator": "warn",
+			"no-label-var": "warn",
+			"no-labels": [
+				"warn",
+				{
+					"allowLoop": true,
+					"allowSwitch": false
+				}
+			],
+			"no-lone-blocks": "warn",
+			"no-loop-func": "warn",
+			"no-mixed-operators": [
+				"warn",
+				{
+					"groups": [
+						[
+							"&",
+							"|",
+							"^",
+							"~",
+							"<<",
+							">>",
+							">>>"
+						],
+						[
+							"==",
+							"!=",
+							"===",
+							"!==",
+							">",
+							">=",
+							"<",
+							"<="
+						],
+						[
+							"&&",
+							"||"
+						],
+						[
+							"in",
+							"instanceof"
+						]
+					],
+					"allowSamePrecedence": false
+				}
+			],
+			"no-multi-str": "warn",
+			"no-native-reassign": "warn",
+			"no-negated-in-lhs": "warn",
+			"no-new-func": "warn",
+			"no-new-object": "warn",
+			"no-new-symbol": "warn",
+			"no-new-wrappers": "warn",
+			"no-obj-calls": "warn",
+			"no-octal": "warn",
+			"no-octal-escape": "warn",
+			"no-redeclare": [
+				"warn",
+				{
+					"builtinGlobals": false
+				}
+			],
+			"no-regex-spaces": "warn",
+			"no-restricted-syntax": [
+				"warn",
+				"WithStatement"
+			],
+			"no-script-url": "warn",
+			"no-self-assign": "warn",
+			"no-self-compare": "warn",
+			"no-sequences": "warn",
+			"no-shadow-restricted-names": "warn",
+			"no-sparse-arrays": "warn",
+			"no-template-curly-in-string": "warn",
+			"no-this-before-super": "warn",
+			"no-throw-literal": "warn",
+			"no-undef": "error",
+			"no-restricted-globals": [
+				"error",
+				"addEventListener",
+				"blur",
+				"close",
+				"closed",
+				"confirm",
+				"defaultStatus",
+				"defaultstatus",
+				"event",
+				"external",
+				"find",
+				"focus",
+				"frameElement",
+				"frames",
+				"history",
+				"innerHeight",
+				"innerWidth",
+				"length",
+				"location",
+				"locationbar",
+				"menubar",
+				"moveBy",
+				"moveTo",
+				"name",
+				"onblur",
+				"onerror",
+				"onfocus",
+				"onload",
+				"onresize",
+				"onunload",
+				"open",
+				"opener",
+				"opera",
+				"outerHeight",
+				"outerWidth",
+				"pageXOffset",
+				"pageYOffset",
+				"parent",
+				"print",
+				"removeEventListener",
+				"resizeBy",
+				"resizeTo",
+				"screen",
+				"screenLeft",
+				"screenTop",
+				"screenX",
+				"screenY",
+				"scroll",
+				"scrollbars",
+				"scrollBy",
+				"scrollTo",
+				"scrollX",
+				"scrollY",
+				"self",
+				"status",
+				"statusbar",
+				"stop",
+				"toolbar",
+				"top"
+			],
+			"no-unreachable": "warn",
+			"no-unused-expressions": [
+				"error",
+				{
+					"allowShortCircuit": true,
+					"allowTernary": true,
+					"allowTaggedTemplates": true
+				}
+			],
+			"no-unused-labels": "warn",
+			"no-unused-vars": [
+				"warn",
+				{
+					"args": "none",
+					"ignoreRestSiblings": true
+				}
+			],
+			"no-use-before-define": [
+				"warn",
+				{
+					"functions": false,
+					"classes": false,
+					"variables": false
+				}
+			],
+			"no-useless-computed-key": "warn",
+			"no-useless-concat": "warn",
+			"no-useless-constructor": "warn",
+			"no-useless-escape": "warn",
+			"no-useless-rename": [
+				"warn",
+				{
+					"ignoreDestructuring": false,
+					"ignoreImport": false,
+					"ignoreExport": false
+				}
+			],
+			"no-with": "warn",
+			"no-whitespace-before-property": "warn",
+			"react-hooks/exhaustive-deps": "warn",
+			"require-yield": "warn",
+			"rest-spread-spacing": [
+				"warn",
+				"never"
+			],
+			"strict": [
+				"warn",
+				"never"
+			],
+			"unicode-bom": [
+				"warn",
+				"never"
+			],
+			"use-isnan": "warn",
+			"valid-typeof": "warn",
+			"no-restricted-properties": [
+				"error",
+				{
+					"object": "require",
+					"property": "ensure",
+					"message": "CLEANED"
+				},
+				{
+					"object": "System",
+					"property": "import",
+					"message": "CLEANED"
+				}
+			],
+			"getter-return": "warn",
+			"import/first": "error",
+			"import/no-amd": "error",
+			"import/no-webpack-loader-syntax": "error",
+			"react/forbid-foreign-prop-types": [
+				"warn",
+				{
+					"allowInPropTypes": true
+				}
+			],
+			"react/jsx-no-comment-textnodes": "warn",
+			"react/jsx-no-duplicate-props": "warn",
+			"react/jsx-no-target-blank": "warn",
+			"react/jsx-no-undef": "error",
+			"react/jsx-pascal-case": [
+				"warn",
+				{
+					"allowAllCaps": true,
+					"ignore": []
+				}
+			],
+			"react/jsx-uses-react": "warn",
+			"react/jsx-uses-vars": "warn",
+			"react/no-danger-with-children": "warn",
+			"react/no-direct-mutation-state": "warn",
+			"react/no-is-mounted": "warn",
+			"react/no-typos": "error",
+			"react/react-in-jsx-scope": "error",
+			"react/require-render-return": "error",
+			"react/style-prop-object": "warn",
+			"jsx-a11y/accessible-emoji": "warn",
+			"jsx-a11y/alt-text": "warn",
+			"jsx-a11y/anchor-has-content": "warn",
+			"jsx-a11y/anchor-is-valid": [
+				"warn",
+				{
+					"aspects": [
+						"noHref",
+						"invalidHref"
+					]
+				}
+			],
+			"jsx-a11y/aria-activedescendant-has-tabindex": "warn",
+			"jsx-a11y/aria-props": "warn",
+			"jsx-a11y/aria-proptypes": "warn",
+			"jsx-a11y/aria-role": [
+				"warn",
+				{
+					"ignoreNonDOM": true
+				}
+			],
+			"jsx-a11y/aria-unsupported-elements": "warn",
+			"jsx-a11y/heading-has-content": "warn",
+			"jsx-a11y/iframe-has-title": "warn",
+			"jsx-a11y/img-redundant-alt": "warn",
+			"jsx-a11y/no-access-key": "warn",
+			"jsx-a11y/no-distracting-elements": "warn",
+			"jsx-a11y/no-redundant-roles": "warn",
+			"jsx-a11y/role-has-required-aria-props": "warn",
+			"jsx-a11y/role-supports-aria-props": "warn",
+			"jsx-a11y/scope": "warn",
+			"react-hooks/rules-of-hooks": "error",
+			"flowtype/define-flow-type": "warn",
+			"flowtype/require-valid-file-annotation": "warn",
+			"flowtype/use-flow-type": "warn"
+		},
+		"settings": {
+			"react": {
+				"version": "detect"
+			}
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[11] » plugin:evelyn/react » eslint-config-react-app#overrides[0]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"react"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.ts?(x)"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		},
+		"parser": {
+			"error": null,
+			"filePath": "CLEANED",
+			"id": "@typescript-eslint/parser",
+			"importerName": "--config#overrides[11] » plugin:evelyn/react » eslint-config-react-app#overrides[0]",
+			"importerPath": "CLEANED"
+		},
+		"parserOptions": {
+			"ecmaVersion": 2018,
+			"sourceType": "module",
+			"ecmaFeatures": {
+				"jsx": true
+			},
+			"warnOnUnsupportedTypeScriptVersion": true
+		},
+		"plugins": {
+			"@typescript-eslint": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "@typescript-eslint",
+				"importerName": "--config#overrides[11] » plugin:evelyn/react » eslint-config-react-app#overrides[0]",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"default-case": "off",
+			"no-dupe-class-members": "off",
+			"no-undef": "off",
+			"@typescript-eslint/consistent-type-assertions": "warn",
+			"no-array-constructor": "off",
+			"@typescript-eslint/no-array-constructor": "warn",
+			"no-use-before-define": "off",
+			"@typescript-eslint/no-use-before-define": [
+				"warn",
+				{
+					"functions": false,
+					"classes": false,
+					"variables": false,
+					"typedefs": false
+				}
+			],
+			"no-unused-expressions": "off",
+			"@typescript-eslint/no-unused-expressions": [
+				"error",
+				{
+					"allowShortCircuit": true,
+					"allowTernary": true,
+					"allowTaggedTemplates": true
+				}
+			],
+			"no-unused-vars": "off",
+			"@typescript-eslint/no-unused-vars": [
+				"warn",
+				{
+					"args": "none",
+					"ignoreRestSiblings": true
+				}
+			],
+			"no-useless-constructor": "off",
+			"@typescript-eslint/no-useless-constructor": "warn"
+		}
+	},
+	{
+		"type": "config",
 		"name": "--config#overrides[11] » plugin:evelyn/react",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -2397,9 +3358,6 @@
 				"importerName": "--config#overrides[11] » plugin:evelyn/react",
 				"importerPath": "CLEANED"
 			}
-		},
-		"rules": {
-			"unicorn/filename-case": "off"
 		},
 		"settings": {
 			"react": {
@@ -2460,6 +3418,132 @@
 	},
 	{
 		"type": "config",
+		"name": "--config#overrides[13] » plugin:evelyn/typescript » plugin:@typescript-eslint/eslint-recommended",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"typescript"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[13] » plugin:evelyn/typescript » plugin:@typescript-eslint/eslint-recommended#overrides[0]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"*.ts",
+						"*.tsx"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		},
+		"rules": {
+			"getter-return": "off",
+			"no-dupe-args": "off",
+			"no-dupe-keys": "off",
+			"no-unreachable": "off",
+			"valid-typeof": "off",
+			"no-const-assign": "off",
+			"no-new-symbol": "off",
+			"no-this-before-super": "off",
+			"no-undef": "off",
+			"no-dupe-class-members": "off",
+			"no-redeclare": "off"
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[13] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended » ./configs/base.json",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"typescript"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"parser": {
+			"error": null,
+			"filePath": "CLEANED",
+			"id": "@typescript-eslint/parser",
+			"importerName": "--config#overrides[13] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended » ./configs/base.json",
+			"importerPath": "CLEANED"
+		},
+		"parserOptions": {
+			"sourceType": "module"
+		},
+		"plugins": {
+			"@typescript-eslint": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "@typescript-eslint",
+				"importerName": "--config#overrides[13] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended » ./configs/base.json",
+				"importerPath": "CLEANED"
+			}
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[13] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"typescript"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"rules": {
+			"@typescript-eslint/adjacent-overload-signatures": "error",
+			"@typescript-eslint/ban-ts-ignore": "error",
+			"@typescript-eslint/ban-types": "error",
+			"camelcase": "off",
+			"@typescript-eslint/camelcase": "error",
+			"@typescript-eslint/class-name-casing": "error",
+			"@typescript-eslint/consistent-type-assertions": "error",
+			"@typescript-eslint/explicit-function-return-type": "warn",
+			"@typescript-eslint/interface-name-prefix": "error",
+			"@typescript-eslint/member-delimiter-style": "error",
+			"no-array-constructor": "off",
+			"@typescript-eslint/no-array-constructor": "error",
+			"no-empty-function": "off",
+			"@typescript-eslint/no-empty-function": "error",
+			"@typescript-eslint/no-empty-interface": "error",
+			"@typescript-eslint/no-explicit-any": "warn",
+			"@typescript-eslint/no-inferrable-types": "error",
+			"@typescript-eslint/no-misused-new": "error",
+			"@typescript-eslint/no-namespace": "error",
+			"@typescript-eslint/no-non-null-assertion": "warn",
+			"@typescript-eslint/no-this-alias": "error",
+			"no-unused-vars": "off",
+			"@typescript-eslint/no-unused-vars": "warn",
+			"no-use-before-define": "off",
+			"@typescript-eslint/no-use-before-define": "error",
+			"@typescript-eslint/no-var-requires": "error",
+			"@typescript-eslint/prefer-namespace-keyword": "error",
+			"@typescript-eslint/triple-slash-reference": "error",
+			"@typescript-eslint/type-annotation-spacing": "error",
+			"no-var": "error",
+			"prefer-const": "error",
+			"prefer-rest-params": "error",
+			"prefer-spread": "error"
+		}
+	},
+	{
+		"type": "config",
 		"name": "--config#overrides[13] » plugin:evelyn/typescript » plugin:import/typescript",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -2503,6 +3587,65 @@
 	},
 	{
 		"type": "config",
+		"name": "--config#overrides[13] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base.json",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"typescript"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"parser": {
+			"error": null,
+			"filePath": "CLEANED",
+			"id": "@typescript-eslint/parser",
+			"importerName": "--config#overrides[13] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base.json",
+			"importerPath": "CLEANED"
+		},
+		"parserOptions": {
+			"sourceType": "module"
+		},
+		"plugins": {
+			"@typescript-eslint": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "@typescript-eslint",
+				"importerName": "--config#overrides[13] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base.json",
+				"importerPath": "CLEANED"
+			}
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[13] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"typescript"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"rules": {
+			"@typescript-eslint/await-thenable": "error",
+			"@typescript-eslint/no-for-in-array": "error",
+			"@typescript-eslint/no-misused-promises": "error",
+			"@typescript-eslint/no-unnecessary-type-assertion": "error",
+			"@typescript-eslint/prefer-includes": "error",
+			"@typescript-eslint/prefer-regexp-exec": "error",
+			"@typescript-eslint/prefer-string-starts-ends-with": "error",
+			"require-await": "off",
+			"@typescript-eslint/require-await": "error",
+			"@typescript-eslint/unbound-method": "error",
+			"no-var": "error",
+			"prefer-const": "error",
+			"prefer-rest-params": "error",
+			"prefer-spread": "error"
+		}
+	},
+	{
+		"type": "config",
 		"name": "--config#overrides[13] » plugin:evelyn/typescript",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -2518,6 +3661,9 @@
 			"id": "@typescript-eslint/parser",
 			"importerName": "--config#overrides[13] » plugin:evelyn/typescript",
 			"importerPath": "CLEANED"
+		},
+		"parserOptions": {
+			"project": "./tsconfig.json"
 		},
 		"plugins": {
 			"@typescript-eslint": {
@@ -2536,7 +3682,6 @@
 			}
 		},
 		"rules": {
-			"no-unused-vars": "warn",
 			"node/no-unsupported-features/es-syntax": "off",
 			"node/no-unsupported-features/es-builtins": "off",
 			"node/exports-style": [
@@ -2544,36 +3689,19 @@
 				"exports"
 			],
 			"@typescript-eslint/member-ordering": "error",
-			"@typescript-eslint/adjacent-overload-signatures": "error",
-			"@typescript-eslint/array-type": "error",
-			"@typescript-eslint/ban-types": "error",
-			"@typescript-eslint/ban-ts-ignore": "error",
-			"@typescript-eslint/camelcase": "error",
-			"@typescript-eslint/class-name-casing": "error",
-			"@typescript-eslint/explicit-function-return-type": "error",
-			"@typescript-eslint/explicit-member-accessibility": "error",
-			"@typescript-eslint/indent": "error",
-			"@typescript-eslint/interface-name-prefix": "error",
-			"@typescript-eslint/member-delimiter-style": "error",
-			"@typescript-eslint/no-angle-bracket-type-assertion": "error",
-			"@typescript-eslint/no-array-constructor": "error",
-			"@typescript-eslint/no-empty-interface": "error",
-			"@typescript-eslint/no-explicit-any": "error",
-			"@typescript-eslint/no-inferrable-types": "error",
-			"@typescript-eslint/no-misused-new": "error",
-			"@typescript-eslint/no-namespace": "error",
-			"@typescript-eslint/no-non-null-assertion": "error",
-			"@typescript-eslint/no-object-literal-type-assertion": "error",
-			"@typescript-eslint/no-parameter-properties": "error",
-			"@typescript-eslint/no-require-imports": "error",
-			"@typescript-eslint/no-triple-slash-reference": "error",
-			"@typescript-eslint/no-unused-vars": "error",
-			"@typescript-eslint/no-use-before-define": "error",
-			"@typescript-eslint/no-var-requires": "error",
-			"@typescript-eslint/prefer-interface": "error",
-			"@typescript-eslint/prefer-namespace-keyword": "error",
-			"@typescript-eslint/promise-function-async": "error",
-			"@typescript-eslint/type-annotation-spacing": "error"
+			"@typescript-eslint/array-type": [
+				"error",
+				{
+					"default": "generic",
+					"readonly": "generic"
+				}
+			],
+			"@typescript-eslint/consistent-type-assertions": [
+				"error",
+				{
+					"assertionStyle": "as"
+				}
+			]
 		}
 	},
 	{
