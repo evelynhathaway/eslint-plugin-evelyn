@@ -1346,6 +1346,28 @@
 	},
 	{
 		"type": "config",
+		"name": "--config#overrides[8] » plugin:evelyn/jsx#overrides[0]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"jsx"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{jsx,tsx}"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"type": "config",
 		"name": "--config#overrides[8]",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -2183,6 +2205,28 @@
 	},
 	{
 		"type": "config",
+		"name": "--config#overrides[11] » plugin:evelyn/react » plugin:evelyn/jsx#overrides[0]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"react"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{jsx,tsx}"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"type": "config",
 		"name": "--config#overrides[11] » plugin:evelyn/react » plugin:react/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -2391,6 +2435,28 @@
 			"@typescript-eslint/prefer-namespace-keyword": "error",
 			"@typescript-eslint/promise-function-async": "error",
 			"@typescript-eslint/type-annotation-spacing": "error"
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[13] » plugin:evelyn/typescript#overrides[0]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.ts"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
 		}
 	},
 	{
