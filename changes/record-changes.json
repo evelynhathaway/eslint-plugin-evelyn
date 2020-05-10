@@ -160,6 +160,19 @@
 		"env": {
 			"es6": true
 		},
+		"ignorePattern": {
+			"patterns": [
+				"!**/.*.js",
+				"!**/.*.ts",
+				"!**/.*.json",
+				"!**/.*.jsx",
+				"!**/.*.tsx",
+				"!**/.*.vue",
+				"**/package-lock.json"
+			],
+			"basePath": "CLEANED",
+			"loose": false
+		},
 		"parserOptions": {
 			"ecmaVersion": 2020,
 			"sourceType": "module"
@@ -873,6 +886,19 @@
 		},
 		"env": {
 			"es6": true
+		},
+		"ignorePattern": {
+			"patterns": [
+				"!**/.*.js",
+				"!**/.*.ts",
+				"!**/.*.json",
+				"!**/.*.jsx",
+				"!**/.*.tsx",
+				"!**/.*.vue",
+				"**/package-lock.json"
+			],
+			"basePath": "CLEANED",
+			"loose": false
 		},
 		"parserOptions": {
 			"ecmaVersion": 2020,
