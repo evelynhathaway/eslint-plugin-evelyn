@@ -200,9 +200,9 @@ See the `peerDependencies` in [package.json](./package.json) for recommended dep
 
 I've needed some bugfixes that have had their PRs auto closed, so I include the ones I need here. This project has a very similar structure to ESLint core, so tests and rules are just about `copy + paste`'ed from my fork of ESLint.
 
-| Documentation                                          | Pull Request                                                                                |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
-| [no-fallthrough](./docs/rules/fixes/no-fallthrough.md) | [Fix: Allow fallthrough comment in case block](https://github.com/eslint/eslint/pull/11016) |
+| Documentation                                          | Pull Request                                                                                | Fixed Issues                                                                                                                                                                                                                    |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [no-fallthrough](./docs/rules/fixes/no-fallthrough.md) | [Fix: Allow fallthrough comment in case block](https://github.com/eslint/eslint/pull/11016) | [`#4652`](https://github.com/eslint/eslint/issues/4652) [`#7889`](https://github.com/eslint/eslint/issues/7889) [`#9080`](https://github.com/eslint/eslint/issues/9080) [`#9559`](https://github.com/eslint/eslint/issues/9559) |
 
 ---
 
