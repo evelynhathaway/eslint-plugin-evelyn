@@ -1,7 +1,8 @@
 require("../lib/util/link");
+const chalk = require("chalk");
 // eslint-disable-next-line node/no-extraneous-require
 const {stealFinalConfigArray} = require("eslint-plugin-evelyn/lib/util/save-config");
-const chalk = require("chalk");
+
 
 const alertAllErrors = function (configs) {
 	let hadError = false;

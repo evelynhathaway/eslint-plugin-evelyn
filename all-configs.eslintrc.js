@@ -3,6 +3,7 @@ require("./lib/util/link");
 // eslint-disable-next-line node/no-extraneous-require
 const {configs} = require("eslint-plugin-evelyn");
 
+
 module.exports = {
 	"plugins": [
 		"evelyn",
