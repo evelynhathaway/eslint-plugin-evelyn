@@ -6,18 +6,18 @@ const config = require("../../lib/configs/default.js");
 
 configTester("config: default", config, {
 	valid: [
-		"function test () {\n	test();\n}\ntest();\n(() => {})();",
+		"function test () {\n	test();\n}\ntest();\n(() => {})();\n",
 	],
 	invalid: [
 		// Indentation
 		{
-			code: "function test () {\n    test();\n}\ntest();",
+			code: "function test () {\n    test();\n}\ntest();\n",
 			errors: ["Expected indentation of 1 tab but found 4 spaces."],
 		},
 		// Semicolons protecting unexpected errors
 		// Example parsing error: `const test = {test: "test"}\n(() => {})();`
 		{
-			code: "const test = {test: \"test\"}\nvoid(test)",
+			code: "const test = {test: \"test\"}\nvoid(test)\n",
 			errors: ["Missing semicolon.", "Missing semicolon."],
 		},
 	],
