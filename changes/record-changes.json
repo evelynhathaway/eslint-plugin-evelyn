@@ -237,18 +237,91 @@
 				"tab",
 				{
 					"SwitchCase": 1,
+					"ignoredNodes": [
+						"JSXElement",
+						"JSXElement > *",
+						"JSXAttribute",
+						"JSXIdentifier",
+						"JSXNamespacedName",
+						"JSXMemberExpression",
+						"JSXSpreadAttribute",
+						"JSXExpressionContainer",
+						"JSXOpeningElement",
+						"JSXClosingElement",
+						"JSXFragment",
+						"JSXOpeningFragment",
+						"JSXClosingFragment",
+						"JSXText",
+						"JSXEmptyExpression",
+						"JSXSpreadChild"
+					],
 					"flatTernaryExpressions": false,
 					"offsetTernaryExpressions": false,
 					"ignoreComments": false
 				}
 			],
+			"spaced-comment": [
+				"error",
+				"always"
+			],
 			"linebreak-style": [
 				"error",
 				"unix"
 			],
+			"eol-last": "error",
+			"no-multiple-empty-lines": [
+				"error",
+				{
+					"max": 3,
+					"maxEOF": 0,
+					"maxBOF": 0
+				}
+			],
+			"object-curly-spacing": [
+				"error",
+				"never"
+			],
+			"padded-blocks": [
+				"error",
+				"never"
+			],
+			"space-in-parens": [
+				"error",
+				"never"
+			],
+			"space-before-function-paren": [
+				"error",
+				"always"
+			],
+			"space-before-blocks": [
+				"error",
+				"always"
+			],
+			"arrow-spacing": [
+				"error",
+				{
+					"before": true,
+					"after": true
+				}
+			],
+			"no-useless-rename": "error",
+			"prefer-destructuring": "error",
+			"rest-spread-spacing": [
+				"error",
+				"never"
+			],
+			"template-curly-spacing": [
+				"error",
+				"never"
+			],
+			"key-spacing": "error",
 			"quotes": [
-				"warn",
+				"error",
 				"double"
+			],
+			"jsx-quotes": [
+				"error",
+				"prefer-double"
 			],
 			"semi": [
 				"error",
@@ -258,6 +331,7 @@
 			"no-var": "error",
 			"prefer-const": "error",
 			"no-console": "warn",
+			"no-alert": "error",
 			"no-throw-literal": "error",
 			"quote-props": [
 				"warn",
@@ -288,6 +362,34 @@
 				"error",
 				{
 					"ignoreRestSiblings": true
+				}
+			],
+			"no-await-in-loop": "error",
+			"no-template-curly-in-string": "error",
+			"dot-notation": "error",
+			"eqeqeq": [
+				"error",
+				"always",
+				{
+					"null": "ignore"
+				}
+			],
+			"no-caller": "error",
+			"no-extend-native": "error",
+			"no-multi-spaces": "error",
+			"no-proto": "error",
+			"no-iterator": "error",
+			"no-self-compare": "error",
+			"no-useless-call": "error",
+			"prefer-named-capture-group": "error",
+			"radix": "error",
+			"require-await": "error",
+			"no-unused-expressions": [
+				"error",
+				{
+					"allowShortCircuit": true,
+					"allowTernary": true,
+					"allowTaggedTemplates": true
 				}
 			],
 			"no-process-exit": "off",
@@ -1171,18 +1273,91 @@
 				"tab",
 				{
 					"SwitchCase": 1,
+					"ignoredNodes": [
+						"JSXElement",
+						"JSXElement > *",
+						"JSXAttribute",
+						"JSXIdentifier",
+						"JSXNamespacedName",
+						"JSXMemberExpression",
+						"JSXSpreadAttribute",
+						"JSXExpressionContainer",
+						"JSXOpeningElement",
+						"JSXClosingElement",
+						"JSXFragment",
+						"JSXOpeningFragment",
+						"JSXClosingFragment",
+						"JSXText",
+						"JSXEmptyExpression",
+						"JSXSpreadChild"
+					],
 					"flatTernaryExpressions": false,
 					"offsetTernaryExpressions": false,
 					"ignoreComments": false
 				}
 			],
+			"spaced-comment": [
+				"error",
+				"always"
+			],
 			"linebreak-style": [
 				"error",
 				"unix"
 			],
+			"eol-last": "error",
+			"no-multiple-empty-lines": [
+				"error",
+				{
+					"max": 3,
+					"maxEOF": 0,
+					"maxBOF": 0
+				}
+			],
+			"object-curly-spacing": [
+				"error",
+				"never"
+			],
+			"padded-blocks": [
+				"error",
+				"never"
+			],
+			"space-in-parens": [
+				"error",
+				"never"
+			],
+			"space-before-function-paren": [
+				"error",
+				"always"
+			],
+			"space-before-blocks": [
+				"error",
+				"always"
+			],
+			"arrow-spacing": [
+				"error",
+				{
+					"before": true,
+					"after": true
+				}
+			],
+			"no-useless-rename": "error",
+			"prefer-destructuring": "error",
+			"rest-spread-spacing": [
+				"error",
+				"never"
+			],
+			"template-curly-spacing": [
+				"error",
+				"never"
+			],
+			"key-spacing": "error",
 			"quotes": [
-				"warn",
+				"error",
 				"double"
+			],
+			"jsx-quotes": [
+				"error",
+				"prefer-double"
 			],
 			"semi": [
 				"error",
@@ -1192,6 +1367,7 @@
 			"no-var": "error",
 			"prefer-const": "error",
 			"no-console": "warn",
+			"no-alert": "error",
 			"no-throw-literal": "error",
 			"quote-props": [
 				"warn",
@@ -1222,6 +1398,34 @@
 				"error",
 				{
 					"ignoreRestSiblings": true
+				}
+			],
+			"no-await-in-loop": "error",
+			"no-template-curly-in-string": "error",
+			"dot-notation": "error",
+			"eqeqeq": [
+				"error",
+				"always",
+				{
+					"null": "ignore"
+				}
+			],
+			"no-caller": "error",
+			"no-extend-native": "error",
+			"no-multi-spaces": "error",
+			"no-proto": "error",
+			"no-iterator": "error",
+			"no-self-compare": "error",
+			"no-useless-call": "error",
+			"prefer-named-capture-group": "error",
+			"radix": "error",
+			"require-await": "error",
+			"no-unused-expressions": [
+				"error",
+				{
+					"allowShortCircuit": true,
+					"allowTernary": true,
+					"allowTaggedTemplates": true
 				}
 			],
 			"no-process-exit": "off",
@@ -2181,6 +2385,7 @@
 			"jsx-a11y/aria-proptypes": "error",
 			"jsx-a11y/aria-role": "error",
 			"jsx-a11y/aria-unsupported-elements": "error",
+			"jsx-a11y/autocomplete-valid": "error",
 			"jsx-a11y/click-events-have-key-events": "error",
 			"jsx-a11y/control-has-associated-label": [
 				"off",
@@ -3519,6 +3724,7 @@
 			"jsx-a11y/aria-proptypes": "error",
 			"jsx-a11y/aria-role": "error",
 			"jsx-a11y/aria-unsupported-elements": "error",
+			"jsx-a11y/autocomplete-valid": "error",
 			"jsx-a11y/click-events-have-key-events": "error",
 			"jsx-a11y/control-has-associated-label": [
 				"off",
@@ -3919,6 +4125,7 @@
 			"react/jsx-curly-newline": "error",
 			"react/jsx-closing-tag-location": "error",
 			"react/jsx-closing-bracket-location": "error",
+			"react/jsx-props-no-multi-spaces": "error",
 			"react/jsx-boolean-value": [
 				"error",
 				"never"
@@ -3940,7 +4147,7 @@
 				"error",
 				"tab",
 				{
-					"checkAttributes": true,
+					"checkAttributes": false,
 					"indentLogicalExpressions": true
 				}
 			]
@@ -4317,6 +4524,9 @@
 			],
 			"excludes": null,
 			"basePath": "CLEANED"
+		},
+		"rules": {
+			"import/named": "off"
 		},
 		"settings": {
 			"import/extensions": [
