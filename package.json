@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-evelyn",
-  "version": "3.0.0-beta.0",
+  "version": "3.0.0",
   "description": "ESLint plugin for my projects with my preferred code style and bugfixes",
   "keywords": [
     "eslint",
@@ -55,7 +55,7 @@
     "@typescript-eslint/parser": "^3.5.0",
     "babel-eslint": "^10.1.0",
     "chalk": "^4.1.0",
-    "eslint": "^7.3.1",
+    "eslint": "^7.4.0",
     "eslint-config-rule-tester": "^0.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jest": "^23.17.1",
