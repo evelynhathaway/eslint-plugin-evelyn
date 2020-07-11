@@ -412,6 +412,7 @@
 				}
 			],
 			"unicorn/no-reduce": "off",
+			"unicorn/no-fn-reference-in-iterator": "off",
 			"unicorn/filename-case": [
 				"error",
 				{
@@ -839,7 +840,20 @@
 		"rules": {
 			"node/no-path-concat": "error",
 			"node/prefer-promises/fs": "warn",
-			"node/no-sync": "warn"
+			"node/no-sync": "warn",
+			"node/no-missing-import": [
+				"error",
+				{
+					"tryExtensions": [
+						".js",
+						".jsx",
+						".ts",
+						".tsx",
+						".json",
+						".vue"
+					]
+				}
+			]
 		}
 	},
 	{
@@ -1448,6 +1462,7 @@
 				}
 			],
 			"unicorn/no-reduce": "off",
+			"unicorn/no-fn-reference-in-iterator": "off",
 			"unicorn/filename-case": [
 				"error",
 				{
@@ -1953,7 +1968,20 @@
 		"rules": {
 			"node/no-path-concat": "error",
 			"node/prefer-promises/fs": "warn",
-			"node/no-sync": "warn"
+			"node/no-sync": "warn",
+			"node/no-missing-import": [
+				"error",
+				{
+					"tryExtensions": [
+						".js",
+						".jsx",
+						".ts",
+						".tsx",
+						".json",
+						".vue"
+					]
+				}
+			]
 		}
 	},
 	{
@@ -3141,7 +3169,20 @@
 		"rules": {
 			"node/no-path-concat": "error",
 			"node/prefer-promises/fs": "warn",
-			"node/no-sync": "warn"
+			"node/no-sync": "warn",
+			"node/no-missing-import": [
+				"error",
+				{
+					"tryExtensions": [
+						".js",
+						".jsx",
+						".ts",
+						".tsx",
+						".json",
+						".vue"
+					]
+				}
+			]
 		}
 	},
 	{
@@ -3657,7 +3698,20 @@
 		"rules": {
 			"node/no-path-concat": "error",
 			"node/prefer-promises/fs": "warn",
-			"node/no-sync": "warn"
+			"node/no-sync": "warn",
+			"node/no-missing-import": [
+				"error",
+				{
+					"tryExtensions": [
+						".js",
+						".jsx",
+						".ts",
+						".tsx",
+						".json",
+						".vue"
+					]
+				}
+			]
 		}
 	},
 	{

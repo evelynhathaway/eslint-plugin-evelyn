@@ -222,10 +222,10 @@ This plugin follows semantic versioning [a-la-ESLint](https://github.com/eslint/
     - A bug fix in a rule that results in ESLint reporting more errors
     - An existing rule, config, or part of the public API is deprecated, but still runs/works
     - New capabilities to the public API are added
-- Major release (likely to break your lint build)
-    - A config or rule is removed
     - A config is updated in a way that results in ESLint fewer or the same amount of errors
         - The hypothetical removal of `semi` would be a good example as not enforcing it could create the potential to break your code
+- Major release (likely to break your lint build)
+    - A config or rule is removed
     - A config is updated in a way that results in ESLint reporting more errors
     - A newer version of ESLint, a plugin, or Node.js may be required
         - Any changes to the low end of any of the `peerDependencies` or the `engines`
