@@ -244,36 +244,6 @@
 	},
 	{
 		"type": "config",
-		"name": ".eslintrc.js » plugin:evelyn/default » plugin:security/recommended",
-		"filePath": "CLEANED",
-		"criteria": null,
-		"plugins": {
-			"security": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "security",
-				"importerName": ".eslintrc.js » plugin:evelyn/default » plugin:security/recommended",
-				"importerPath": "CLEANED"
-			}
-		},
-		"rules": {
-			"security/detect-buffer-noassert": "warn",
-			"security/detect-child-process": "warn",
-			"security/detect-disable-mustache-escape": "warn",
-			"security/detect-eval-with-expression": "warn",
-			"security/detect-new-buffer": "warn",
-			"security/detect-no-csrf-before-method-override": "warn",
-			"security/detect-non-literal-fs-filename": "warn",
-			"security/detect-non-literal-regexp": "warn",
-			"security/detect-non-literal-require": "warn",
-			"security/detect-object-injection": "warn",
-			"security/detect-possible-timing-attacks": "warn",
-			"security/detect-pseudoRandomBytes": "warn",
-			"security/detect-unsafe-regex": "warn"
-		}
-	},
-	{
-		"type": "config",
 		"name": ".eslintrc.js » plugin:evelyn/default",
 		"filePath": "CLEANED",
 		"criteria": null,
@@ -309,13 +279,6 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "regexp",
-				"importerName": ".eslintrc.js » plugin:evelyn/default",
-				"importerPath": "CLEANED"
-			},
-			"security": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "security",
 				"importerName": ".eslintrc.js » plugin:evelyn/default",
 				"importerPath": "CLEANED"
 			}
@@ -1382,42 +1345,6 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[3] » plugin:evelyn/default » plugin:security/recommended",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"default"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"plugins": {
-			"security": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "security",
-				"importerName": "--config#overrides[3] » plugin:evelyn/default » plugin:security/recommended",
-				"importerPath": "CLEANED"
-			}
-		},
-		"rules": {
-			"security/detect-buffer-noassert": "warn",
-			"security/detect-child-process": "warn",
-			"security/detect-disable-mustache-escape": "warn",
-			"security/detect-eval-with-expression": "warn",
-			"security/detect-new-buffer": "warn",
-			"security/detect-no-csrf-before-method-override": "warn",
-			"security/detect-non-literal-fs-filename": "warn",
-			"security/detect-non-literal-regexp": "warn",
-			"security/detect-non-literal-require": "warn",
-			"security/detect-object-injection": "warn",
-			"security/detect-possible-timing-attacks": "warn",
-			"security/detect-pseudoRandomBytes": "warn",
-			"security/detect-unsafe-regex": "warn"
-		}
-	},
-	{
-		"type": "config",
 		"name": "--config#overrides[3] » plugin:evelyn/default",
 		"filePath": "CLEANED",
 		"criteria": {
@@ -1459,13 +1386,6 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "regexp",
-				"importerName": "--config#overrides[3] » plugin:evelyn/default",
-				"importerPath": "CLEANED"
-			},
-			"security": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "security",
 				"importerName": "--config#overrides[3] » plugin:evelyn/default",
 				"importerPath": "CLEANED"
 			}

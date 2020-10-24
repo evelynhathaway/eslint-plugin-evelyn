@@ -19,7 +19,6 @@ const alertAllErrors = function (configs) {
 	for (const config of configs) {
 		alertIfError(config.parser);
 		for (const key in config.plugins) {
-			// eslint-disable-next-line security/detect-object-injection
 			alertIfError(config.plugins[key]);
 		}
 	}

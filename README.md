@@ -24,7 +24,7 @@ My code style is very opinionated, so I only use this package on my projects. Ho
 
 ```bash
 # Save ESLint, Import, Unicorn, and this plugin to devDependencies
-npm i -D eslint eslint-plugin-import eslint-plugin-unicorn eslint-plugin-regexp eslint-plugin-security eslint-plugin-evelyn
+npm i -D eslint eslint-plugin-import eslint-plugin-unicorn eslint-plugin-regexp eslint-plugin-evelyn
 
 # OR
 
