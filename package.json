@@ -34,7 +34,6 @@
     "pre-commit:record-changes": "node ./changes/git-hook.js",
     "record-changes": "eslint -c ./changes/record-changes.eslintrc.js ./changes/record-changes.eslintrc.js",
     "test": "run-s test:*",
-    "test:configs": "mocha test/configs --recursive",
     "test:final-config-array": "eslint -c ./test/final-config-array.eslintrc.js ./test/final-config-array.eslintrc.js",
     "test:rules": "mocha test/rules --recursive"
   },
@@ -56,7 +55,6 @@
     "babel-eslint": "^10.1.0",
     "chalk": "^4.1.0",
     "eslint": "^7.12.0",
-    "eslint-config-rule-tester": "^0.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.0",
     "eslint-plugin-json": "^2.1.2",
