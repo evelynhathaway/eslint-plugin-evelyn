@@ -86,7 +86,7 @@
 			"es6": true
 		},
 		"parserOptions": {
-			"ecmaVersion": 2020,
+			"ecmaVersion": 2021,
 			"sourceType": "module"
 		},
 		"plugins": {
@@ -109,6 +109,7 @@
 			"unicorn/explicit-length-check": "error",
 			"unicorn/filename-case": "error",
 			"unicorn/import-index": "error",
+			"unicorn/import-style": "error",
 			"unicorn/new-for-builtins": "error",
 			"unicorn/no-abusive-eslint-disable": "error",
 			"unicorn/no-array-instanceof": "error",
@@ -121,6 +122,7 @@
 			"unicorn/no-nested-ternary": "error",
 			"unicorn/no-new-buffer": "error",
 			"unicorn/no-null": "error",
+			"unicorn/no-object-as-default-parameter": "error",
 			"unicorn/no-process-exit": "error",
 			"unicorn/no-reduce": "error",
 			"unicorn/no-unreadable-array-destructuring": "error",
@@ -129,11 +131,14 @@
 			"unicorn/no-useless-undefined": "error",
 			"unicorn/no-zero-fractions": "error",
 			"unicorn/number-literal-case": "error",
+			"unicorn/numeric-separators-style": "off",
 			"unicorn/prefer-add-event-listener": "error",
+			"unicorn/prefer-array-find": "error",
 			"unicorn/prefer-dataset": "error",
 			"unicorn/prefer-event-key": "error",
-			"unicorn/prefer-flat-map": "error",
+			"unicorn/prefer-flat-map": "off",
 			"unicorn/prefer-includes": "error",
+			"unicorn/prefer-math-trunc": "error",
 			"unicorn/prefer-modern-dom-apis": "error",
 			"unicorn/prefer-negative-index": "error",
 			"unicorn/prefer-node-append": "error",
@@ -147,6 +152,7 @@
 			"unicorn/prefer-spread": "error",
 			"unicorn/prefer-starts-ends-with": "error",
 			"unicorn/prefer-string-slice": "error",
+			"unicorn/prefer-ternary": "error",
 			"unicorn/prefer-text-content": "error",
 			"unicorn/prefer-trim-start-end": "error",
 			"unicorn/prefer-type-error": "error",
@@ -254,10 +260,7 @@
 						"JSXText",
 						"JSXEmptyExpression",
 						"JSXSpreadChild"
-					],
-					"flatTernaryExpressions": false,
-					"offsetTernaryExpressions": false,
-					"ignoreComments": false
+					]
 				}
 			],
 			"spaced-comment": [
@@ -425,6 +428,8 @@
 					]
 				}
 			],
+			"unicorn/import-style": "off",
+			"unicorn/prefer-ternary": "off",
 			"import/first": "error",
 			"import/order": [
 				"error",
@@ -1118,7 +1123,7 @@
 			"es6": true
 		},
 		"parserOptions": {
-			"ecmaVersion": 2020,
+			"ecmaVersion": 2021,
 			"sourceType": "module"
 		},
 		"plugins": {
@@ -1141,6 +1146,7 @@
 			"unicorn/explicit-length-check": "error",
 			"unicorn/filename-case": "error",
 			"unicorn/import-index": "error",
+			"unicorn/import-style": "error",
 			"unicorn/new-for-builtins": "error",
 			"unicorn/no-abusive-eslint-disable": "error",
 			"unicorn/no-array-instanceof": "error",
@@ -1153,6 +1159,7 @@
 			"unicorn/no-nested-ternary": "error",
 			"unicorn/no-new-buffer": "error",
 			"unicorn/no-null": "error",
+			"unicorn/no-object-as-default-parameter": "error",
 			"unicorn/no-process-exit": "error",
 			"unicorn/no-reduce": "error",
 			"unicorn/no-unreadable-array-destructuring": "error",
@@ -1161,11 +1168,14 @@
 			"unicorn/no-useless-undefined": "error",
 			"unicorn/no-zero-fractions": "error",
 			"unicorn/number-literal-case": "error",
+			"unicorn/numeric-separators-style": "off",
 			"unicorn/prefer-add-event-listener": "error",
+			"unicorn/prefer-array-find": "error",
 			"unicorn/prefer-dataset": "error",
 			"unicorn/prefer-event-key": "error",
-			"unicorn/prefer-flat-map": "error",
+			"unicorn/prefer-flat-map": "off",
 			"unicorn/prefer-includes": "error",
+			"unicorn/prefer-math-trunc": "error",
 			"unicorn/prefer-modern-dom-apis": "error",
 			"unicorn/prefer-negative-index": "error",
 			"unicorn/prefer-node-append": "error",
@@ -1179,6 +1189,7 @@
 			"unicorn/prefer-spread": "error",
 			"unicorn/prefer-starts-ends-with": "error",
 			"unicorn/prefer-string-slice": "error",
+			"unicorn/prefer-ternary": "error",
 			"unicorn/prefer-text-content": "error",
 			"unicorn/prefer-trim-start-end": "error",
 			"unicorn/prefer-type-error": "error",
@@ -1304,10 +1315,7 @@
 						"JSXText",
 						"JSXEmptyExpression",
 						"JSXSpreadChild"
-					],
-					"flatTernaryExpressions": false,
-					"offsetTernaryExpressions": false,
-					"ignoreComments": false
+					]
 				}
 			],
 			"spaced-comment": [
@@ -1475,6 +1483,8 @@
 					]
 				}
 			],
+			"unicorn/import-style": "off",
+			"unicorn/prefer-ternary": "off",
 			"import/first": "error",
 			"import/order": [
 				"error",
@@ -2033,20 +2043,24 @@
 		"rules": {
 			"jest/expect-expect": "warn",
 			"jest/no-commented-out-tests": "warn",
+			"jest/no-conditional-expect": "error",
+			"jest/no-deprecated-functions": "error",
 			"jest/no-disabled-tests": "warn",
+			"jest/no-done-callback": "error",
 			"jest/no-export": "error",
 			"jest/no-focused-tests": "error",
 			"jest/no-identical-title": "error",
+			"jest/no-interpolation-in-snapshots": "error",
+			"jest/no-jasmine-globals": "error",
 			"jest/no-jest-import": "error",
 			"jest/no-mocks-import": "error",
-			"jest/no-jasmine-globals": "warn",
 			"jest/no-standalone-expect": "error",
-			"jest/no-test-callback": "error",
 			"jest/no-test-prefixes": "error",
 			"jest/no-try-expect": "error",
 			"jest/valid-describe": "error",
+			"jest/valid-expect-in-promise": "error",
 			"jest/valid-expect": "error",
-			"jest/valid-expect-in-promise": "error"
+			"jest/valid-title": "error"
 		}
 	},
 	{
@@ -3215,6 +3229,7 @@
 			],
 			"mocha/no-async-describe": "error",
 			"mocha/no-exclusive-tests": "warn",
+			"mocha/no-exports": "error",
 			"mocha/no-global-tests": "error",
 			"mocha/no-hooks": "off",
 			"mocha/no-hooks-for-single-case": "warn",
@@ -4793,11 +4808,8 @@
 			"importerPath": "CLEANED"
 		},
 		"parserOptions": {
-			"ecmaVersion": 2018,
-			"sourceType": "module",
-			"ecmaFeatures": {
-				"jsx": true
-			}
+			"ecmaVersion": 2020,
+			"sourceType": "module"
 		},
 		"plugins": {
 			"vue": {
@@ -4810,6 +4822,7 @@
 		},
 		"rules": {
 			"vue/comment-directive": "error",
+			"vue/experimental-script-setup-vars": "error",
 			"vue/jsx-uses-vars": "error"
 		}
 	},
@@ -4825,9 +4838,15 @@
 			"basePath": "CLEANED"
 		},
 		"rules": {
+			"vue/custom-event-name-casing": "error",
+			"vue/no-arrow-functions-in-watch": "error",
 			"vue/no-async-in-computed-properties": "error",
+			"vue/no-custom-modifiers-on-v-model": "error",
 			"vue/no-dupe-keys": "error",
+			"vue/no-dupe-v-else-if": "error",
 			"vue/no-duplicate-attributes": "error",
+			"vue/no-multiple-template-root": "error",
+			"vue/no-mutating-props": "error",
 			"vue/no-parsing-error": "error",
 			"vue/no-reserved-keys": "error",
 			"vue/no-shared-component-data": "error",
@@ -4837,6 +4856,8 @@
 			"vue/no-unused-components": "error",
 			"vue/no-unused-vars": "error",
 			"vue/no-use-v-if-with-v-for": "error",
+			"vue/no-v-for-template-key": "error",
+			"vue/no-v-model-argument": "error",
 			"vue/require-component-is": "error",
 			"vue/require-prop-type-constructor": "error",
 			"vue/require-render-return": "error",
@@ -4845,6 +4866,7 @@
 			"vue/return-in-computed-property": "error",
 			"vue/use-v-on-exact": "error",
 			"vue/valid-template-root": "error",
+			"vue/valid-v-bind-sync": "error",
 			"vue/valid-v-bind": "error",
 			"vue/valid-v-cloak": "error",
 			"vue/valid-v-else-if": "error",
@@ -4857,6 +4879,7 @@
 			"vue/valid-v-once": "error",
 			"vue/valid-v-pre": "error",
 			"vue/valid-v-show": "error",
+			"vue/valid-v-slot": "error",
 			"vue/valid-v-text": "error"
 		}
 	},
@@ -4873,6 +4896,7 @@
 		},
 		"rules": {
 			"vue/attribute-hyphenation": "warn",
+			"vue/component-definition-name-casing": "warn",
 			"vue/html-closing-bracket-newline": "warn",
 			"vue/html-closing-bracket-spacing": "warn",
 			"vue/html-end-tags": "warn",
@@ -4882,16 +4906,17 @@
 			"vue/max-attributes-per-line": "warn",
 			"vue/multiline-html-element-content-newline": "warn",
 			"vue/mustache-interpolation-spacing": "warn",
-			"vue/name-property-casing": "warn",
 			"vue/no-multi-spaces": "warn",
 			"vue/no-spaces-around-equal-signs-in-attribute": "warn",
 			"vue/no-template-shadow": "warn",
+			"vue/one-component-per-file": "warn",
 			"vue/prop-name-casing": "warn",
 			"vue/require-default-prop": "warn",
 			"vue/require-prop-types": "warn",
 			"vue/singleline-html-element-content-newline": "warn",
 			"vue/v-bind-style": "warn",
-			"vue/v-on-style": "warn"
+			"vue/v-on-style": "warn",
+			"vue/v-slot-style": "warn"
 		}
 	},
 	{
@@ -4907,6 +4932,9 @@
 		},
 		"rules": {
 			"vue/attributes-order": "warn",
+			"vue/component-tags-order": "warn",
+			"vue/no-lone-template": "warn",
+			"vue/no-multiple-slot-args": "warn",
 			"vue/no-v-html": "warn",
 			"vue/order-in-components": "warn",
 			"vue/this-in-template": "warn"
