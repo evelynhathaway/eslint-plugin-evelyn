@@ -1,5 +1,13 @@
 # Changelog
 
+## v5.0.1
+
+**[`v5.0.0...v5.0.1`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v5.0.0...v5.0.1)** - **2021-05-17**
+
+### 📦 Package
+
+- **npm:** Bump @typescript-eslint/eslint-plugin [`5dc0838`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/5dc0838)
+
 ## v5.0.0
 
 **[`v4.0.0...v5.0.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v4.0.0...v5.0.0)** - **2021-05-17**
