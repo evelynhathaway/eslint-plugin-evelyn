@@ -1,5 +1,23 @@
-.vscode/
-node_modules
+# Node
+node_modules/
 
+# IDE
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
-debug_*
+# Built
+/dist
+/lib
+
+# Testing
+/coverage
+
+# Other
+.cache
+/*.log
+*.lock
+.DS_Store

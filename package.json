@@ -30,68 +30,76 @@
   "scripts": {
     "link": "node ./lib/util/link.js",
     "lint": "eslint ./",
-    "pre-commit:lint-staged": "lint-staged",
-    "pre-commit:record-changes": "node ./changes/git-hook.js",
+    "prepare": "husky install",
     "record-changes": "eslint -c ./changes/record-changes.eslintrc.js ./changes/record-changes.eslintrc.js",
     "test": "run-s test:*",
     "test:final-config-array": "eslint -c ./test/final-config-array.eslintrc.js ./test/final-config-array.eslintrc.js",
     "test:rules": "mocha test/rules --recursive"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "run-s pre-commit:*"
-    }
+  "commitlint": {
+    "extends": "./node_modules/conventional-changelog-evelyn/commitlint.config.js"
   },
   "lint-staged": {
     "**/package.json": "sort-package-json",
     "./": "eslint --fix"
   },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/prompt"
+    }
+  },
   "dependencies": {
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.5.0",
-    "@typescript-eslint/parser": "^4.5.0",
-    "babel-eslint": "^10.1.0",
-    "chalk": "^4.1.0",
-    "eslint": "^7.12.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jest": "^24.1.0",
-    "eslint-plugin-json": "^2.1.2",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-markdown": "^1.0.2",
-    "eslint-plugin-mocha": "^8.0.0",
+    "@babel/eslint-parser": "^7.14.2",
+    "@commitlint/prompt": "^12.1.4",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "chalk": "^4.1.1",
+    "commitlint": "^12.1.4",
+    "conventional-changelog-evelyn": "^1.2.2",
+    "eslint": "^7.26.0",
+    "eslint-plugin-import": "^2.23.2",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-json": "^3.0.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-markdown": "^2.1.0",
+    "eslint-plugin-mocha": "^8.1.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-regexp": "^0.1.1",
-    "eslint-plugin-testing-library": "^3.9.2",
-    "eslint-plugin-unicorn": "^23.0.0",
-    "eslint-plugin-vue": "^7.1.0",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.4.2",
-    "mocha": "^8.2.0",
+    "eslint-plugin-regexp": "^0.10.0",
+    "eslint-plugin-testing-library": "^4.4.0",
+    "eslint-plugin-unicorn": "^32.0.1",
+    "eslint-plugin-vue": "^7.9.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "mocha": "^8.4.0",
     "npm-run-all": "^4.1.5",
-    "sort-package-json": "^1.46.1",
-    "typescript": "^4.0.3"
+    "semantic-release": "^17.4.3",
+    "sort-package-json": "^1.50.0",
+    "typescript": "^4.2.4"
   },
   "peerDependencies": {
+    "@babel/eslint-parser": "^7.14.2",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^4.0.0",
-    "babel-eslint": "^10.0.0",
     "eslint": "^7.0.0",
     "eslint-plugin-import": "^2.0.0",
     "eslint-plugin-jest": "^24.0.0",
-    "eslint-plugin-json": "^2.0.0",
+    "eslint-plugin-json": "^3.0.0",
     "eslint-plugin-jsx-a11y": "^6.0.0",
-    "eslint-plugin-markdown": "^1.0.0",
+    "eslint-plugin-markdown": "^2.0.0",
     "eslint-plugin-mocha": "^8.0.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-react": "^7.0.0",
     "eslint-plugin-react-hooks": "^4.0.0",
-    "eslint-plugin-regexp": "^0.1.0",
-    "eslint-plugin-testing-library": "^3.0.0",
-    "eslint-plugin-unicorn": "^23.0.0",
+    "eslint-plugin-regexp": "^0.10.0",
+    "eslint-plugin-testing-library": "^4.0.0",
+    "eslint-plugin-unicorn": "^32.0.0",
     "eslint-plugin-vue": "^7.0.0",
     "typescript": "^4.0.3"
   },
@@ -137,6 +145,9 @@
     }
   },
   "engines": {
-    "node": "^10.12.0 || >=12.0.0"
+    "node": ">=12.0.0"
+  },
+  "release": {
+    "extends": "conventional-changelog-evelyn/release.config.js"
   }
 }

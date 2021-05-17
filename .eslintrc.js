@@ -17,4 +17,9 @@ module.exports = {
 		"lib/rules/fixes/*",
 		"test/rules/fixes/*",
 	],
+
+	"rules": {
+		// Reason: ESLint isn't ready for ESM
+		"unicorn/prefer-module": "off",
+	},
 };

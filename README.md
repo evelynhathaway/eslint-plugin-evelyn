@@ -57,6 +57,7 @@ Include as many configs as you'd like to use in your config. Extend them in the 
     "plugins": [
         "evelyn"
     ],
+
     "extends": [
         "plugin:evelyn/default",
         "plugin:evelyn/node"
@@ -75,9 +76,11 @@ Requires eslint `>=6.0.0`.
     "plugins": [
         "evelyn"
     ],
+
     "extends": [
         "plugin:evelyn/default"
     ],
+
     "overrides": [
         {
             "files": [
@@ -106,12 +109,6 @@ npm run link
 # Run all tests!
 npm run test
 ```
-
-### Config Tests
-
-Non-exhaustive tests to make sure important rules in configs do not change.
-
-You can use @Agoric's [config tester](https://github.com/Agoric/eslint-config-rule-tester), which has a similar API to ESLint's rule tester.
 
 ### Rule Tests
 
