@@ -1,5 +1,13 @@
 # Changelog
 
+## v5.0.3
+
+**[`v5.0.2...v5.0.3`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v5.0.2...v5.0.3)** - **2021-05-17**
+
+### 📄 Documentation
+
+- **readme:** Update badges [`dd6c559`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/dd6c559)
+
 ## v5.0.2
 
 **[`v5.0.1...v5.0.2`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v5.0.1...v5.0.2)** - **2021-05-17**
