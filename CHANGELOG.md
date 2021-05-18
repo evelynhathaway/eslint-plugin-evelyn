@@ -1,5 +1,14 @@
 # Changelog
 
+## v5.0.4
+
+**[`v5.0.3...v5.0.4`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v5.0.3...v5.0.4)** - **2021-05-18**
+
+### 📦 Package
+
+- **npm:** Bump @babel/eslint-parser from 7.14.2 to 7.14.3 [`d088b7d`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/d088b7d)
+- **npm:** Bump conventional-changelog-evelyn from 1.2.2 to 1.2.3 [`4f2819f`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/4f2819f)
+
 ## v5.0.3
 
 **[`v5.0.2...v5.0.3`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v5.0.2...v5.0.3)** - **2021-05-17**
