@@ -1,5 +1,17 @@
 # Changelog
 
+## v5.0.5
+
+**[`v5.0.4...v5.0.5`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v5.0.4...v5.0.5)** - **2021-05-18**
+
+### 🐛 Fix
+
+- Update unicorn/no-reduce override [`fa160f2`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/fa160f2)
+
+### Other
+
+- **dev:** npm update [`71dee94`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/71dee94)
+
 ## v5.0.4
 
 **[`v5.0.3...v5.0.4`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v5.0.3...v5.0.4)** - **2021-05-18**
