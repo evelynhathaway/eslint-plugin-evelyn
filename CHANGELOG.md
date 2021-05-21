@@ -1,5 +1,26 @@
 # Changelog
 
+## v6.0.0
+
+**[`v5.0.5...v6.0.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v5.0.5...v6.0.0)** - **2021-05-21**
+
+### 💥 Breaking
+
+- Simplify configs into default, remove JSON and markdown [`290bccf`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/290bccf)
+
+### ⚡ Improvement
+
+- Add rules to ESM and export new config [`8d6e97b`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/8d6e97b)
+- Only add TypeScript config to ts and tsx files [`84c6d58`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/84c6d58)
+
+### 🐛 Fix
+
+- Remove prefer ESM from cjs files [`981d3e7`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/981d3e7)
+
+### Other
+
+- **dev:** Bump eslint-plugin-testing-library from 4.4.0 to 4.5.0 [`dcb796d`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/dcb796d)
+
 ## v6.0.0-alpha.4
 
 **[`v6.0.0-alpha.3...v6.0.0-alpha.4`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v6.0.0-alpha.3...v6.0.0-alpha.4)** - **2021-05-21**
