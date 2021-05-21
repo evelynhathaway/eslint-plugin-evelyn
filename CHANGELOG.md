@@ -1,5 +1,13 @@
 # Changelog
 
+## v6.0.0-alpha.4
+
+**[`v6.0.0-alpha.3...v6.0.0-alpha.4`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v6.0.0-alpha.3...v6.0.0-alpha.4)** - **2021-05-21**
+
+### 🐛 Fix
+
+- Remove prefer ESM from cjs files [`981d3e7`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/981d3e7)
+
 ## v6.0.0-alpha.3
 
 **[`v6.0.0-alpha.2...v6.0.0-alpha.3`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v6.0.0-alpha.2...v6.0.0-alpha.3)** - **2021-05-21**
