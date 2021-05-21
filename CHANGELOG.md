@@ -1,5 +1,13 @@
 # Changelog
 
+## v6.0.2
+
+**[`v6.0.1...v6.0.2`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v6.0.1...v6.0.2)** - **2021-05-21**
+
+### 🐛 Fix
+
+- **default:** Remove no-array-callback-reference [`8f1e043`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/8f1e043)
+
 ## v6.0.1
 
 **[`v6.0.0...v6.0.1`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v6.0.0...v6.0.1)** - **2021-05-21**
