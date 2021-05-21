@@ -1,5 +1,13 @@
 # Changelog
 
+## v6.0.1
+
+**[`v6.0.0...v6.0.1`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v6.0.0...v6.0.1)** - **2021-05-21**
+
+### 🐛 Fix
+
+- **esm:** Better glob for cjs overrides [`73f8b07`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/73f8b07)
+
 ## v6.0.0
 
 **[`v5.0.5...v6.0.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v5.0.5...v6.0.0)** - **2021-05-21**
