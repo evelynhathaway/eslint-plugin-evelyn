@@ -1,5 +1,13 @@
 # Changelog
 
+## v6.0.0-alpha.2
+
+**[`v6.0.0-alpha.1...v6.0.0-alpha.2`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v6.0.0-alpha.1...v6.0.0-alpha.2)** - **2021-05-21**
+
+### ⚡ Improvement
+
+- Add rules to ESM and export new config [`8d6e97b`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/8d6e97b)
+
 ## v6.0.0-alpha.1
 
 **[`v5.0.5...v6.0.0-alpha.1`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v5.0.5...v6.0.0-alpha.1)** - **2021-05-21**
