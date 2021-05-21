@@ -1,5 +1,17 @@
 # Changelog
 
+## v6.0.0-alpha.1
+
+**[`v5.0.5...v6.0.0-alpha.1`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v5.0.5...v6.0.0-alpha.1)** - **2021-05-21**
+
+### 💥 Breaking
+
+- Simplify configs into default, remove JSON and markdown [`290bccf`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/290bccf)
+
+### Other
+
+- **dev:** Bump eslint-plugin-testing-library from 4.4.0 to 4.5.0 [`dcb796d`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/dcb796d)
+
 ## v5.0.5
 
 **[`v5.0.4...v5.0.5`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v5.0.4...v5.0.5)** - **2021-05-18**
