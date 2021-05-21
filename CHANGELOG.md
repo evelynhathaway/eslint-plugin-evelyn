@@ -1,5 +1,13 @@
 # Changelog
 
+## v6.0.0-alpha.3
+
+**[`v6.0.0-alpha.2...v6.0.0-alpha.3`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v6.0.0-alpha.2...v6.0.0-alpha.3)** - **2021-05-21**
+
+### ⚡ Improvement
+
+- Only add TypeScript config to ts and tsx files [`84c6d58`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/84c6d58)
+
 ## v6.0.0-alpha.2
 
 **[`v6.0.0-alpha.1...v6.0.0-alpha.2`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v6.0.0-alpha.1...v6.0.0-alpha.2)** - **2021-05-21**
