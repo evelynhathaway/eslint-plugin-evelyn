@@ -9,7 +9,7 @@
 [![npm version](https://badgen.net/npm/v/eslint-plugin-evelyn?icon=npm)](https://www.npmjs.com/package/eslint-plugin-evelyn)
 [![check status](https://badgen.net/github/checks/evelynhathaway/eslint-plugin-evelyn/main?icon=github)](https://github.com/evelynhathaway/eslint-plugin-evelyn/actions)
 [![rules: 1](https://badgen.net/badge/rules/1/blue)](#rules)
-[![configs: 19](https://badgen.net/badge/configs/19/blue)](#configs)
+[![configs: 12](https://badgen.net/badge/configs/12/blue)](#configs)
 [![license: MIT](https://badgen.net/badge/license/MIT/blue)](/LICENSE)
 
 </div>
@@ -24,15 +24,15 @@ My code style is very opinionated, so I only use this package on my projects. Ho
 
 ```bash
 # Save ESLint, Import, Unicorn, and this plugin to devDependencies
-npm i -D eslint eslint-plugin-import eslint-plugin-unicorn eslint-plugin-regexp eslint-plugin-evelyn
+npm install --save-dev eslint eslint-plugin-import eslint-plugin-unicorn eslint-plugin-regexp eslint-plugin-evelyn
 
 # OR
 
 # Save all this plugin and ALL peerDependencies to devDependencies
-npx install-peerdeps -D eslint-config-evelyn
+npx install-peerdeps --save-dev eslint-config-evelyn
 ```
 
-### Peer dependencies
+### Peer Dependencies
 
 npm warns about any missing peer dependencies when installing this plugin.
 
@@ -87,8 +87,7 @@ Requires eslint `>=6.0.0`.
                 "src/**/*.js"
             ],
             "extends": [
-                "plugin:evelyn/node",
-                "plugin:evelyn/source"
+                "plugin:evelyn/node"
             ]
         }
     ]
@@ -139,7 +138,7 @@ npm run lint
 - Use the `--debug` ESLint CLI flag for determining things like the modules that get loaded
 - Use the `--print-config` ESLint CLI flag for a minimal computed config
 
-### Saving the entire computed config array
+### Saving the Entire Computed Config Array
 
 Run the default export from the `save-config.js` file from inside the config file to output to monkey-patch ESLint. This works on this project as well as any package that has eslint-plugin-evelyn `>=1.0.0` as a dependency.
 
@@ -173,27 +172,20 @@ The script is used to track the changes to the final array over time using the p
 
 See the `peerDependencies` in [package.json](./package.json) for recommended dependency version ranges.
 
-| Name                                                            | Description                                                       | Peer Dependencies                                                                             |
-| --------------------------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [babel](./lib/configs/babel.js)                                 | For files transpiled by Babel                                     | @babel/eslint-parser                                                                          |
-| [browser-env](./lib/configs/browser-env.js)                     | For the browser environment                                       |                                                                                               |
-| [default](./lib/configs/default.js)                             | My style and lint rules from ESLint                               | eslint-plugin-unicorn, eslint-plugin-import, eslint-plugin-regexp                             |
-| [extensions](./lib/configs/extensions.js)                       | Enforce ESLint linting all extensions compatible with this plugin |                                                                                               |
-| [jest](./lib/configs/jest.js)                                   | Jest tests                                                        | eslint-plugin-node, eslint-plugin-jest                                                        |
-| [json-comments](./lib/configs/json-comments.js)                 | JSON files with comments                                          | eslint-plugin-json                                                                            |
-| [json](./lib/configs/json.js)                                   | JSON files                                                        | eslint-plugin-json                                                                            |
-| [jsx](./lib/configs/jsx.js)                                     | JSX features                                                      | eslint-plugin-jsx-a11y                                                                        |
-| [markdown](./lib/configs/markdown.js)                           | Linting scripts in markdown files                                 | eslint-plugin-markdown                                                                        |
-| [mocha](./lib/configs/mocha.js)                                 | Mocha tests                                                       | eslint-plugin-node, eslint-plugin-mocha                                                       |
-| [node-env](./lib/configs/node-env.js)                           | For the node env and parser options                               | eslint-plugin-node                                                                            |
-| [node](./lib/configs/node.js)                                   | Node.js environment                                               | eslint-plugin-node                                                                            |
-| [react](./lib/configs/react.js)                                 | React.js, browser env, JSX                                        | eslint-plugin-react, eslint-plugin-jsx-a11y, eslint-plugin-react-hooks, eslint-plugin-import  |
-| [source](./lib/configs/source.js)                               | Files to allow unsupported syntax before transpilation            | eslint-plugin-node                                                                            |
-| [testing-library](./lib/configs/testing-library.js)             | Testing library test files                                        | eslint-plugin-testing-library                                                                 |
-| [testing-library-react](./lib/configs/testing-library-react.js) | Testing library test files for React.js                           | eslint-plugin-testing-library                                                                 |
-| [testing-library-vue](./lib/configs/testing-library-vue.js)     | Testing library test files for Vue.js                             | eslint-plugin-testing-library                                                                 |
-| [typescript](./lib/configs/typescript.js)                       | TypeScript files                                                  | @typescript-eslint/eslint-plugin, @typescript-eslint/parser, typescript, eslint-plugin-import |
-| [vue](./lib/configs/vue.js)                                     | Vue.js files                                                      | @babel/eslint-parser, eslint-plugin-vue                                                       |
+| Name                                                            | Peer Dependencies                                                                             |
+| --------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| [babel](./lib/configs/babel.js)                                 | @babel/eslint-parser                                                                          |
+| [default](./lib/configs/default.js)                             | eslint-plugin-unicorn, eslint-plugin-import, eslint-plugin-regexp                             |
+| [jest](./lib/configs/jest.js)                                   | eslint-plugin-node, eslint-plugin-jest                                                        |
+| [jsx](./lib/configs/jsx.js)                                     | eslint-plugin-jsx-a11y                                                                        |
+| [mocha](./lib/configs/mocha.js)                                 | eslint-plugin-node, eslint-plugin-mocha                                                       |
+| [node](./lib/configs/node.js)                                   | eslint-plugin-node                                                                            |
+| [react](./lib/configs/react.js)                                 | eslint-plugin-react, eslint-plugin-jsx-a11y, eslint-plugin-react-hooks, eslint-plugin-import  |
+| [testing-library](./lib/configs/testing-library.js)             | eslint-plugin-testing-library                                                                 |
+| [testing-library-react](./lib/configs/testing-library-react.js) | eslint-plugin-testing-library                                                                 |
+| [testing-library-vue](./lib/configs/testing-library-vue.js)     | eslint-plugin-testing-library                                                                 |
+| [typescript](./lib/configs/typescript.js)                       | @typescript-eslint/eslint-plugin, @typescript-eslint/parser, typescript, eslint-plugin-import |
+| [vue](./lib/configs/vue.js)                                     | @babel/eslint-parser, eslint-plugin-vue                                                       |
 
 ## Rules
 

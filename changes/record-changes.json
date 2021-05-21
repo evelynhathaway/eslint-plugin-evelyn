@@ -266,18 +266,29 @@
 		"name": ".eslintrc.js » plugin:evelyn/default",
 		"filePath": "CLEANED",
 		"criteria": null,
+		"env": {
+			"es2021": true,
+			"node": true,
+			"browser": true,
+			"worker": true,
+			"serviceworker": true
+		},
 		"ignorePattern": {
 			"patterns": [
 				"!**/.*.js",
+				"!**/.*.cjs",
+				"!**/.*.mjs",
 				"!**/.*.ts",
-				"!**/.*.json",
 				"!**/.*.jsx",
 				"!**/.*.tsx",
-				"!**/.*.vue",
-				"**/package-lock.json"
+				"!**/.*.vue"
 			],
 			"basePath": "CLEANED",
 			"loose": false
+		},
+		"parserOptions": {
+			"ecmaVersion": 2021,
+			"sourceType": "module"
 		},
 		"plugins": {
 			"unicorn": {
@@ -472,13 +483,13 @@
 					"commentPattern": "falls?\\s?through|break"
 				}
 			],
+			"unicorn/prefer-module": "off",
 			"unicorn/no-array-for-each": "off",
 			"unicorn/no-new-array": "off",
 			"unicorn/no-null": "off",
 			"unicorn/prefer-spread": "off",
 			"unicorn/prefer-query-selector": "off",
-			"unicorn/prevent-abbreviations": "off",
-			"unicorn/import-index": "off",
+			"unicorn/prevent-abbreviations": "error",
 			"unicorn/explicit-length-check": "off",
 			"unicorn/expiring-todo-comments": [
 				"error",
@@ -487,7 +498,7 @@
 					"ignoreDatesOnPullRequests": true
 				}
 			],
-			"unicorn/no-reduce": "off",
+			"unicorn/no-array-reduce": "off",
 			"unicorn/no-fn-reference-in-iterator": "off",
 			"unicorn/filename-case": [
 				"error",
@@ -503,6 +514,8 @@
 			],
 			"unicorn/import-style": "off",
 			"unicorn/prefer-ternary": "off",
+			"import/no-deprecated": "error",
+			"import/no-useless-path-segments": "error",
 			"import/first": "error",
 			"import/order": [
 				"error",
@@ -542,13 +555,13 @@
 			"import/no-anonymous-default-export": [
 				"error",
 				{
-					"allowArray": false,
+					"allowArray": true,
 					"allowArrowFunction": false,
 					"allowAnonymousClass": false,
 					"allowAnonymousFunction": false,
 					"allowCallExpression": false,
-					"allowLiteral": false,
-					"allowObject": false
+					"allowLiteral": true,
+					"allowObject": true
 				}
 			]
 		},
@@ -557,6 +570,8 @@
 				"node": {
 					"extensions": [
 						".js",
+						".cjs",
+						".mjs",
 						".jsx",
 						".ts",
 						".tsx",
@@ -571,17 +586,11 @@
 	},
 	{
 		"type": "config",
-		"name": ".eslintrc.js » plugin:evelyn/extensions",
-		"filePath": "CLEANED",
-		"criteria": null
-	},
-	{
-		"type": "config",
-		"name": ".eslintrc.js » plugin:evelyn/extensions#overrides[0]",
+		"name": ".eslintrc.js » plugin:evelyn/default#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
-				"**/*.{js,jsx,ts,tsx,json,vue}"
+				"**/*.{js,cjs,mjs,jsx,ts,tsx,vue}"
 			],
 			"excludes": null,
 			"basePath": "CLEANED"
@@ -890,20 +899,6 @@
 	},
 	{
 		"type": "config",
-		"name": ".eslintrc.js » plugin:evelyn/node » plugin:evelyn/node-env",
-		"filePath": "CLEANED",
-		"criteria": null,
-		"env": {
-			"es6": true,
-			"node": true
-		},
-		"parserOptions": {
-			"ecmaVersion": 2020,
-			"sourceType": "module"
-		}
-	},
-	{
-		"type": "config",
 		"name": ".eslintrc.js » plugin:evelyn/node",
 		"filePath": "CLEANED",
 		"criteria": null,
@@ -917,71 +912,11 @@
 			}
 		},
 		"rules": {
+			"no-process-exit": "off",
 			"node/no-path-concat": "error",
 			"node/prefer-promises/fs": "warn",
 			"node/no-sync": "warn",
-			"node/no-missing-import": [
-				"error",
-				{
-					"tryExtensions": [
-						".js",
-						".jsx",
-						".ts",
-						".tsx",
-						".json",
-						".vue"
-					]
-				}
-			]
-		}
-	},
-	{
-		"type": "implicit-processor",
-		"name": ".eslintrc.js » plugin:evelyn/json » plugin:json/recommended#processors[\"json/.json\"]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"*.json"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"processor": "json/.json"
-	},
-	{
-		"type": "config",
-		"name": ".eslintrc.js » plugin:evelyn/json » plugin:json/recommended",
-		"filePath": "CLEANED",
-		"criteria": null,
-		"plugins": {
-			"json": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "json",
-				"importerName": ".eslintrc.js » plugin:evelyn/json » plugin:json/recommended",
-				"importerPath": "CLEANED"
-			}
-		},
-		"rules": {
-			"json/*": "error"
-		}
-	},
-	{
-		"type": "config",
-		"name": ".eslintrc.js » plugin:evelyn/json",
-		"filePath": "CLEANED",
-		"criteria": null
-	},
-	{
-		"type": "config",
-		"name": ".eslintrc.js » plugin:evelyn/json#overrides[0]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"**/*.json"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
+			"node/no-missing-import": "off"
 		}
 	},
 	{
@@ -1005,9 +940,6 @@
 				"importerName": ".eslintrc.js",
 				"importerPath": "CLEANED"
 			}
-		},
-		"rules": {
-			"unicorn/prefer-module": "off"
 		}
 	},
 	{
@@ -1058,65 +990,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[1] » plugin:evelyn/browser-env",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"browser-env"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"env": {
-			"browser": true,
-			"worker": true,
-			"serviceworker": true
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[1]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"browser-env"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[2] » plugin:evelyn/browser",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"browser"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"env": {
-			"browser": true,
-			"worker": true,
-			"serviceworker": true
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[2]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"browser"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[3] » plugin:evelyn/default » eslint:recommended",
+		"name": "--config#overrides[1] » plugin:evelyn/default » eslint:recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -1187,7 +1061,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[3] » plugin:evelyn/default » plugin:unicorn/recommended",
+		"name": "--config#overrides[1] » plugin:evelyn/default » plugin:unicorn/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -1208,7 +1082,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "unicorn",
-				"importerName": "--config#overrides[3] » plugin:evelyn/default » plugin:unicorn/recommended",
+				"importerName": "--config#overrides[1] » plugin:evelyn/default » plugin:unicorn/recommended",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -1295,7 +1169,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[3] » plugin:evelyn/default » plugin:import/errors",
+		"name": "--config#overrides[1] » plugin:evelyn/default » plugin:import/errors",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -1309,7 +1183,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "import",
-				"importerName": "--config#overrides[3] » plugin:evelyn/default » plugin:import/errors",
+				"importerName": "--config#overrides[1] » plugin:evelyn/default » plugin:import/errors",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -1323,7 +1197,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[3] » plugin:evelyn/default » plugin:import/warnings",
+		"name": "--config#overrides[1] » plugin:evelyn/default » plugin:import/warnings",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -1337,7 +1211,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "import",
-				"importerName": "--config#overrides[3] » plugin:evelyn/default » plugin:import/warnings",
+				"importerName": "--config#overrides[1] » plugin:evelyn/default » plugin:import/warnings",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -1349,7 +1223,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[3] » plugin:evelyn/default » plugin:regexp/recommended",
+		"name": "--config#overrides[1] » plugin:evelyn/default » plugin:regexp/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -1363,7 +1237,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "regexp",
-				"importerName": "--config#overrides[3] » plugin:evelyn/default » plugin:regexp/recommended",
+				"importerName": "--config#overrides[1] » plugin:evelyn/default » plugin:regexp/recommended",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -1395,7 +1269,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[3] » plugin:evelyn/default",
+		"name": "--config#overrides[1] » plugin:evelyn/default",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -1404,39 +1278,50 @@
 			"excludes": null,
 			"basePath": "CLEANED"
 		},
+		"env": {
+			"es2021": true,
+			"node": true,
+			"browser": true,
+			"worker": true,
+			"serviceworker": true
+		},
 		"ignorePattern": {
 			"patterns": [
 				"!**/.*.js",
+				"!**/.*.cjs",
+				"!**/.*.mjs",
 				"!**/.*.ts",
-				"!**/.*.json",
 				"!**/.*.jsx",
 				"!**/.*.tsx",
-				"!**/.*.vue",
-				"**/package-lock.json"
+				"!**/.*.vue"
 			],
 			"basePath": "CLEANED",
 			"loose": false
+		},
+		"parserOptions": {
+			"ecmaVersion": 2021,
+			"sourceType": "module"
 		},
 		"plugins": {
 			"unicorn": {
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "unicorn",
-				"importerName": "--config#overrides[3] » plugin:evelyn/default",
+				"importerName": "--config#overrides[1] » plugin:evelyn/default",
 				"importerPath": "CLEANED"
 			},
 			"import": {
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "import",
-				"importerName": "--config#overrides[3] » plugin:evelyn/default",
+				"importerName": "--config#overrides[1] » plugin:evelyn/default",
 				"importerPath": "CLEANED"
 			},
 			"regexp": {
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "regexp",
-				"importerName": "--config#overrides[3] » plugin:evelyn/default",
+				"importerName": "--config#overrides[1] » plugin:evelyn/default",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -1610,13 +1495,13 @@
 					"commentPattern": "falls?\\s?through|break"
 				}
 			],
+			"unicorn/prefer-module": "off",
 			"unicorn/no-array-for-each": "off",
 			"unicorn/no-new-array": "off",
 			"unicorn/no-null": "off",
 			"unicorn/prefer-spread": "off",
 			"unicorn/prefer-query-selector": "off",
-			"unicorn/prevent-abbreviations": "off",
-			"unicorn/import-index": "off",
+			"unicorn/prevent-abbreviations": "error",
 			"unicorn/explicit-length-check": "off",
 			"unicorn/expiring-todo-comments": [
 				"error",
@@ -1625,7 +1510,7 @@
 					"ignoreDatesOnPullRequests": true
 				}
 			],
-			"unicorn/no-reduce": "off",
+			"unicorn/no-array-reduce": "off",
 			"unicorn/no-fn-reference-in-iterator": "off",
 			"unicorn/filename-case": [
 				"error",
@@ -1641,6 +1526,8 @@
 			],
 			"unicorn/import-style": "off",
 			"unicorn/prefer-ternary": "off",
+			"import/no-deprecated": "error",
+			"import/no-useless-path-segments": "error",
 			"import/first": "error",
 			"import/order": [
 				"error",
@@ -1680,13 +1567,13 @@
 			"import/no-anonymous-default-export": [
 				"error",
 				{
-					"allowArray": false,
+					"allowArray": true,
 					"allowArrowFunction": false,
 					"allowAnonymousClass": false,
 					"allowAnonymousFunction": false,
 					"allowCallExpression": false,
-					"allowLiteral": false,
-					"allowObject": false
+					"allowLiteral": true,
+					"allowObject": true
 				}
 			]
 		},
@@ -1695,6 +1582,8 @@
 				"node": {
 					"extensions": [
 						".js",
+						".cjs",
+						".mjs",
 						".jsx",
 						".ts",
 						".tsx",
@@ -1709,7 +1598,29 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[3]",
+		"name": "--config#overrides[1] » plugin:evelyn/default#overrides[0]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"default"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{js,cjs,mjs,jsx,ts,tsx,vue}"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[1]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -1721,45 +1632,74 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[4] » plugin:evelyn/extensions",
+		"name": "--config#overrides[2] » plugin:evelyn/esm",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
-				"extensions"
+				"esm"
 			],
 			"excludes": null,
 			"basePath": "CLEANED"
+		},
+		"plugins": {
+			"import": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "import",
+				"importerName": "--config#overrides[2] » plugin:evelyn/esm",
+				"importerPath": "CLEANED"
+			},
+			"unicorn": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "unicorn",
+				"importerName": "--config#overrides[2] » plugin:evelyn/esm",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"unicorn/prefer-module": "error",
+			"import/extensions": [
+				"error",
+				"always",
+				{
+					"ignorePackages": true
+				}
+			]
 		}
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[4] » plugin:evelyn/extensions#overrides[0]",
+		"name": "--config#overrides[2] » plugin:evelyn/esm#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
 				{
 					"includes": [
-						"extensions"
+						"esm"
 					],
 					"excludes": null
 				},
 				{
 					"includes": [
-						"**/*.{js,jsx,ts,tsx,json,vue}"
+						"**/*.{ts,tsx}"
 					],
 					"excludes": null
 				}
 			],
 			"basePath": "CLEANED"
+		},
+		"rules": {
+			"import/no-unresolved": "off"
 		}
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[4]",
+		"name": "--config#overrides[2]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
-				"extensions"
+				"esm"
 			],
 			"excludes": null,
 			"basePath": "CLEANED"
@@ -1767,7 +1707,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[5] » plugin:evelyn/jest » plugin:evelyn/node » plugin:node/recommended",
+		"name": "--config#overrides[3] » plugin:evelyn/jest » plugin:evelyn/node » plugin:node/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -1839,7 +1779,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "node",
-				"importerName": "--config#overrides[5] » plugin:evelyn/jest » plugin:evelyn/node » plugin:node/recommended",
+				"importerName": "--config#overrides[3] » plugin:evelyn/jest » plugin:evelyn/node » plugin:node/recommended",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -1868,7 +1808,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[5] » plugin:evelyn/jest » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
+		"name": "--config#overrides[3] » plugin:evelyn/jest » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -1951,7 +1891,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "node",
-				"importerName": "--config#overrides[5] » plugin:evelyn/jest » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
+				"importerName": "--config#overrides[3] » plugin:evelyn/jest » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -1980,7 +1920,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[5] » plugin:evelyn/jest » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
+		"name": "--config#overrides[3] » plugin:evelyn/jest » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -2063,7 +2003,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "node",
-				"importerName": "--config#overrides[5] » plugin:evelyn/jest » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
+				"importerName": "--config#overrides[3] » plugin:evelyn/jest » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -2094,27 +2034,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[5] » plugin:evelyn/jest » plugin:evelyn/node » plugin:evelyn/node-env",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"jest"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"env": {
-			"es6": true,
-			"node": true
-		},
-		"parserOptions": {
-			"ecmaVersion": 2020,
-			"sourceType": "module"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[5] » plugin:evelyn/jest » plugin:evelyn/node",
+		"name": "--config#overrides[3] » plugin:evelyn/jest » plugin:evelyn/node",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -2128,32 +2048,21 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "node",
-				"importerName": "--config#overrides[5] » plugin:evelyn/jest » plugin:evelyn/node",
+				"importerName": "--config#overrides[3] » plugin:evelyn/jest » plugin:evelyn/node",
 				"importerPath": "CLEANED"
 			}
 		},
 		"rules": {
+			"no-process-exit": "off",
 			"node/no-path-concat": "error",
 			"node/prefer-promises/fs": "warn",
 			"node/no-sync": "warn",
-			"node/no-missing-import": [
-				"error",
-				{
-					"tryExtensions": [
-						".js",
-						".jsx",
-						".ts",
-						".tsx",
-						".json",
-						".vue"
-					]
-				}
-			]
+			"node/no-missing-import": "off"
 		}
 	},
 	{
 		"type": "implicit-processor",
-		"name": "--config#overrides[5] » plugin:evelyn/jest » plugin:jest/recommended#processors[\"jest/.snap\"]",
+		"name": "--config#overrides[3] » plugin:evelyn/jest » plugin:jest/recommended#processors[\"jest/.snap\"]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -2176,7 +2085,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[5] » plugin:evelyn/jest » plugin:jest/recommended",
+		"name": "--config#overrides[3] » plugin:evelyn/jest » plugin:jest/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -2193,7 +2102,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "jest",
-				"importerName": "--config#overrides[5] » plugin:evelyn/jest » plugin:jest/recommended",
+				"importerName": "--config#overrides[3] » plugin:evelyn/jest » plugin:jest/recommended",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -2222,7 +2131,7 @@
 	},
 	{
 		"type": "implicit-processor",
-		"name": "--config#overrides[5] » plugin:evelyn/jest » plugin:jest/style#processors[\"jest/.snap\"]",
+		"name": "--config#overrides[3] » plugin:evelyn/jest » plugin:jest/style#processors[\"jest/.snap\"]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -2245,7 +2154,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[5] » plugin:evelyn/jest » plugin:jest/style",
+		"name": "--config#overrides[3] » plugin:evelyn/jest » plugin:jest/style",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -2259,7 +2168,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "jest",
-				"importerName": "--config#overrides[5] » plugin:evelyn/jest » plugin:jest/style",
+				"importerName": "--config#overrides[3] » plugin:evelyn/jest » plugin:jest/style",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -2272,28 +2181,8 @@
 		}
 	},
 	{
-		"type": "config",
-		"name": "--config#overrides[5] » plugin:evelyn/jest » plugin:evelyn/node-env",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"jest"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"env": {
-			"es6": true,
-			"node": true
-		},
-		"parserOptions": {
-			"ecmaVersion": 2020,
-			"sourceType": "module"
-		}
-	},
-	{
 		"type": "implicit-processor",
-		"name": "--config#overrides[5] » plugin:evelyn/jest#processors[\"jest/.snap\"]",
+		"name": "--config#overrides[3] » plugin:evelyn/jest#processors[\"jest/.snap\"]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -2316,7 +2205,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[5] » plugin:evelyn/jest",
+		"name": "--config#overrides[3] » plugin:evelyn/jest",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -2334,21 +2223,21 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "node",
-				"importerName": "--config#overrides[5] » plugin:evelyn/jest",
+				"importerName": "--config#overrides[3] » plugin:evelyn/jest",
 				"importerPath": "CLEANED"
 			},
 			"jest": {
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "jest",
-				"importerName": "--config#overrides[5] » plugin:evelyn/jest",
+				"importerName": "--config#overrides[3] » plugin:evelyn/jest",
 				"importerPath": "CLEANED"
 			}
 		}
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[5]",
+		"name": "--config#overrides[3]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -2359,199 +2248,8 @@
 		}
 	},
 	{
-		"type": "implicit-processor",
-		"name": "--config#overrides[6] » plugin:evelyn/json-comments » plugin:json/recommended-with-comments#processors[\"json/.json\"]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"AND": [
-				{
-					"includes": [
-						"json-comments"
-					],
-					"excludes": null
-				},
-				{
-					"includes": [
-						"*.json"
-					],
-					"excludes": null
-				}
-			],
-			"basePath": "CLEANED"
-		},
-		"processor": "json/.json"
-	},
-	{
 		"type": "config",
-		"name": "--config#overrides[6] » plugin:evelyn/json-comments » plugin:json/recommended-with-comments",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"json-comments"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"plugins": {
-			"json": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "json",
-				"importerName": "--config#overrides[6] » plugin:evelyn/json-comments » plugin:json/recommended-with-comments",
-				"importerPath": "CLEANED"
-			}
-		},
-		"rules": {
-			"json/*": [
-				"error",
-				{
-					"allowComments": true
-				}
-			]
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[6] » plugin:evelyn/json-comments",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"json-comments"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[6] » plugin:evelyn/json-comments#overrides[0]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"AND": [
-				{
-					"includes": [
-						"json-comments"
-					],
-					"excludes": null
-				},
-				{
-					"includes": [
-						"**/*.json"
-					],
-					"excludes": null
-				}
-			],
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[6]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"json-comments"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "implicit-processor",
-		"name": "--config#overrides[7] » plugin:evelyn/json » plugin:json/recommended#processors[\"json/.json\"]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"AND": [
-				{
-					"includes": [
-						"json"
-					],
-					"excludes": null
-				},
-				{
-					"includes": [
-						"*.json"
-					],
-					"excludes": null
-				}
-			],
-			"basePath": "CLEANED"
-		},
-		"processor": "json/.json"
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[7] » plugin:evelyn/json » plugin:json/recommended",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"json"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"plugins": {
-			"json": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "json",
-				"importerName": "--config#overrides[7] » plugin:evelyn/json » plugin:json/recommended",
-				"importerPath": "CLEANED"
-			}
-		},
-		"rules": {
-			"json/*": "error"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[7] » plugin:evelyn/json",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"json"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[7] » plugin:evelyn/json#overrides[0]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"AND": [
-				{
-					"includes": [
-						"json"
-					],
-					"excludes": null
-				},
-				{
-					"includes": [
-						"**/*.json"
-					],
-					"excludes": null
-				}
-			],
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[7]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"json"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[8] » plugin:evelyn/jsx » plugin:jsx-a11y/recommended",
+		"name": "--config#overrides[4] » plugin:evelyn/jsx » plugin:jsx-a11y/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -2570,7 +2268,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "jsx-a11y",
-				"importerName": "--config#overrides[8] » plugin:evelyn/jsx » plugin:jsx-a11y/recommended",
+				"importerName": "--config#overrides[4] » plugin:evelyn/jsx » plugin:jsx-a11y/recommended",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -2757,7 +2455,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[8] » plugin:evelyn/jsx",
+		"name": "--config#overrides[4] » plugin:evelyn/jsx",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -2776,14 +2474,14 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "jsx-a11y",
-				"importerName": "--config#overrides[8] » plugin:evelyn/jsx",
+				"importerName": "--config#overrides[4] » plugin:evelyn/jsx",
 				"importerPath": "CLEANED"
 			}
 		}
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[8] » plugin:evelyn/jsx#overrides[0]",
+		"name": "--config#overrides[4] » plugin:evelyn/jsx#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -2805,7 +2503,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[8]",
+		"name": "--config#overrides[4]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -2817,70 +2515,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[9] » plugin:evelyn/markdown",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"markdown"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"plugins": {
-			"markdown": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "markdown",
-				"importerName": "--config#overrides[9] » plugin:evelyn/markdown",
-				"importerPath": "CLEANED"
-			}
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[9] » plugin:evelyn/markdown#overrides[0]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"AND": [
-				{
-					"includes": [
-						"markdown"
-					],
-					"excludes": null
-				},
-				{
-					"includes": [
-						"**/*.{md,markdown,mdown,mkdn}"
-					],
-					"excludes": null
-				}
-			],
-			"basePath": "CLEANED"
-		},
-		"parserOptions": {
-			"ecmaFeatures": {
-				"impliedStrict": true
-			}
-		},
-		"rules": {
-			"strict": "off"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[9]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"markdown"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[10] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended",
+		"name": "--config#overrides[5] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -2952,7 +2587,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "node",
-				"importerName": "--config#overrides[10] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended",
+				"importerName": "--config#overrides[5] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -2981,7 +2616,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[10] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
+		"name": "--config#overrides[5] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -3064,7 +2699,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "node",
-				"importerName": "--config#overrides[10] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
+				"importerName": "--config#overrides[5] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -3093,7 +2728,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[10] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
+		"name": "--config#overrides[5] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -3176,7 +2811,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "node",
-				"importerName": "--config#overrides[10] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
+				"importerName": "--config#overrides[5] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -3207,27 +2842,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[10] » plugin:evelyn/mocha » plugin:evelyn/node » plugin:evelyn/node-env",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"mocha"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"env": {
-			"es6": true,
-			"node": true
-		},
-		"parserOptions": {
-			"ecmaVersion": 2020,
-			"sourceType": "module"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[10] » plugin:evelyn/mocha » plugin:evelyn/node",
+		"name": "--config#overrides[5] » plugin:evelyn/mocha » plugin:evelyn/node",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -3241,32 +2856,21 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "node",
-				"importerName": "--config#overrides[10] » plugin:evelyn/mocha » plugin:evelyn/node",
+				"importerName": "--config#overrides[5] » plugin:evelyn/mocha » plugin:evelyn/node",
 				"importerPath": "CLEANED"
 			}
 		},
 		"rules": {
+			"no-process-exit": "off",
 			"node/no-path-concat": "error",
 			"node/prefer-promises/fs": "warn",
 			"node/no-sync": "warn",
-			"node/no-missing-import": [
-				"error",
-				{
-					"tryExtensions": [
-						".js",
-						".jsx",
-						".ts",
-						".tsx",
-						".json",
-						".vue"
-					]
-				}
-			]
+			"node/no-missing-import": "off"
 		}
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[10] » plugin:evelyn/mocha » plugin:mocha/recommended",
+		"name": "--config#overrides[5] » plugin:evelyn/mocha » plugin:mocha/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -3283,7 +2887,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "mocha",
-				"importerName": "--config#overrides[10] » plugin:evelyn/mocha » plugin:mocha/recommended",
+				"importerName": "--config#overrides[5] » plugin:evelyn/mocha » plugin:mocha/recommended",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -3319,7 +2923,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[10] » plugin:evelyn/mocha » plugin:evelyn/node-env",
+		"name": "--config#overrides[5] » plugin:evelyn/mocha",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -3327,49 +2931,20 @@
 			],
 			"excludes": null,
 			"basePath": "CLEANED"
-		},
-		"env": {
-			"es6": true,
-			"node": true
-		},
-		"parserOptions": {
-			"ecmaVersion": 2020,
-			"sourceType": "module"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[10] » plugin:evelyn/mocha",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"mocha"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"env": {
-			"mocha": true
 		},
 		"plugins": {
 			"mocha": {
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "mocha",
-				"importerName": "--config#overrides[10] » plugin:evelyn/mocha",
+				"importerName": "--config#overrides[5] » plugin:evelyn/mocha",
 				"importerPath": "CLEANED"
 			}
-		},
-		"rules": {
-			"mocha/no-global-tests": "warn",
-			"mocha/no-mocha-arrows": "warn",
-			"mocha/no-pending-tests": "warn",
-			"mocha/no-skipped-tests": "warn"
 		}
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[10]",
+		"name": "--config#overrides[5]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -3381,39 +2956,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/node-env",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"node-env"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"env": {
-			"es6": true,
-			"node": true
-		},
-		"parserOptions": {
-			"ecmaVersion": 2020,
-			"sourceType": "module"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[11]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"node-env"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[12] » plugin:evelyn/node » plugin:node/recommended",
+		"name": "--config#overrides[6] » plugin:evelyn/node » plugin:node/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -3485,7 +3028,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "node",
-				"importerName": "--config#overrides[12] » plugin:evelyn/node » plugin:node/recommended",
+				"importerName": "--config#overrides[6] » plugin:evelyn/node » plugin:node/recommended",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -3514,7 +3057,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[12] » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
+		"name": "--config#overrides[6] » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -3597,7 +3140,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "node",
-				"importerName": "--config#overrides[12] » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
+				"importerName": "--config#overrides[6] » plugin:evelyn/node » plugin:node/recommended#overrides[0]",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -3626,7 +3169,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[12] » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
+		"name": "--config#overrides[6] » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -3709,7 +3252,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "node",
-				"importerName": "--config#overrides[12] » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
+				"importerName": "--config#overrides[6] » plugin:evelyn/node » plugin:node/recommended#overrides[1]",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -3740,27 +3283,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[12] » plugin:evelyn/node » plugin:evelyn/node-env",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"node"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"env": {
-			"es6": true,
-			"node": true
-		},
-		"parserOptions": {
-			"ecmaVersion": 2020,
-			"sourceType": "module"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[12] » plugin:evelyn/node",
+		"name": "--config#overrides[6] » plugin:evelyn/node",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -3774,32 +3297,21 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "node",
-				"importerName": "--config#overrides[12] » plugin:evelyn/node",
+				"importerName": "--config#overrides[6] » plugin:evelyn/node",
 				"importerPath": "CLEANED"
 			}
 		},
 		"rules": {
+			"no-process-exit": "off",
 			"node/no-path-concat": "error",
 			"node/prefer-promises/fs": "warn",
 			"node/no-sync": "warn",
-			"node/no-missing-import": [
-				"error",
-				{
-					"tryExtensions": [
-						".js",
-						".jsx",
-						".ts",
-						".tsx",
-						".json",
-						".vue"
-					]
-				}
-			]
+			"node/no-missing-import": "off"
 		}
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[12]",
+		"name": "--config#overrides[6]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -3811,24 +3323,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[13] » plugin:evelyn/react » plugin:evelyn/browser-env",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"react"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"env": {
-			"browser": true,
-			"worker": true,
-			"serviceworker": true
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[13] » plugin:evelyn/react » plugin:evelyn/jsx » plugin:jsx-a11y/recommended",
+		"name": "--config#overrides[7] » plugin:evelyn/react » plugin:evelyn/jsx » plugin:jsx-a11y/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -3847,7 +3342,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "jsx-a11y",
-				"importerName": "--config#overrides[13] » plugin:evelyn/react » plugin:evelyn/jsx » plugin:jsx-a11y/recommended",
+				"importerName": "--config#overrides[7] » plugin:evelyn/react » plugin:evelyn/jsx » plugin:jsx-a11y/recommended",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -4034,7 +3529,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[13] » plugin:evelyn/react » plugin:evelyn/jsx",
+		"name": "--config#overrides[7] » plugin:evelyn/react » plugin:evelyn/jsx",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -4053,14 +3548,14 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "jsx-a11y",
-				"importerName": "--config#overrides[13] » plugin:evelyn/react » plugin:evelyn/jsx",
+				"importerName": "--config#overrides[7] » plugin:evelyn/react » plugin:evelyn/jsx",
 				"importerPath": "CLEANED"
 			}
 		}
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[13] » plugin:evelyn/react » plugin:evelyn/jsx#overrides[0]",
+		"name": "--config#overrides[7] » plugin:evelyn/react » plugin:evelyn/jsx#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -4082,7 +3577,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[13] » plugin:evelyn/react » plugin:react/recommended",
+		"name": "--config#overrides[7] » plugin:evelyn/react » plugin:react/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -4101,7 +3596,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "react",
-				"importerName": "--config#overrides[13] » plugin:evelyn/react » plugin:react/recommended",
+				"importerName": "--config#overrides[7] » plugin:evelyn/react » plugin:react/recommended",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -4132,7 +3627,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[13] » plugin:evelyn/react » plugin:react-hooks/recommended",
+		"name": "--config#overrides[7] » plugin:evelyn/react » plugin:react-hooks/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -4146,7 +3641,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "react-hooks",
-				"importerName": "--config#overrides[13] » plugin:evelyn/react » plugin:react-hooks/recommended",
+				"importerName": "--config#overrides[7] » plugin:evelyn/react » plugin:react-hooks/recommended",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -4157,27 +3652,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[13] » plugin:evelyn/react » plugin:evelyn/node-env",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"react"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"env": {
-			"es6": true,
-			"node": true
-		},
-		"parserOptions": {
-			"ecmaVersion": 2020,
-			"sourceType": "module"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[13] » plugin:evelyn/react",
+		"name": "--config#overrides[7] » plugin:evelyn/react",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -4191,21 +3666,21 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "react",
-				"importerName": "--config#overrides[13] » plugin:evelyn/react",
+				"importerName": "--config#overrides[7] » plugin:evelyn/react",
 				"importerPath": "CLEANED"
 			},
 			"import": {
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "import",
-				"importerName": "--config#overrides[13] » plugin:evelyn/react",
+				"importerName": "--config#overrides[7] » plugin:evelyn/react",
 				"importerPath": "CLEANED"
 			},
 			"react-hooks": {
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "react-hooks",
-				"importerName": "--config#overrides[13] » plugin:evelyn/react",
+				"importerName": "--config#overrides[7] » plugin:evelyn/react",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -4213,7 +3688,6 @@
 			"react/jsx-props-no-spreading": "off",
 			"react/self-closing-comp": "error",
 			"react-hooks/exhaustive-deps": "error",
-			"import/no-amd": "error",
 			"react/no-array-index-key": "error",
 			"react/button-has-type": "error",
 			"react/prefer-stateless-function": "error",
@@ -4299,7 +3773,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[13]",
+		"name": "--config#overrides[7]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -4311,112 +3785,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[14] » plugin:evelyn/source",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"source"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"plugins": {
-			"node": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "node",
-				"importerName": "--config#overrides[14] » plugin:evelyn/source",
-				"importerPath": "CLEANED"
-			}
-		},
-		"rules": {
-			"node/no-unsupported-features/es-syntax": "off",
-			"node/no-unsupported-features/es-builtins": "off"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[14]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"source"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[15] » plugin:evelyn/testing-library » plugin:testing-library/dom",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"testing-library"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"plugins": {
-			"testing-library": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "testing-library",
-				"importerName": "--config#overrides[15] » plugin:evelyn/testing-library » plugin:testing-library/dom",
-				"importerPath": "CLEANED"
-			}
-		},
-		"rules": {
-			"testing-library/await-async-query": "error",
-			"testing-library/await-async-utils": "error",
-			"testing-library/no-await-sync-query": "error",
-			"testing-library/no-promise-in-fire-event": "error",
-			"testing-library/no-wait-for-empty-callback": "error",
-			"testing-library/prefer-find-by": "error",
-			"testing-library/prefer-screen-queries": "error"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[15] » plugin:evelyn/testing-library",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"testing-library"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"plugins": {
-			"testing-library": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "testing-library",
-				"importerName": "--config#overrides[15] » plugin:evelyn/testing-library",
-				"importerPath": "CLEANED"
-			}
-		},
-		"rules": {
-			"testing-library/no-debug": "warn",
-			"testing-library/no-wait-for-empty-callback": "warn",
-			"testing-library/prefer-wait-for": "error"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[15]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"testing-library"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[16] » plugin:evelyn/testing-library-react » plugin:testing-library/react",
+		"name": "--config#overrides[8] » plugin:evelyn/testing-library-react » plugin:testing-library/react",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -4430,7 +3799,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "testing-library",
-				"importerName": "--config#overrides[16] » plugin:evelyn/testing-library-react » plugin:testing-library/react",
+				"importerName": "--config#overrides[8] » plugin:evelyn/testing-library-react » plugin:testing-library/react",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -4454,7 +3823,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[16] » plugin:evelyn/testing-library-react » plugin:evelyn/testing-library » plugin:testing-library/dom",
+		"name": "--config#overrides[8] » plugin:evelyn/testing-library-react » plugin:evelyn/testing-library » plugin:testing-library/dom",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -4468,7 +3837,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "testing-library",
-				"importerName": "--config#overrides[16] » plugin:evelyn/testing-library-react » plugin:evelyn/testing-library » plugin:testing-library/dom",
+				"importerName": "--config#overrides[8] » plugin:evelyn/testing-library-react » plugin:evelyn/testing-library » plugin:testing-library/dom",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -4484,7 +3853,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[16] » plugin:evelyn/testing-library-react » plugin:evelyn/testing-library",
+		"name": "--config#overrides[8] » plugin:evelyn/testing-library-react » plugin:evelyn/testing-library",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -4498,7 +3867,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "testing-library",
-				"importerName": "--config#overrides[16] » plugin:evelyn/testing-library-react » plugin:evelyn/testing-library",
+				"importerName": "--config#overrides[8] » plugin:evelyn/testing-library-react » plugin:evelyn/testing-library",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -4510,7 +3879,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[16] » plugin:evelyn/testing-library-react",
+		"name": "--config#overrides[8] » plugin:evelyn/testing-library-react",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -4524,14 +3893,14 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "testing-library",
-				"importerName": "--config#overrides[16] » plugin:evelyn/testing-library-react",
+				"importerName": "--config#overrides[8] » plugin:evelyn/testing-library-react",
 				"importerPath": "CLEANED"
 			}
 		}
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[16]",
+		"name": "--config#overrides[8]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -4543,7 +3912,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[17] » plugin:evelyn/testing-library-vue » plugin:testing-library/vue",
+		"name": "--config#overrides[9] » plugin:evelyn/testing-library-vue » plugin:testing-library/vue",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -4557,7 +3926,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "testing-library",
-				"importerName": "--config#overrides[17] » plugin:evelyn/testing-library-vue » plugin:testing-library/vue",
+				"importerName": "--config#overrides[9] » plugin:evelyn/testing-library-vue » plugin:testing-library/vue",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -4582,7 +3951,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[17] » plugin:evelyn/testing-library-vue » plugin:evelyn/testing-library » plugin:testing-library/dom",
+		"name": "--config#overrides[9] » plugin:evelyn/testing-library-vue » plugin:evelyn/testing-library » plugin:testing-library/dom",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -4596,7 +3965,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "testing-library",
-				"importerName": "--config#overrides[17] » plugin:evelyn/testing-library-vue » plugin:evelyn/testing-library » plugin:testing-library/dom",
+				"importerName": "--config#overrides[9] » plugin:evelyn/testing-library-vue » plugin:evelyn/testing-library » plugin:testing-library/dom",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -4612,7 +3981,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[17] » plugin:evelyn/testing-library-vue » plugin:evelyn/testing-library",
+		"name": "--config#overrides[9] » plugin:evelyn/testing-library-vue » plugin:evelyn/testing-library",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -4626,7 +3995,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "testing-library",
-				"importerName": "--config#overrides[17] » plugin:evelyn/testing-library-vue » plugin:evelyn/testing-library",
+				"importerName": "--config#overrides[9] » plugin:evelyn/testing-library-vue » plugin:evelyn/testing-library",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -4638,7 +4007,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[17] » plugin:evelyn/testing-library-vue",
+		"name": "--config#overrides[9] » plugin:evelyn/testing-library-vue",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -4652,14 +4021,14 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "testing-library",
-				"importerName": "--config#overrides[17] » plugin:evelyn/testing-library-vue",
+				"importerName": "--config#overrides[9] » plugin:evelyn/testing-library-vue",
 				"importerPath": "CLEANED"
 			}
 		}
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[17]",
+		"name": "--config#overrides[9]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -4671,7 +4040,75 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[18] » plugin:evelyn/typescript » plugin:@typescript-eslint/eslint-recommended",
+		"name": "--config#overrides[10] » plugin:evelyn/testing-library » plugin:testing-library/dom",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"testing-library"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"plugins": {
+			"testing-library": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "testing-library",
+				"importerName": "--config#overrides[10] » plugin:evelyn/testing-library » plugin:testing-library/dom",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"testing-library/await-async-query": "error",
+			"testing-library/await-async-utils": "error",
+			"testing-library/no-await-sync-query": "error",
+			"testing-library/no-promise-in-fire-event": "error",
+			"testing-library/no-wait-for-empty-callback": "error",
+			"testing-library/prefer-find-by": "error",
+			"testing-library/prefer-screen-queries": "error"
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[10] » plugin:evelyn/testing-library",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"testing-library"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		},
+		"plugins": {
+			"testing-library": {
+				"error": null,
+				"filePath": "CLEANED",
+				"id": "testing-library",
+				"importerName": "--config#overrides[10] » plugin:evelyn/testing-library",
+				"importerPath": "CLEANED"
+			}
+		},
+		"rules": {
+			"testing-library/no-debug": "warn",
+			"testing-library/no-wait-for-empty-callback": "warn",
+			"testing-library/prefer-wait-for": "error"
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[10]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"includes": [
+				"testing-library"
+			],
+			"excludes": null,
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -4683,13 +4120,41 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[18] » plugin:evelyn/typescript » plugin:@typescript-eslint/eslint-recommended#overrides[0]",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/eslint-recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
 				{
 					"includes": [
 						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/eslint-recommended#overrides[0]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
 					],
 					"excludes": null
 				},
@@ -4729,20 +4194,30 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[18] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended » ./configs/base",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/base",
 		"filePath": "CLEANED",
 		"criteria": {
-			"includes": [
-				"typescript"
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
 			],
-			"excludes": null,
 			"basePath": "CLEANED"
 		},
 		"parser": {
 			"error": null,
 			"filePath": "CLEANED",
 			"id": "@typescript-eslint/parser",
-			"importerName": "--config#overrides[18] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended » ./configs/base",
+			"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/base",
 			"importerPath": "CLEANED"
 		},
 		"parserOptions": {
@@ -4753,32 +4228,48 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "@typescript-eslint",
-				"importerName": "--config#overrides[18] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended » ./configs/base",
+				"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/base",
 				"importerPath": "CLEANED"
 			}
 		}
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[18] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended » ./configs/eslint-recommended",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"typescript"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[18] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended » ./configs/eslint-recommended#overrides[0]",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/eslint-recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
 				{
 					"includes": [
 						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/eslint-recommended#overrides[0]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
 					],
 					"excludes": null
 				},
@@ -4818,13 +4309,23 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[18] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
-			"includes": [
-				"typescript"
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
 			],
-			"excludes": null,
 			"basePath": "CLEANED"
 		},
 		"rules": {
@@ -4857,20 +4358,30 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[18] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
 		"filePath": "CLEANED",
 		"criteria": {
-			"includes": [
-				"typescript"
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
 			],
-			"excludes": null,
 			"basePath": "CLEANED"
 		},
 		"parser": {
 			"error": null,
 			"filePath": "CLEANED",
 			"id": "@typescript-eslint/parser",
-			"importerName": "--config#overrides[18] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
+			"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
 			"importerPath": "CLEANED"
 		},
 		"parserOptions": {
@@ -4881,32 +4392,48 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "@typescript-eslint",
-				"importerName": "--config#overrides[18] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
+				"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
 				"importerPath": "CLEANED"
 			}
 		}
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[18] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/eslint-recommended",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"typescript"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[18] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/eslint-recommended#overrides[0]",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/eslint-recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
 				{
 					"includes": [
 						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/eslint-recommended#overrides[0]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
 					],
 					"excludes": null
 				},
@@ -4946,13 +4473,23 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[18] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking",
 		"filePath": "CLEANED",
 		"criteria": {
-			"includes": [
-				"typescript"
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
 			],
-			"excludes": null,
 			"basePath": "CLEANED"
 		},
 		"rules": {
@@ -4977,13 +4514,23 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[18] » plugin:evelyn/typescript » plugin:import/typescript",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:import/typescript",
 		"filePath": "CLEANED",
 		"criteria": {
-			"includes": [
-				"typescript"
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
 			],
-			"excludes": null,
 			"basePath": "CLEANED"
 		},
 		"rules": {
@@ -5023,40 +4570,30 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[18] » plugin:evelyn/typescript » plugin:evelyn/node-env",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
-			"includes": [
-				"typescript"
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
 			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"env": {
-			"es6": true,
-			"node": true
-		},
-		"parserOptions": {
-			"ecmaVersion": 2020,
-			"sourceType": "module"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[18] » plugin:evelyn/typescript",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"typescript"
-			],
-			"excludes": null,
 			"basePath": "CLEANED"
 		},
 		"parser": {
 			"error": null,
 			"filePath": "CLEANED",
 			"id": "@typescript-eslint/parser",
-			"importerName": "--config#overrides[18] » plugin:evelyn/typescript",
+			"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0]",
 			"importerPath": "CLEANED"
 		},
 		"parserOptions": {
@@ -5067,26 +4604,19 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "@typescript-eslint",
-				"importerName": "--config#overrides[18] » plugin:evelyn/typescript",
+				"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0]",
 				"importerPath": "CLEANED"
 			},
 			"import": {
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "import",
-				"importerName": "--config#overrides[18] » plugin:evelyn/typescript",
+				"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0]",
 				"importerPath": "CLEANED"
 			}
 		},
 		"rules": {
 			"@typescript-eslint/member-ordering": "error",
-			"@typescript-eslint/array-type": [
-				"error",
-				{
-					"default": "generic",
-					"readonly": "generic"
-				}
-			],
 			"@typescript-eslint/consistent-type-assertions": [
 				"error",
 				{
@@ -5103,29 +4633,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[18] » plugin:evelyn/typescript#overrides[0]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"AND": [
-				{
-					"includes": [
-						"typescript"
-					],
-					"excludes": null
-				},
-				{
-					"includes": [
-						"**/*.ts"
-					],
-					"excludes": null
-				}
-			],
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[18]",
+		"name": "--config#overrides[11]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -5137,7 +4645,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[19] » plugin:evelyn/vue » plugin:evelyn/babel",
+		"name": "--config#overrides[12] » plugin:evelyn/vue » plugin:evelyn/babel",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -5150,13 +4658,13 @@
 			"error": null,
 			"filePath": "CLEANED",
 			"id": "@babel/eslint-parser",
-			"importerName": "--config#overrides[19] » plugin:evelyn/vue » plugin:evelyn/babel",
+			"importerName": "--config#overrides[12] » plugin:evelyn/vue » plugin:evelyn/babel",
 			"importerPath": "CLEANED"
 		}
 	},
 	{
 		"type": "implicit-processor",
-		"name": "--config#overrides[19] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\essential.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\base.js#processors[\"vue/.vue\"]",
+		"name": "--config#overrides[12] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\essential.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\base.js#processors[\"vue/.vue\"]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -5179,7 +4687,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[19] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\essential.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\base.js",
+		"name": "--config#overrides[12] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\essential.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\base.js",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -5196,7 +4704,7 @@
 			"error": null,
 			"filePath": "CLEANED",
 			"id": "C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\vue-eslint-parser\\index.js",
-			"importerName": "--config#overrides[19] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\essential.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\base.js",
+			"importerName": "--config#overrides[12] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\essential.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\base.js",
 			"importerPath": "CLEANED"
 		},
 		"parserOptions": {
@@ -5208,7 +4716,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "vue",
-				"importerName": "--config#overrides[19] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\essential.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\base.js",
+				"importerName": "--config#overrides[12] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\essential.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\base.js",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -5220,7 +4728,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[19] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\essential.js",
+		"name": "--config#overrides[12] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\essential.js",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -5276,7 +4784,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[19] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js",
+		"name": "--config#overrides[12] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -5312,7 +4820,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[19] » plugin:evelyn/vue » plugin:vue/recommended",
+		"name": "--config#overrides[12] » plugin:evelyn/vue » plugin:vue/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -5333,27 +4841,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[19] » plugin:evelyn/vue » plugin:evelyn/node-env",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"vue"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"env": {
-			"es6": true,
-			"node": true
-		},
-		"parserOptions": {
-			"ecmaVersion": 2020,
-			"sourceType": "module"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[19] » plugin:evelyn/vue",
+		"name": "--config#overrides[12] » plugin:evelyn/vue",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -5365,7 +4853,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[19] » plugin:evelyn/vue#overrides[0]",
+		"name": "--config#overrides[12] » plugin:evelyn/vue#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -5387,7 +4875,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[19]",
+		"name": "--config#overrides[12]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [

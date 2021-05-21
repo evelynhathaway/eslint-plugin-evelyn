@@ -8,18 +8,11 @@ module.exports = {
 
 	"extends": [
 		"plugin:evelyn/default",
-		"plugin:evelyn/extensions",
 		"plugin:evelyn/node",
-		"plugin:evelyn/json",
 	],
 
 	"ignorePatterns": [
 		"lib/rules/fixes/*",
 		"test/rules/fixes/*",
 	],
-
-	"rules": {
-		// Reason: ESLint isn't ready for ESM
-		"unicorn/prefer-module": "off",
-	},
 };
