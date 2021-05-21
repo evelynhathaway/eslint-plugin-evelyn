@@ -48,7 +48,7 @@ ESLint always resolves and loads plugins when the configs are extended in the to
 
 Include as many configs as you'd like to use in your config. Extend them in the order that they should be applied, in order of importance, lowest to highest.
 
-### Configs applied to all files
+### Configs Applied to All Files
 
 `.eslintrc`
 
@@ -176,6 +176,7 @@ See the `peerDependencies` in [package.json](./package.json) for recommended dep
 | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | [babel](./lib/configs/babel.js)                                 | @babel/eslint-parser                                                                          |
 | [default](./lib/configs/default.js)                             | eslint-plugin-unicorn, eslint-plugin-import, eslint-plugin-regexp                             |
+| [esm](./lib/configs/esm.js)                                     | eslint-plugin-unicorn, eslint-plugin-import                                                   |
 | [jest](./lib/configs/jest.js)                                   | eslint-plugin-node, eslint-plugin-jest                                                        |
 | [jsx](./lib/configs/jsx.js)                                     | eslint-plugin-jsx-a11y                                                                        |
 | [mocha](./lib/configs/mocha.js)                                 | eslint-plugin-node, eslint-plugin-mocha                                                       |
