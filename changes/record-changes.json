@@ -4108,7 +4108,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript » plugin:@typescript-eslint/eslint-recommended",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -4120,13 +4120,41 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript » plugin:@typescript-eslint/eslint-recommended#overrides[0]",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/eslint-recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
 				{
 					"includes": [
 						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/eslint-recommended#overrides[0]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
 					],
 					"excludes": null
 				},
@@ -4166,20 +4194,30 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended » ./configs/base",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/base",
 		"filePath": "CLEANED",
 		"criteria": {
-			"includes": [
-				"typescript"
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
 			],
-			"excludes": null,
 			"basePath": "CLEANED"
 		},
 		"parser": {
 			"error": null,
 			"filePath": "CLEANED",
 			"id": "@typescript-eslint/parser",
-			"importerName": "--config#overrides[11] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended » ./configs/base",
+			"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/base",
 			"importerPath": "CLEANED"
 		},
 		"parserOptions": {
@@ -4190,32 +4228,48 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "@typescript-eslint",
-				"importerName": "--config#overrides[11] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended » ./configs/base",
+				"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/base",
 				"importerPath": "CLEANED"
 			}
 		}
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended » ./configs/eslint-recommended",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"typescript"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended » ./configs/eslint-recommended#overrides[0]",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/eslint-recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
 				{
 					"includes": [
 						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/eslint-recommended#overrides[0]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
 					],
 					"excludes": null
 				},
@@ -4255,13 +4309,23 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
-			"includes": [
-				"typescript"
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
 			],
-			"excludes": null,
 			"basePath": "CLEANED"
 		},
 		"rules": {
@@ -4294,20 +4358,30 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
 		"filePath": "CLEANED",
 		"criteria": {
-			"includes": [
-				"typescript"
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
 			],
-			"excludes": null,
 			"basePath": "CLEANED"
 		},
 		"parser": {
 			"error": null,
 			"filePath": "CLEANED",
 			"id": "@typescript-eslint/parser",
-			"importerName": "--config#overrides[11] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
+			"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
 			"importerPath": "CLEANED"
 		},
 		"parserOptions": {
@@ -4318,32 +4392,48 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "@typescript-eslint",
-				"importerName": "--config#overrides[11] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
+				"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
 				"importerPath": "CLEANED"
 			}
 		}
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/eslint-recommended",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"typescript"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/eslint-recommended#overrides[0]",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/eslint-recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
 				{
 					"includes": [
 						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/eslint-recommended#overrides[0]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
 					],
 					"excludes": null
 				},
@@ -4383,13 +4473,23 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript » plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking",
 		"filePath": "CLEANED",
 		"criteria": {
-			"includes": [
-				"typescript"
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
 			],
-			"excludes": null,
 			"basePath": "CLEANED"
 		},
 		"rules": {
@@ -4414,13 +4514,23 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript » plugin:import/typescript",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:import/typescript",
 		"filePath": "CLEANED",
 		"criteria": {
-			"includes": [
-				"typescript"
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
 			],
-			"excludes": null,
 			"basePath": "CLEANED"
 		},
 		"rules": {
@@ -4460,20 +4570,30 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript",
+		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
-			"includes": [
-				"typescript"
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
 			],
-			"excludes": null,
 			"basePath": "CLEANED"
 		},
 		"parser": {
 			"error": null,
 			"filePath": "CLEANED",
 			"id": "@typescript-eslint/parser",
-			"importerName": "--config#overrides[11] » plugin:evelyn/typescript",
+			"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0]",
 			"importerPath": "CLEANED"
 		},
 		"parserOptions": {
@@ -4484,14 +4604,14 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "@typescript-eslint",
-				"importerName": "--config#overrides[11] » plugin:evelyn/typescript",
+				"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0]",
 				"importerPath": "CLEANED"
 			},
 			"import": {
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "import",
-				"importerName": "--config#overrides[11] » plugin:evelyn/typescript",
+				"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0]",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -4509,28 +4629,6 @@
 					"ignoreRestSiblings": true
 				}
 			]
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"AND": [
-				{
-					"includes": [
-						"typescript"
-					],
-					"excludes": null
-				},
-				{
-					"includes": [
-						"**/*.ts"
-					],
-					"excludes": null
-				}
-			],
-			"basePath": "CLEANED"
 		}
 	},
 	{
