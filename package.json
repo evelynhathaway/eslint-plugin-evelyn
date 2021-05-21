@@ -43,17 +43,11 @@
     "**/package.json": "sort-package-json",
     "./": "eslint --fix"
   },
-  "config": {
-    "commitizen": {
-      "path": "@commitlint/prompt"
-    }
-  },
   "dependencies": {
     "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.3",
-    "@commitlint/prompt": "^12.1.4",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
     "@typescript-eslint/eslint-plugin": "^4.24.0",
@@ -64,15 +58,13 @@
     "eslint": "^7.26.0",
     "eslint-plugin-import": "^2.23.2",
     "eslint-plugin-jest": "^24.3.6",
-    "eslint-plugin-json": "^3.0.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-markdown": "^2.1.0",
     "eslint-plugin-mocha": "^8.1.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-regexp": "^0.10.0",
-    "eslint-plugin-testing-library": "^4.4.0",
+    "eslint-plugin-testing-library": "^4.5.0",
     "eslint-plugin-unicorn": "^32.0.1",
     "eslint-plugin-vue": "^7.9.0",
     "husky": "^6.0.0",
@@ -90,9 +82,7 @@
     "eslint": "^7.0.0",
     "eslint-plugin-import": "^2.0.0",
     "eslint-plugin-jest": "^24.0.0",
-    "eslint-plugin-json": "^3.0.0",
     "eslint-plugin-jsx-a11y": "^6.0.0",
-    "eslint-plugin-markdown": "^2.0.0",
     "eslint-plugin-mocha": "^8.0.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-react": "^7.0.0",
@@ -101,7 +91,7 @@
     "eslint-plugin-testing-library": "^4.0.0",
     "eslint-plugin-unicorn": "^32.0.0",
     "eslint-plugin-vue": "^7.0.0",
-    "typescript": "^4.0.3"
+    "typescript": "^4.2.4"
   },
   "peerDependenciesMeta": {
     "@typescript-eslint/eslint-plugin": {
@@ -116,13 +106,7 @@
     "eslint-plugin-jest": {
       "optional": true
     },
-    "eslint-plugin-json": {
-      "optional": true
-    },
     "eslint-plugin-jsx-a11y": {
-      "optional": true
-    },
-    "eslint-plugin-markdown": {
       "optional": true
     },
     "eslint-plugin-mocha": {

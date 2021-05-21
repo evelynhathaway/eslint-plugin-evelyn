@@ -23,7 +23,7 @@ const alertAllErrors = function (configs) {
 		}
 	}
 
-	// eslint-disable-next-line no-process-exit, unicorn/no-process-exit
+	// eslint-disable-next-line unicorn/no-process-exit
 	if (hadError) process.exit(1);
 };
 stealFinalConfigArray(
