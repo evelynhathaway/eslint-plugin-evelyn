@@ -1,5 +1,13 @@
 # Changelog
 
+## v6.1.0
+
+**[`v6.0.2...v6.1.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v6.0.2...v6.1.0)** - **2021-05-24**
+
+### ⚡ Improvement
+
+- Allowed abbreviations list, removed prop-types [`02a5b27`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/02a5b27)
+
 ## v6.0.2
 
 **[`v6.0.1...v6.0.2`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v6.0.1...v6.0.2)** - **2021-05-21**
