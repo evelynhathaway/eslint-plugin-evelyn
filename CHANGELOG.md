@@ -1,5 +1,19 @@
 # Changelog
 
+## v6.2.0
+
+**[`v6.1.0...v6.2.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v6.1.0...v6.2.0)** - **2021-05-25**
+
+### ⚡ Improvement
+
+- Remove node from testing configs that have node env [`3316a00`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/3316a00)
+
+### Other
+
+- **dev:** Bump eslint from 7.26.0 to 7.27.0 [`9025c49`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/9025c49)
+- **dev:** Bump eslint-plugin-import from 2.23.2 to 2.23.3 [`48a3257`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/48a3257)
+- **dev:** Bump eslint-plugin-testing-library from 4.5.0 to 4.6.0 [`0417fe4`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/0417fe4)
+
 ## v6.1.0
 
 **[`v6.0.2...v6.1.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v6.0.2...v6.1.0)** - **2021-05-24**
