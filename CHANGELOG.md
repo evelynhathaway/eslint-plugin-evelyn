@@ -1,5 +1,19 @@
 # Changelog
 
+## v6.2.1
+
+**[`v6.2.0...v6.2.1`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v6.2.0...v6.2.1)** - **2021-05-27**
+
+### 📦 Package
+
+- **dev:** Bump @typescript-eslint/eslint-plugin [`5499556`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/5499556)
+- **dev:** Bump @typescript-eslint/parser from 4.24.0 to 4.25.0 [`d515bf9`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/d515bf9)
+- **dev:** Bump conventional-changelog-evelyn from 1.3.0 to 1.3.1 [`47b3f1a`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/47b3f1a)
+- **dev:** Bump eslint-plugin-mocha from 8.1.0 to 8.2.0 [`5af2e46`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/5af2e46)
+- **dev:** Bump eslint-plugin-mocha from 8.2.0 to 9.0.0 [`1155422`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/1155422)
+- **dev:** Bump typescript from 4.2.4 to 4.3.2 [`f7237c3`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/f7237c3)
+- **user:** Expand range for npm peer dependencies, upgrade dev [`91d9545`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/91d9545)
+
 ## v6.2.0
 
 **[`v6.1.0...v6.2.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v6.1.0...v6.2.0)** - **2021-05-25**
