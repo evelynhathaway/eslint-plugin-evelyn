@@ -141,6 +141,7 @@ Make sure to remove any references to old ESLint plugins or configs and replace 
     "lint": "eslint ./"
   }
 }
+```
 
 ## Testing
 

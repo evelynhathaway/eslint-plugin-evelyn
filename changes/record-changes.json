@@ -597,6 +597,18 @@
 			"unicorn/no-array-reduce": "off",
 			"unicorn/no-fn-reference-in-iterator": "off",
 			"unicorn/no-array-callback-reference": "off",
+			"unicorn/filename-case": [
+				"error",
+				{
+					"cases": {
+						"kebabCase": true,
+						"pascalCase": true
+					},
+					"ignore": [
+						"^[A-Z_]+\\.[a-z\\.\\-]+$"
+					]
+				}
+			],
 			"unicorn/import-style": "off",
 			"unicorn/prefer-ternary": "off",
 			"unicorn/no-useless-undefined": [
@@ -1711,6 +1723,18 @@
 			"unicorn/no-array-reduce": "off",
 			"unicorn/no-fn-reference-in-iterator": "off",
 			"unicorn/no-array-callback-reference": "off",
+			"unicorn/filename-case": [
+				"error",
+				{
+					"cases": {
+						"kebabCase": true,
+						"pascalCase": true
+					},
+					"ignore": [
+						"^[A-Z_]+\\.[a-z\\.\\-]+$"
+					]
+				}
+			],
 			"unicorn/import-style": "off",
 			"unicorn/prefer-ternary": "off",
 			"unicorn/no-useless-undefined": [
@@ -4027,6 +4051,7 @@
 			}
 		},
 		"rules": {
+			"@typescript-eslint/member-ordering": "error",
 			"@typescript-eslint/consistent-type-assertions": [
 				"error",
 				{
