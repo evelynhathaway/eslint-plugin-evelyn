@@ -20,11 +20,9 @@
   "main": "./lib/index.js",
   "directories": {
     "lib": "/lib",
-    "doc": "/docs",
     "test": "/test"
   },
   "files": [
-    "/docs",
     "/lib"
   ],
   "scripts": {
@@ -32,7 +30,7 @@
     "lint": "eslint ./",
     "prepare": "husky install",
     "record-changes": "eslint -c ./changes/record-changes.eslintrc.js ./changes/record-changes.eslintrc.js",
-    "test": "run-s test:*",
+    "test": "npm run test:final-config-array",
     "test:final-config-array": "eslint -c ./test/final-config-array.eslintrc.js ./test/final-config-array.eslintrc.js",
     "test:rules": "mocha test/rules --recursive"
   },

@@ -16,7 +16,7 @@
 
 ## Description
 
-These are my configs, bugfixes, and code related to maintaining ESLint scripts.
+These are my configs and code related to maintaining ESLint scripts.
 
 My code style is very opinionated, so I only use this package on my projects. However, others are welcome to use, copy, or fork this project.
 
@@ -187,16 +187,6 @@ See the `peerDependencies` in [package.json](./package.json) for recommended dep
 | [testing-library-vue](./lib/configs/testing-library-vue.js)     | eslint-plugin-testing-library                                                                 |
 | [typescript](./lib/configs/typescript.js)                       | @typescript-eslint/eslint-plugin, @typescript-eslint/parser, typescript, eslint-plugin-import |
 | [vue](./lib/configs/vue.js)                                     | @babel/eslint-parser, eslint-plugin-vue                                                       |
-
-## Rules
-
-### ESLint Bug Fixes
-
-I've needed some bugfixes that have had their PRs auto closed, so I include the ones I need here. This project has a very similar structure to ESLint core, so tests and rules are just about `copy + paste`'ed from my fork of ESLint.
-
-| Documentation                                          | Pull Request                                                                                | Fixed Issues                                                                                                                                                                                                                    |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [no-fallthrough](./docs/rules/fixes/no-fallthrough.md) | [Fix: Allow fallthrough comment in case block](https://github.com/eslint/eslint/pull/11016) | [`#4652`](https://github.com/eslint/eslint/issues/4652) [`#7889`](https://github.com/eslint/eslint/issues/7889) [`#9080`](https://github.com/eslint/eslint/issues/9080) [`#9559`](https://github.com/eslint/eslint/issues/9559) |
 
 ---
 
