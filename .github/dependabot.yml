@@ -2,8 +2,8 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
-    ignore:
-      - dependency-type: development
+    allow:
+      - dependency-type: production
     schedule:
       interval: "weekly"
     commit-message:
