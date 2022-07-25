@@ -8,33 +8,29 @@
 
 [![npm version](https://badgen.net/npm/v/eslint-plugin-evelyn?icon=npm)](https://www.npmjs.com/package/eslint-plugin-evelyn)
 [![check status](https://badgen.net/github/checks/evelynhathaway/eslint-plugin-evelyn/main?icon=github)](https://github.com/evelynhathaway/eslint-plugin-evelyn/actions)
-[![rules: 1](https://badgen.net/badge/rules/1/blue)](#rules)
-[![configs: 12](https://badgen.net/badge/configs/12/blue)](#configs)
+[![configs: 11](https://badgen.net/badge/configs/11/blue)](#configs)
 [![license: MIT](https://badgen.net/badge/license/MIT/blue)](/LICENSE)
 
 </div>
 
 ## Description
 
-These are my configs, bugfixes, and code related to maintaining ESLint scripts.
+These are my configs and code related to maintaining ESLint scripts.
 
 My code style is very opinionated, so I only use this package on my projects. However, others are welcome to use, copy, or fork this project.
 
 ## Installation
 
+Save this project to your dev dependencies. If you are using an version on npm older than v7.0.0, you will have to
+install peer dependencies manually.
+
 ```bash
-# Save ESLint, Import, Unicorn, and this plugin to devDependencies
-npm install --save-dev eslint eslint-plugin-import eslint-plugin-unicorn eslint-plugin-regexp eslint-plugin-evelyn
-
-# OR
-
-# Save all this plugin and ALL peerDependencies to devDependencies
-npx install-peerdeps --save-dev eslint-config-evelyn
+npm install --save-dev eslint-plugin-evelyn
 ```
 
 ### Peer Dependencies
 
-npm warns about any missing peer dependencies when installing this plugin.
+npm may warn about any missing peer dependencies when installing this plugin.
 
 ```bash
 npm WARN eslint-plugin-evelyn@x.x.x requires a peer of eslint-plugin-xxxxx@^x.x.x but none is installed. You must install peer dependencies yourself.
@@ -50,7 +46,7 @@ Include as many configs as you'd like to use in your config. Extend them in the 
 
 ### Configs Applied to All Files
 
-`.eslintrc`
+**`.eslintrc`**
 
 ```json
 {
@@ -69,7 +65,7 @@ Include as many configs as you'd like to use in your config. Extend them in the 
 
 Requires eslint `>=6.0.0`.
 
-`.eslintrc`
+**`.eslintrc`**
 
 ```json
 {
@@ -91,7 +87,60 @@ Requires eslint `>=6.0.0`.
             ]
         }
     ]
+}
+```
+
+### TypeScript React App Example
+
+**`.eslintrc.js`**
+
+```js
+module.exports = {
+	"plugins": [
+		"@evelyn",
+	],
+
+	"extends": [
+		"plugin:@evelyn/default",
+		"plugin:@evelyn/node",
+		"plugin:@evelyn/react",
+		"plugin:@evelyn/typescript",
+	],
+
+	"ignorePatterns": [
+		"build",
+		"coverage",
+	],
+
+	"overrides": [
+		{
+			"files": [
+				"**/*.test.{ts,tsx}",
+				"**/__tests__/**/*.{ts,tsx}",
+			],
+			"extends": [
+				"plugin:@evelyn/jest",
+				"plugin:@evelyn/testing-library-react",
+			],
+		},
+	],
 };
+
+```
+
+**`package.json`** (snippet)
+
+Make sure to remove any references to old ESLint plugins or configs and replace the lint script with `eslint ./`.
+
+```json
+{
+  "name": "my-app",
+  "...": "...",
+  "scripts": {
+    "...": "...",
+    "lint": "eslint ./"
+  }
+}
 ```
 
 ## Testing
@@ -184,19 +233,7 @@ See the `peerDependencies` in [package.json](./package.json) for recommended dep
 | [react](./lib/configs/react.js)                                 | eslint-plugin-react, eslint-plugin-jsx-a11y, eslint-plugin-react-hooks, eslint-plugin-import  |
 | [testing-library](./lib/configs/testing-library.js)             | eslint-plugin-testing-library                                                                 |
 | [testing-library-react](./lib/configs/testing-library-react.js) | eslint-plugin-testing-library                                                                 |
-| [testing-library-vue](./lib/configs/testing-library-vue.js)     | eslint-plugin-testing-library                                                                 |
 | [typescript](./lib/configs/typescript.js)                       | @typescript-eslint/eslint-plugin, @typescript-eslint/parser, typescript, eslint-plugin-import |
-| [vue](./lib/configs/vue.js)                                     | @babel/eslint-parser, eslint-plugin-vue                                                       |
-
-## Rules
-
-### ESLint Bug Fixes
-
-I've needed some bugfixes that have had their PRs auto closed, so I include the ones I need here. This project has a very similar structure to ESLint core, so tests and rules are just about `copy + paste`'ed from my fork of ESLint.
-
-| Documentation                                          | Pull Request                                                                                | Fixed Issues                                                                                                                                                                                                                    |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [no-fallthrough](./docs/rules/fixes/no-fallthrough.md) | [Fix: Allow fallthrough comment in case block](https://github.com/eslint/eslint/pull/11016) | [`#4652`](https://github.com/eslint/eslint/issues/4652) [`#7889`](https://github.com/eslint/eslint/issues/7889) [`#9080`](https://github.com/eslint/eslint/issues/9080) [`#9559`](https://github.com/eslint/eslint/issues/9559) |
 
 ---
 

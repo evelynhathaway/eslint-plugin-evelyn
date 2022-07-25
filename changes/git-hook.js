@@ -1,4 +1,4 @@
-const {exec} = require("child_process");
+const {exec} = require("node:child_process");
 
 
 const execAwaitable = function (command) {
@@ -13,6 +13,8 @@ const execAwaitable = function (command) {
 // eslint-disable-next-line no-console
 const log = (message) => console.log("record-changes:", message);
 
+// Top-level await is not supported in CommonJS and this file isn't transpiled
+// eslint-disable-next-line unicorn/prefer-top-level-await
 (async () => {
 	let didStash;
 

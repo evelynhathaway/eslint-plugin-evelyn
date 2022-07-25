@@ -1,6 +1,5 @@
 const lodash = require("lodash");
 require("../lib/util/link");
-// eslint-disable-next-line node/no-extraneous-require
 require("eslint-plugin-evelyn/lib/util/save-config")(
 	"./changes/record-changes.json",
 	data => lodash.cloneDeepWith(
@@ -9,5 +8,4 @@ require("eslint-plugin-evelyn/lib/util/save-config")(
 	),
 );
 
-// eslint-disable-next-line node/no-extraneous-require
 module.exports = require("eslint-plugin-evelyn/all-configs.eslintrc.js");
