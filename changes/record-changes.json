@@ -49,9 +49,11 @@
 			"no-inner-declarations": "error",
 			"no-invalid-regexp": "error",
 			"no-irregular-whitespace": "error",
+			"no-loss-of-precision": "error",
 			"no-misleading-character-class": "error",
 			"no-mixed-spaces-and-tabs": "error",
 			"no-new-symbol": "error",
+			"no-nonoctal-decimal-escape": "error",
 			"no-obj-calls": "error",
 			"no-octal": "error",
 			"no-prototype-builtins": "error",
@@ -67,8 +69,10 @@
 			"no-unreachable": "error",
 			"no-unsafe-finally": "error",
 			"no-unsafe-negation": "error",
+			"no-unsafe-optional-chaining": "error",
 			"no-unused-labels": "error",
 			"no-unused-vars": "error",
+			"no-useless-backreference": "error",
 			"no-useless-catch": "error",
 			"no-useless-escape": "error",
 			"no-with": "error",
@@ -83,10 +87,10 @@
 		"filePath": "CLEANED",
 		"criteria": null,
 		"env": {
-			"es6": true
+			"es2022": true
 		},
 		"parserOptions": {
-			"ecmaVersion": 2021,
+			"ecmaVersion": "latest",
 			"sourceType": "module"
 		},
 		"plugins": {
@@ -110,19 +114,22 @@
 			"unicorn/expiring-todo-comments": "error",
 			"unicorn/explicit-length-check": "error",
 			"unicorn/filename-case": "error",
-			"unicorn/import-index": "off",
 			"unicorn/import-style": "error",
 			"unicorn/new-for-builtins": "error",
 			"unicorn/no-abusive-eslint-disable": "error",
 			"unicorn/no-array-callback-reference": "error",
 			"unicorn/no-array-for-each": "error",
+			"unicorn/no-array-method-this-argument": "error",
 			"unicorn/no-array-push-push": "error",
 			"unicorn/no-array-reduce": "error",
+			"unicorn/no-await-expression-member": "error",
 			"unicorn/no-console-spaces": "error",
 			"unicorn/no-document-cookie": "error",
+			"unicorn/no-empty-file": "error",
 			"unicorn/no-for-loop": "error",
 			"unicorn/no-hex-escape": "error",
 			"unicorn/no-instanceof-array": "error",
+			"unicorn/no-invalid-remove-event-listener": "error",
 			"unicorn/no-keyword-prefix": "off",
 			"unicorn/no-lonely-if": "error",
 			"no-nested-ternary": "off",
@@ -133,10 +140,17 @@
 			"unicorn/no-object-as-default-parameter": "error",
 			"unicorn/no-process-exit": "error",
 			"unicorn/no-static-only-class": "error",
+			"unicorn/no-thenable": "error",
 			"unicorn/no-this-assignment": "error",
 			"unicorn/no-unreadable-array-destructuring": "error",
+			"unicorn/no-unreadable-iife": "error",
 			"unicorn/no-unsafe-regex": "off",
 			"unicorn/no-unused-properties": "off",
+			"unicorn/no-useless-fallback-in-spread": "error",
+			"unicorn/no-useless-length-check": "error",
+			"unicorn/no-useless-promise-resolve-reject": "error",
+			"unicorn/no-useless-spread": "error",
+			"unicorn/no-useless-switch-case": "error",
 			"unicorn/no-useless-undefined": "error",
 			"unicorn/no-zero-fractions": "error",
 			"unicorn/number-literal-case": "error",
@@ -147,21 +161,31 @@
 			"unicorn/prefer-array-flat-map": "error",
 			"unicorn/prefer-array-index-of": "error",
 			"unicorn/prefer-array-some": "error",
+			"unicorn/prefer-at": "off",
+			"unicorn/prefer-code-point": "error",
 			"unicorn/prefer-date-now": "error",
 			"unicorn/prefer-default-parameters": "error",
 			"unicorn/prefer-dom-node-append": "error",
 			"unicorn/prefer-dom-node-dataset": "error",
 			"unicorn/prefer-dom-node-remove": "error",
 			"unicorn/prefer-dom-node-text-content": "error",
+			"unicorn/prefer-event-target": "off",
+			"unicorn/prefer-export-from": "error",
 			"unicorn/prefer-includes": "error",
+			"unicorn/prefer-json-parse-buffer": "off",
 			"unicorn/prefer-keyboard-event-key": "error",
+			"unicorn/prefer-logical-operator-over-ternary": "error",
 			"unicorn/prefer-math-trunc": "error",
 			"unicorn/prefer-modern-dom-apis": "error",
+			"unicorn/prefer-modern-math-apis": "error",
 			"unicorn/prefer-module": "error",
+			"unicorn/prefer-native-coercion-functions": "error",
 			"unicorn/prefer-negative-index": "error",
 			"unicorn/prefer-node-protocol": "error",
 			"unicorn/prefer-number-properties": "error",
+			"unicorn/prefer-object-from-entries": "error",
 			"unicorn/prefer-optional-catch-binding": "error",
+			"unicorn/prefer-prototype-methods": "error",
 			"unicorn/prefer-query-selector": "error",
 			"unicorn/prefer-reflect-apply": "error",
 			"unicorn/prefer-regexp-test": "error",
@@ -173,9 +197,16 @@
 			"unicorn/prefer-string-trim-start-end": "error",
 			"unicorn/prefer-switch": "error",
 			"unicorn/prefer-ternary": "error",
+			"unicorn/prefer-top-level-await": "error",
 			"unicorn/prefer-type-error": "error",
 			"unicorn/prevent-abbreviations": "error",
+			"unicorn/relative-url-style": "error",
+			"unicorn/require-array-join-separator": "error",
+			"unicorn/require-number-to-fixed-digits-argument": "error",
+			"unicorn/require-post-message-target-origin": "off",
 			"unicorn/string-content": "off",
+			"unicorn/template-indent": "error",
+			"unicorn/text-encoding-identifier-case": "error",
 			"unicorn/throw-new-error": "error"
 		}
 	},
@@ -237,28 +268,60 @@
 		},
 		"rules": {
 			"no-control-regex": "error",
-			"no-invalid-regexp": "error",
+			"no-empty-character-class": "error",
 			"no-misleading-character-class": "error",
 			"no-regex-spaces": "error",
 			"prefer-regex-literals": "error",
+			"no-invalid-regexp": "off",
 			"no-useless-backreference": "off",
+			"regexp/confusing-quantifier": "warn",
+			"regexp/control-character-escape": "error",
 			"regexp/match-any": "error",
-			"regexp/no-assertion-capturing-group": "error",
+			"regexp/negation": "error",
 			"regexp/no-dupe-characters-character-class": "error",
+			"regexp/no-dupe-disjunctions": "error",
+			"regexp/no-empty-alternative": "warn",
+			"regexp/no-empty-capturing-group": "error",
 			"regexp/no-empty-group": "error",
 			"regexp/no-empty-lookarounds-assertion": "error",
 			"regexp/no-escape-backspace": "error",
+			"regexp/no-invalid-regexp": "error",
 			"regexp/no-invisible-character": "error",
-			"regexp/no-octal": "error",
+			"regexp/no-lazy-ends": "warn",
+			"regexp/no-legacy-features": "error",
+			"regexp/no-non-standard-flag": "error",
+			"regexp/no-obscure-range": "error",
+			"regexp/no-optional-assertion": "error",
+			"regexp/no-potentially-useless-backreference": "warn",
+			"regexp/no-super-linear-backtracking": "error",
+			"regexp/no-trivially-nested-assertion": "error",
+			"regexp/no-trivially-nested-quantifier": "error",
+			"regexp/no-unused-capturing-group": "error",
+			"regexp/no-useless-assertions": "error",
 			"regexp/no-useless-backreference": "error",
-			"regexp/no-useless-exactly-quantifier": "error",
+			"regexp/no-useless-character-class": "error",
+			"regexp/no-useless-dollar-replacements": "error",
+			"regexp/no-useless-escape": "error",
+			"regexp/no-useless-flag": "warn",
+			"regexp/no-useless-lazy": "error",
+			"regexp/no-useless-non-capturing-group": "error",
+			"regexp/no-useless-quantifier": "error",
+			"regexp/no-useless-range": "error",
 			"regexp/no-useless-two-nums-quantifier": "error",
+			"regexp/no-zero-quantifier": "error",
+			"regexp/optimal-lookaround-quantifier": "warn",
+			"regexp/optimal-quantifier-concatenation": "error",
+			"regexp/prefer-character-class": "error",
 			"regexp/prefer-d": "error",
 			"regexp/prefer-plus-quantifier": "error",
+			"regexp/prefer-predefined-assertion": "error",
 			"regexp/prefer-question-quantifier": "error",
+			"regexp/prefer-range": "error",
 			"regexp/prefer-star-quantifier": "error",
-			"regexp/prefer-t": "error",
-			"regexp/prefer-w": "error"
+			"regexp/prefer-unicode-codepoint-escapes": "error",
+			"regexp/prefer-w": "error",
+			"regexp/sort-flags": "error",
+			"regexp/strict": "error"
 		}
 	},
 	{
@@ -280,8 +343,7 @@
 				"!**/.*.mjs",
 				"!**/.*.ts",
 				"!**/.*.jsx",
-				"!**/.*.tsx",
-				"!**/.*.vue"
+				"!**/.*.tsx"
 			],
 			"basePath": "CLEANED",
 			"loose": false
@@ -344,7 +406,12 @@
 			],
 			"spaced-comment": [
 				"error",
-				"always"
+				"always",
+				{
+					"markers": [
+						"/"
+					]
+				}
 			],
 			"linebreak-style": [
 				"error",
@@ -386,8 +453,6 @@
 					"after": true
 				}
 			],
-			"no-useless-rename": "error",
-			"prefer-destructuring": "error",
 			"rest-spread-spacing": [
 				"error",
 				"never"
@@ -397,9 +462,22 @@
 				"never"
 			],
 			"key-spacing": "error",
+			"comma-spacing": [
+				"error",
+				{
+					"before": false,
+					"after": true
+				}
+			],
+			"no-multi-spaces": "error",
+			"no-useless-rename": "error",
+			"prefer-destructuring": "error",
 			"quotes": [
 				"error",
-				"double"
+				"double",
+				{
+					"avoidEscape": true
+				}
 			],
 			"jsx-quotes": [
 				"error",
@@ -421,13 +499,6 @@
 				{
 					"unnecessary": false,
 					"numbers": true
-				}
-			],
-			"comma-spacing": [
-				"error",
-				{
-					"before": false,
-					"after": true
 				}
 			],
 			"comma-dangle": [
@@ -456,14 +527,13 @@
 					"null": "ignore"
 				}
 			],
+			"prefer-named-capture-group": "error",
 			"no-caller": "error",
 			"no-extend-native": "error",
-			"no-multi-spaces": "error",
 			"no-proto": "error",
 			"no-iterator": "error",
 			"no-self-compare": "error",
 			"no-useless-call": "error",
-			"prefer-named-capture-group": "error",
 			"radix": "error",
 			"require-await": "error",
 			"no-unused-expressions": [
@@ -476,25 +546,44 @@
 				}
 			],
 			"no-array-constructor": "error",
-			"no-process-exit": "off",
-			"evelyn/no-fallthrough": [
+			"no-fallthrough": [
 				"error",
 				{
 					"commentPattern": "falls?\\s?through|break"
 				}
 			],
+			"no-process-exit": "off",
 			"unicorn/prefer-module": "off",
 			"unicorn/no-array-for-each": "off",
-			"unicorn/no-new-array": "off",
 			"unicorn/no-null": "off",
 			"unicorn/prefer-spread": "off",
 			"unicorn/prefer-query-selector": "off",
+			"unicorn/consistent-function-scoping": [
+				"error",
+				{
+					"checkArrowFunctions": false
+				}
+			],
 			"unicorn/prevent-abbreviations": [
 				"error",
 				{
-					"allowList": {
-						"args": true
-					}
+					"replacements": {
+						"e": {
+							"error": true,
+							"event": true,
+							"element": true
+						},
+						"props": false,
+						"prop": false,
+						"ref": false,
+						"args": false,
+						"arg": false,
+						"param": false,
+						"params": false
+					},
+					"ignore": [
+						{}
+					]
 				}
 			],
 			"unicorn/explicit-length-check": "off",
@@ -508,20 +597,15 @@
 			"unicorn/no-array-reduce": "off",
 			"unicorn/no-fn-reference-in-iterator": "off",
 			"unicorn/no-array-callback-reference": "off",
-			"unicorn/filename-case": [
-				"error",
-				{
-					"cases": {
-						"kebabCase": true,
-						"pascalCase": true
-					},
-					"ignore": [
-						"^[A-Z_]+\\.[a-z\\.\\-]+$"
-					]
-				}
-			],
 			"unicorn/import-style": "off",
 			"unicorn/prefer-ternary": "off",
+			"unicorn/no-useless-undefined": [
+				"error",
+				{
+					"checkArguments": false
+				}
+			],
+			"unicorn/no-useless-switch-case": "off",
 			"import/no-deprecated": "error",
 			"import/no-useless-path-segments": "error",
 			"import/first": "error",
@@ -553,13 +637,13 @@
 					"warnOnUnassignedImports": false
 				}
 			],
-			"import/no-mutable-exports": "warn",
 			"import/newline-after-import": [
 				"error",
 				{
-					"count": 2
+					"count": 1
 				}
 			],
+			"import/no-mutable-exports": "warn",
 			"import/no-anonymous-default-export": [
 				"error",
 				{
@@ -582,9 +666,12 @@
 						".mjs",
 						".jsx",
 						".ts",
-						".tsx",
-						".vue"
+						".tsx"
 					]
+				},
+				"typescript": {
+					"alwaysTryTypes": true,
+					"project": "tsconfig.json"
 				}
 			},
 			"import/ignore": [
@@ -598,7 +685,7 @@
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
-				"**/*.{js,cjs,mjs,jsx,ts,tsx,vue}"
+				"**/*.{js,cjs,mjs,jsx,ts,tsx}"
 			],
 			"excludes": null,
 			"basePath": "CLEANED"
@@ -921,10 +1008,17 @@
 		},
 		"rules": {
 			"no-process-exit": "off",
+			"node/no-unsupported-features/es-syntax": "off",
 			"node/no-path-concat": "error",
 			"node/prefer-promises/fs": "warn",
+			"node/prefer-promises/dns": "warn",
 			"node/no-sync": "warn",
-			"node/no-missing-import": "off"
+			"node/no-extraneous-import": "off",
+			"node/no-extraneous-require": "off",
+			"node/no-missing-import": "off",
+			"node/no-missing-require": "off",
+			"node/no-unpublished-import": "off",
+			"node/no-unpublished-require": "off"
 		}
 	},
 	{
@@ -1039,9 +1133,11 @@
 			"no-inner-declarations": "error",
 			"no-invalid-regexp": "error",
 			"no-irregular-whitespace": "error",
+			"no-loss-of-precision": "error",
 			"no-misleading-character-class": "error",
 			"no-mixed-spaces-and-tabs": "error",
 			"no-new-symbol": "error",
+			"no-nonoctal-decimal-escape": "error",
 			"no-obj-calls": "error",
 			"no-octal": "error",
 			"no-prototype-builtins": "error",
@@ -1057,8 +1153,10 @@
 			"no-unreachable": "error",
 			"no-unsafe-finally": "error",
 			"no-unsafe-negation": "error",
+			"no-unsafe-optional-chaining": "error",
 			"no-unused-labels": "error",
 			"no-unused-vars": "error",
+			"no-useless-backreference": "error",
 			"no-useless-catch": "error",
 			"no-useless-escape": "error",
 			"no-with": "error",
@@ -1079,10 +1177,10 @@
 			"basePath": "CLEANED"
 		},
 		"env": {
-			"es6": true
+			"es2022": true
 		},
 		"parserOptions": {
-			"ecmaVersion": 2021,
+			"ecmaVersion": "latest",
 			"sourceType": "module"
 		},
 		"plugins": {
@@ -1106,19 +1204,22 @@
 			"unicorn/expiring-todo-comments": "error",
 			"unicorn/explicit-length-check": "error",
 			"unicorn/filename-case": "error",
-			"unicorn/import-index": "off",
 			"unicorn/import-style": "error",
 			"unicorn/new-for-builtins": "error",
 			"unicorn/no-abusive-eslint-disable": "error",
 			"unicorn/no-array-callback-reference": "error",
 			"unicorn/no-array-for-each": "error",
+			"unicorn/no-array-method-this-argument": "error",
 			"unicorn/no-array-push-push": "error",
 			"unicorn/no-array-reduce": "error",
+			"unicorn/no-await-expression-member": "error",
 			"unicorn/no-console-spaces": "error",
 			"unicorn/no-document-cookie": "error",
+			"unicorn/no-empty-file": "error",
 			"unicorn/no-for-loop": "error",
 			"unicorn/no-hex-escape": "error",
 			"unicorn/no-instanceof-array": "error",
+			"unicorn/no-invalid-remove-event-listener": "error",
 			"unicorn/no-keyword-prefix": "off",
 			"unicorn/no-lonely-if": "error",
 			"no-nested-ternary": "off",
@@ -1129,10 +1230,17 @@
 			"unicorn/no-object-as-default-parameter": "error",
 			"unicorn/no-process-exit": "error",
 			"unicorn/no-static-only-class": "error",
+			"unicorn/no-thenable": "error",
 			"unicorn/no-this-assignment": "error",
 			"unicorn/no-unreadable-array-destructuring": "error",
+			"unicorn/no-unreadable-iife": "error",
 			"unicorn/no-unsafe-regex": "off",
 			"unicorn/no-unused-properties": "off",
+			"unicorn/no-useless-fallback-in-spread": "error",
+			"unicorn/no-useless-length-check": "error",
+			"unicorn/no-useless-promise-resolve-reject": "error",
+			"unicorn/no-useless-spread": "error",
+			"unicorn/no-useless-switch-case": "error",
 			"unicorn/no-useless-undefined": "error",
 			"unicorn/no-zero-fractions": "error",
 			"unicorn/number-literal-case": "error",
@@ -1143,21 +1251,31 @@
 			"unicorn/prefer-array-flat-map": "error",
 			"unicorn/prefer-array-index-of": "error",
 			"unicorn/prefer-array-some": "error",
+			"unicorn/prefer-at": "off",
+			"unicorn/prefer-code-point": "error",
 			"unicorn/prefer-date-now": "error",
 			"unicorn/prefer-default-parameters": "error",
 			"unicorn/prefer-dom-node-append": "error",
 			"unicorn/prefer-dom-node-dataset": "error",
 			"unicorn/prefer-dom-node-remove": "error",
 			"unicorn/prefer-dom-node-text-content": "error",
+			"unicorn/prefer-event-target": "off",
+			"unicorn/prefer-export-from": "error",
 			"unicorn/prefer-includes": "error",
+			"unicorn/prefer-json-parse-buffer": "off",
 			"unicorn/prefer-keyboard-event-key": "error",
+			"unicorn/prefer-logical-operator-over-ternary": "error",
 			"unicorn/prefer-math-trunc": "error",
 			"unicorn/prefer-modern-dom-apis": "error",
+			"unicorn/prefer-modern-math-apis": "error",
 			"unicorn/prefer-module": "error",
+			"unicorn/prefer-native-coercion-functions": "error",
 			"unicorn/prefer-negative-index": "error",
 			"unicorn/prefer-node-protocol": "error",
 			"unicorn/prefer-number-properties": "error",
+			"unicorn/prefer-object-from-entries": "error",
 			"unicorn/prefer-optional-catch-binding": "error",
+			"unicorn/prefer-prototype-methods": "error",
 			"unicorn/prefer-query-selector": "error",
 			"unicorn/prefer-reflect-apply": "error",
 			"unicorn/prefer-regexp-test": "error",
@@ -1169,9 +1287,16 @@
 			"unicorn/prefer-string-trim-start-end": "error",
 			"unicorn/prefer-switch": "error",
 			"unicorn/prefer-ternary": "error",
+			"unicorn/prefer-top-level-await": "error",
 			"unicorn/prefer-type-error": "error",
 			"unicorn/prevent-abbreviations": "error",
+			"unicorn/relative-url-style": "error",
+			"unicorn/require-array-join-separator": "error",
+			"unicorn/require-number-to-fixed-digits-argument": "error",
+			"unicorn/require-post-message-target-origin": "off",
 			"unicorn/string-content": "off",
+			"unicorn/template-indent": "error",
+			"unicorn/text-encoding-identifier-case": "error",
 			"unicorn/throw-new-error": "error"
 		}
 	},
@@ -1251,28 +1376,60 @@
 		},
 		"rules": {
 			"no-control-regex": "error",
-			"no-invalid-regexp": "error",
+			"no-empty-character-class": "error",
 			"no-misleading-character-class": "error",
 			"no-regex-spaces": "error",
 			"prefer-regex-literals": "error",
+			"no-invalid-regexp": "off",
 			"no-useless-backreference": "off",
+			"regexp/confusing-quantifier": "warn",
+			"regexp/control-character-escape": "error",
 			"regexp/match-any": "error",
-			"regexp/no-assertion-capturing-group": "error",
+			"regexp/negation": "error",
 			"regexp/no-dupe-characters-character-class": "error",
+			"regexp/no-dupe-disjunctions": "error",
+			"regexp/no-empty-alternative": "warn",
+			"regexp/no-empty-capturing-group": "error",
 			"regexp/no-empty-group": "error",
 			"regexp/no-empty-lookarounds-assertion": "error",
 			"regexp/no-escape-backspace": "error",
+			"regexp/no-invalid-regexp": "error",
 			"regexp/no-invisible-character": "error",
-			"regexp/no-octal": "error",
+			"regexp/no-lazy-ends": "warn",
+			"regexp/no-legacy-features": "error",
+			"regexp/no-non-standard-flag": "error",
+			"regexp/no-obscure-range": "error",
+			"regexp/no-optional-assertion": "error",
+			"regexp/no-potentially-useless-backreference": "warn",
+			"regexp/no-super-linear-backtracking": "error",
+			"regexp/no-trivially-nested-assertion": "error",
+			"regexp/no-trivially-nested-quantifier": "error",
+			"regexp/no-unused-capturing-group": "error",
+			"regexp/no-useless-assertions": "error",
 			"regexp/no-useless-backreference": "error",
-			"regexp/no-useless-exactly-quantifier": "error",
+			"regexp/no-useless-character-class": "error",
+			"regexp/no-useless-dollar-replacements": "error",
+			"regexp/no-useless-escape": "error",
+			"regexp/no-useless-flag": "warn",
+			"regexp/no-useless-lazy": "error",
+			"regexp/no-useless-non-capturing-group": "error",
+			"regexp/no-useless-quantifier": "error",
+			"regexp/no-useless-range": "error",
 			"regexp/no-useless-two-nums-quantifier": "error",
+			"regexp/no-zero-quantifier": "error",
+			"regexp/optimal-lookaround-quantifier": "warn",
+			"regexp/optimal-quantifier-concatenation": "error",
+			"regexp/prefer-character-class": "error",
 			"regexp/prefer-d": "error",
 			"regexp/prefer-plus-quantifier": "error",
+			"regexp/prefer-predefined-assertion": "error",
 			"regexp/prefer-question-quantifier": "error",
+			"regexp/prefer-range": "error",
 			"regexp/prefer-star-quantifier": "error",
-			"regexp/prefer-t": "error",
-			"regexp/prefer-w": "error"
+			"regexp/prefer-unicode-codepoint-escapes": "error",
+			"regexp/prefer-w": "error",
+			"regexp/sort-flags": "error",
+			"regexp/strict": "error"
 		}
 	},
 	{
@@ -1300,8 +1457,7 @@
 				"!**/.*.mjs",
 				"!**/.*.ts",
 				"!**/.*.jsx",
-				"!**/.*.tsx",
-				"!**/.*.vue"
+				"!**/.*.tsx"
 			],
 			"basePath": "CLEANED",
 			"loose": false
@@ -1364,7 +1520,12 @@
 			],
 			"spaced-comment": [
 				"error",
-				"always"
+				"always",
+				{
+					"markers": [
+						"/"
+					]
+				}
 			],
 			"linebreak-style": [
 				"error",
@@ -1406,8 +1567,6 @@
 					"after": true
 				}
 			],
-			"no-useless-rename": "error",
-			"prefer-destructuring": "error",
 			"rest-spread-spacing": [
 				"error",
 				"never"
@@ -1417,9 +1576,22 @@
 				"never"
 			],
 			"key-spacing": "error",
+			"comma-spacing": [
+				"error",
+				{
+					"before": false,
+					"after": true
+				}
+			],
+			"no-multi-spaces": "error",
+			"no-useless-rename": "error",
+			"prefer-destructuring": "error",
 			"quotes": [
 				"error",
-				"double"
+				"double",
+				{
+					"avoidEscape": true
+				}
 			],
 			"jsx-quotes": [
 				"error",
@@ -1441,13 +1613,6 @@
 				{
 					"unnecessary": false,
 					"numbers": true
-				}
-			],
-			"comma-spacing": [
-				"error",
-				{
-					"before": false,
-					"after": true
 				}
 			],
 			"comma-dangle": [
@@ -1476,14 +1641,13 @@
 					"null": "ignore"
 				}
 			],
+			"prefer-named-capture-group": "error",
 			"no-caller": "error",
 			"no-extend-native": "error",
-			"no-multi-spaces": "error",
 			"no-proto": "error",
 			"no-iterator": "error",
 			"no-self-compare": "error",
 			"no-useless-call": "error",
-			"prefer-named-capture-group": "error",
 			"radix": "error",
 			"require-await": "error",
 			"no-unused-expressions": [
@@ -1496,25 +1660,44 @@
 				}
 			],
 			"no-array-constructor": "error",
-			"no-process-exit": "off",
-			"evelyn/no-fallthrough": [
+			"no-fallthrough": [
 				"error",
 				{
 					"commentPattern": "falls?\\s?through|break"
 				}
 			],
+			"no-process-exit": "off",
 			"unicorn/prefer-module": "off",
 			"unicorn/no-array-for-each": "off",
-			"unicorn/no-new-array": "off",
 			"unicorn/no-null": "off",
 			"unicorn/prefer-spread": "off",
 			"unicorn/prefer-query-selector": "off",
+			"unicorn/consistent-function-scoping": [
+				"error",
+				{
+					"checkArrowFunctions": false
+				}
+			],
 			"unicorn/prevent-abbreviations": [
 				"error",
 				{
-					"allowList": {
-						"args": true
-					}
+					"replacements": {
+						"e": {
+							"error": true,
+							"event": true,
+							"element": true
+						},
+						"props": false,
+						"prop": false,
+						"ref": false,
+						"args": false,
+						"arg": false,
+						"param": false,
+						"params": false
+					},
+					"ignore": [
+						{}
+					]
 				}
 			],
 			"unicorn/explicit-length-check": "off",
@@ -1528,20 +1711,15 @@
 			"unicorn/no-array-reduce": "off",
 			"unicorn/no-fn-reference-in-iterator": "off",
 			"unicorn/no-array-callback-reference": "off",
-			"unicorn/filename-case": [
-				"error",
-				{
-					"cases": {
-						"kebabCase": true,
-						"pascalCase": true
-					},
-					"ignore": [
-						"^[A-Z_]+\\.[a-z\\.\\-]+$"
-					]
-				}
-			],
 			"unicorn/import-style": "off",
 			"unicorn/prefer-ternary": "off",
+			"unicorn/no-useless-undefined": [
+				"error",
+				{
+					"checkArguments": false
+				}
+			],
+			"unicorn/no-useless-switch-case": "off",
 			"import/no-deprecated": "error",
 			"import/no-useless-path-segments": "error",
 			"import/first": "error",
@@ -1573,13 +1751,13 @@
 					"warnOnUnassignedImports": false
 				}
 			],
-			"import/no-mutable-exports": "warn",
 			"import/newline-after-import": [
 				"error",
 				{
-					"count": 2
+					"count": 1
 				}
 			],
+			"import/no-mutable-exports": "warn",
 			"import/no-anonymous-default-export": [
 				"error",
 				{
@@ -1602,9 +1780,12 @@
 						".mjs",
 						".jsx",
 						".ts",
-						".tsx",
-						".vue"
+						".tsx"
 					]
+				},
+				"typescript": {
+					"alwaysTryTypes": true,
+					"project": "tsconfig.json"
 				}
 			},
 			"import/ignore": [
@@ -1626,7 +1807,7 @@
 				},
 				{
 					"includes": [
-						"**/*.{js,cjs,mjs,jsx,ts,tsx,vue}"
+						"**/*.{js,cjs,mjs,jsx,ts,tsx}"
 					],
 					"excludes": null
 				}
@@ -1808,8 +1989,7 @@
 			"jest/no-mocks-import": "error",
 			"jest/no-standalone-expect": "error",
 			"jest/no-test-prefixes": "error",
-			"jest/no-try-expect": "error",
-			"jest/valid-describe": "error",
+			"jest/valid-describe-callback": "error",
 			"jest/valid-expect-in-promise": "error",
 			"jest/valid-expect": "error",
 			"jest/valid-title": "error"
@@ -1860,8 +2040,7 @@
 		},
 		"rules": {
 			"jest/no-alias-methods": "warn",
-			"jest/prefer-to-be-null": "error",
-			"jest/prefer-to-be-undefined": "error",
+			"jest/prefer-to-be": "error",
 			"jest/prefer-to-contain": "error",
 			"jest/prefer-to-have-length": "error"
 		}
@@ -1919,6 +2098,45 @@
 				"importerName": "--config#overrides[3] » plugin:evelyn/jest",
 				"importerPath": "CLEANED"
 			}
+		},
+		"rules": {
+			"jest/no-alias-methods": "off",
+			"jest/require-to-throw-message": "error",
+			"jest/no-duplicate-hooks": "error",
+			"jest/prefer-hooks-on-top": "error",
+			"jest/no-restricted-matchers": [
+				"error",
+				{
+					"toBeFalsy": "Use a more restrictive expectation e.g. `.toBe(false)`, `.toBeNull()`, `.not.toBeInTheDocument()`",
+					"toBeTruthy": "Use a more restrictive expectation e.g. `.toBe(true)`, `.toEqual(value)`, `.toBeInTheDocument()`"
+				}
+			]
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[3] » plugin:evelyn/jest#overrides[0]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"jest"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.{ts,tsx}"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		},
+		"rules": {
+			"@typescript-eslint/unbound-method": "off",
+			"jest/unbound-method": "error"
 		}
 	},
 	{
@@ -1959,7 +2177,6 @@
 			}
 		},
 		"rules": {
-			"jsx-a11y/accessible-emoji": "error",
 			"jsx-a11y/alt-text": "error",
 			"jsx-a11y/anchor-has-content": "error",
 			"jsx-a11y/anchor-is-valid": "error",
@@ -2031,6 +2248,9 @@
 					"tr": [
 						"none",
 						"presentation"
+					],
+					"canvas": [
+						"img"
 					]
 				}
 			],
@@ -2104,6 +2324,10 @@
 					],
 					"td": [
 						"gridcell"
+					],
+					"fieldset": [
+						"radiogroup",
+						"presentation"
 					]
 				}
 			],
@@ -2117,7 +2341,6 @@
 					"allowExpressionValues": true
 				}
 			],
-			"jsx-a11y/no-onchange": "error",
 			"jsx-a11y/no-redundant-roles": "error",
 			"jsx-a11y/no-static-element-interactions": [
 				"error",
@@ -2235,7 +2458,7 @@
 			"mocha/no-exports": "error",
 			"mocha/no-global-tests": "error",
 			"mocha/no-hooks": "off",
-			"mocha/no-hooks-for-single-case": "warn",
+			"mocha/no-hooks-for-single-case": "off",
 			"mocha/no-identical-title": "error",
 			"mocha/no-mocha-arrows": "error",
 			"mocha/no-nested-tests": "error",
@@ -2249,7 +2472,8 @@
 			"mocha/no-top-level-hooks": "warn",
 			"mocha/prefer-arrow-callback": "off",
 			"mocha/valid-suite-description": "off",
-			"mocha/valid-test-description": "off"
+			"mocha/valid-test-description": "off",
+			"mocha/no-empty-description": "error"
 		}
 	},
 	{
@@ -2634,10 +2858,17 @@
 		},
 		"rules": {
 			"no-process-exit": "off",
+			"node/no-unsupported-features/es-syntax": "off",
 			"node/no-path-concat": "error",
 			"node/prefer-promises/fs": "warn",
+			"node/prefer-promises/dns": "warn",
 			"node/no-sync": "warn",
-			"node/no-missing-import": "off"
+			"node/no-extraneous-import": "off",
+			"node/no-extraneous-require": "off",
+			"node/no-missing-import": "off",
+			"node/no-missing-require": "off",
+			"node/no-unpublished-import": "off",
+			"node/no-unpublished-require": "off"
 		}
 	},
 	{
@@ -2678,7 +2909,6 @@
 			}
 		},
 		"rules": {
-			"jsx-a11y/accessible-emoji": "error",
 			"jsx-a11y/alt-text": "error",
 			"jsx-a11y/anchor-has-content": "error",
 			"jsx-a11y/anchor-is-valid": "error",
@@ -2750,6 +2980,9 @@
 					"tr": [
 						"none",
 						"presentation"
+					],
+					"canvas": [
+						"img"
 					]
 				}
 			],
@@ -2823,6 +3056,10 @@
 					],
 					"td": [
 						"gridcell"
+					],
+					"fieldset": [
+						"radiogroup",
+						"presentation"
 					]
 				}
 			],
@@ -2836,7 +3073,6 @@
 					"allowExpressionValues": true
 				}
 			],
-			"jsx-a11y/no-onchange": "error",
 			"jsx-a11y/no-redundant-roles": "error",
 			"jsx-a11y/no-static-element-interactions": [
 				"error",
@@ -3017,9 +3253,9 @@
 		},
 		"rules": {
 			"react/jsx-props-no-spreading": "off",
-			"react/self-closing-comp": "error",
 			"react-hooks/exhaustive-deps": "error",
 			"react/no-array-index-key": "error",
+			"react/no-unstable-nested-components": "error",
 			"react/button-has-type": "error",
 			"react/prefer-stateless-function": "error",
 			"react/prop-types": "off",
@@ -3032,6 +3268,8 @@
 					]
 				}
 			],
+			"react/jsx-no-comment-textnodes": "error",
+			"react/self-closing-comp": "error",
 			"react/jsx-pascal-case": [
 				"error",
 				{
@@ -3051,7 +3289,12 @@
 				}
 			],
 			"react/jsx-first-prop-new-line": "error",
-			"react/jsx-no-useless-fragment": "error",
+			"react/jsx-no-useless-fragment": [
+				"error",
+				{
+					"allowExpressions": true
+				}
+			],
 			"react/jsx-no-script-url": "error",
 			"react/jsx-equals-spacing": [
 				"error",
@@ -3064,7 +3307,6 @@
 					"children": true
 				}
 			],
-			"react/jsx-no-comment-textnodes": "error",
 			"react/jsx-curly-newline": "error",
 			"react/jsx-closing-tag-location": "error",
 			"react/jsx-closing-bracket-location": "error",
@@ -3098,8 +3340,7 @@
 		"settings": {
 			"react": {
 				"pragma": "React",
-				"version": "detect",
-				"flowVersion": "detect"
+				"version": "detect"
 			}
 		}
 	},
@@ -3140,73 +3381,24 @@
 			"testing-library/await-async-utils": "error",
 			"testing-library/no-await-sync-query": "error",
 			"testing-library/no-container": "error",
-			"testing-library/no-debug": "error",
+			"testing-library/no-debugging-utils": "error",
 			"testing-library/no-dom-import": [
 				"error",
 				"react"
 			],
 			"testing-library/no-node-access": "error",
 			"testing-library/no-promise-in-fire-event": "error",
+			"testing-library/no-render-in-setup": "error",
+			"testing-library/no-unnecessary-act": "error",
 			"testing-library/no-wait-for-empty-callback": "error",
+			"testing-library/no-wait-for-multiple-assertions": "error",
+			"testing-library/no-wait-for-side-effects": "error",
+			"testing-library/no-wait-for-snapshot": "error",
 			"testing-library/prefer-find-by": "error",
+			"testing-library/prefer-presence-queries": "error",
+			"testing-library/prefer-query-by-disappearance": "error",
 			"testing-library/prefer-screen-queries": "error",
 			"testing-library/render-result-naming-convention": "error"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[8] » plugin:evelyn/testing-library-react » plugin:evelyn/testing-library » plugin:testing-library/dom",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"testing-library-react"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"plugins": {
-			"testing-library": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "testing-library",
-				"importerName": "--config#overrides[8] » plugin:evelyn/testing-library-react » plugin:evelyn/testing-library » plugin:testing-library/dom",
-				"importerPath": "CLEANED"
-			}
-		},
-		"rules": {
-			"testing-library/await-async-query": "error",
-			"testing-library/await-async-utils": "error",
-			"testing-library/no-await-sync-query": "error",
-			"testing-library/no-promise-in-fire-event": "error",
-			"testing-library/no-wait-for-empty-callback": "error",
-			"testing-library/prefer-find-by": "error",
-			"testing-library/prefer-screen-queries": "error"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[8] » plugin:evelyn/testing-library-react » plugin:evelyn/testing-library",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"testing-library-react"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"plugins": {
-			"testing-library": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "testing-library",
-				"importerName": "--config#overrides[8] » plugin:evelyn/testing-library-react » plugin:evelyn/testing-library",
-				"importerPath": "CLEANED"
-			}
-		},
-		"rules": {
-			"testing-library/no-debug": "warn",
-			"testing-library/no-wait-for-empty-callback": "warn",
-			"testing-library/prefer-wait-for": "error"
 		}
 	},
 	{
@@ -3228,6 +3420,11 @@
 				"importerName": "--config#overrides[8] » plugin:evelyn/testing-library-react",
 				"importerPath": "CLEANED"
 			}
+		},
+		"rules": {
+			"testing-library/no-debugging-utils": "warn",
+			"testing-library/no-wait-for-empty-callback": "warn",
+			"testing-library/prefer-wait-for": "error"
 		}
 	},
 	{
@@ -3244,11 +3441,11 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[9] » plugin:evelyn/testing-library-vue » plugin:testing-library/vue",
+		"name": "--config#overrides[9] » plugin:evelyn/testing-library » plugin:testing-library/dom",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
-				"testing-library-vue"
+				"testing-library"
 			],
 			"excludes": null,
 			"basePath": "CLEANED"
@@ -3258,46 +3455,7 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "testing-library",
-				"importerName": "--config#overrides[9] » plugin:evelyn/testing-library-vue » plugin:testing-library/vue",
-				"importerPath": "CLEANED"
-			}
-		},
-		"rules": {
-			"testing-library/await-async-query": "error",
-			"testing-library/await-async-utils": "error",
-			"testing-library/await-fire-event": "error",
-			"testing-library/no-await-sync-query": "error",
-			"testing-library/no-container": "error",
-			"testing-library/no-debug": "error",
-			"testing-library/no-dom-import": [
-				"error",
-				"vue"
-			],
-			"testing-library/no-node-access": "error",
-			"testing-library/no-promise-in-fire-event": "error",
-			"testing-library/no-wait-for-empty-callback": "error",
-			"testing-library/prefer-find-by": "error",
-			"testing-library/prefer-screen-queries": "error",
-			"testing-library/render-result-naming-convention": "error"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[9] » plugin:evelyn/testing-library-vue » plugin:evelyn/testing-library » plugin:testing-library/dom",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"testing-library-vue"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"plugins": {
-			"testing-library": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "testing-library",
-				"importerName": "--config#overrides[9] » plugin:evelyn/testing-library-vue » plugin:evelyn/testing-library » plugin:testing-library/dom",
+				"importerName": "--config#overrides[9] » plugin:evelyn/testing-library » plugin:testing-library/dom",
 				"importerPath": "CLEANED"
 			}
 		},
@@ -3307,17 +3465,22 @@
 			"testing-library/no-await-sync-query": "error",
 			"testing-library/no-promise-in-fire-event": "error",
 			"testing-library/no-wait-for-empty-callback": "error",
+			"testing-library/no-wait-for-multiple-assertions": "error",
+			"testing-library/no-wait-for-side-effects": "error",
+			"testing-library/no-wait-for-snapshot": "error",
 			"testing-library/prefer-find-by": "error",
+			"testing-library/prefer-presence-queries": "error",
+			"testing-library/prefer-query-by-disappearance": "error",
 			"testing-library/prefer-screen-queries": "error"
 		}
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[9] » plugin:evelyn/testing-library-vue » plugin:evelyn/testing-library",
+		"name": "--config#overrides[9] » plugin:evelyn/testing-library",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
-				"testing-library-vue"
+				"testing-library"
 			],
 			"excludes": null,
 			"basePath": "CLEANED"
@@ -3327,35 +3490,14 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "testing-library",
-				"importerName": "--config#overrides[9] » plugin:evelyn/testing-library-vue » plugin:evelyn/testing-library",
+				"importerName": "--config#overrides[9] » plugin:evelyn/testing-library",
 				"importerPath": "CLEANED"
 			}
 		},
 		"rules": {
-			"testing-library/no-debug": "warn",
+			"testing-library/no-debugging-utils": "warn",
 			"testing-library/no-wait-for-empty-callback": "warn",
 			"testing-library/prefer-wait-for": "error"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[9] » plugin:evelyn/testing-library-vue",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"testing-library-vue"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"plugins": {
-			"testing-library": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "testing-library",
-				"importerName": "--config#overrides[9] » plugin:evelyn/testing-library-vue",
-				"importerPath": "CLEANED"
-			}
 		}
 	},
 	{
@@ -3364,74 +3506,6 @@
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
-				"testing-library-vue"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[10] » plugin:evelyn/testing-library » plugin:testing-library/dom",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"testing-library"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"plugins": {
-			"testing-library": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "testing-library",
-				"importerName": "--config#overrides[10] » plugin:evelyn/testing-library » plugin:testing-library/dom",
-				"importerPath": "CLEANED"
-			}
-		},
-		"rules": {
-			"testing-library/await-async-query": "error",
-			"testing-library/await-async-utils": "error",
-			"testing-library/no-await-sync-query": "error",
-			"testing-library/no-promise-in-fire-event": "error",
-			"testing-library/no-wait-for-empty-callback": "error",
-			"testing-library/prefer-find-by": "error",
-			"testing-library/prefer-screen-queries": "error"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[10] » plugin:evelyn/testing-library",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"testing-library"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"plugins": {
-			"testing-library": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "testing-library",
-				"importerName": "--config#overrides[10] » plugin:evelyn/testing-library",
-				"importerPath": "CLEANED"
-			}
-		},
-		"rules": {
-			"testing-library/no-debug": "warn",
-			"testing-library/no-wait-for-empty-callback": "warn",
-			"testing-library/prefer-wait-for": "error"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[10]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
 				"testing-library"
 			],
 			"excludes": null,
@@ -3440,7 +3514,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript",
+		"name": "--config#overrides[10] » plugin:evelyn/typescript",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
@@ -3452,7 +3526,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/eslint-recommended",
+		"name": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/eslint-recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -3474,7 +3548,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/eslint-recommended#overrides[0]",
+		"name": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/eslint-recommended#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -3493,7 +3567,9 @@
 				{
 					"includes": [
 						"*.ts",
-						"*.tsx"
+						"*.tsx",
+						"*.mts",
+						"*.cts"
 					],
 					"excludes": null
 				}
@@ -3526,7 +3602,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/base",
+		"name": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/base",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -3549,7 +3625,7 @@
 			"error": null,
 			"filePath": "CLEANED",
 			"id": "@typescript-eslint/parser",
-			"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/base",
+			"importerName": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/base",
 			"importerPath": "CLEANED"
 		},
 		"parserOptions": {
@@ -3560,14 +3636,14 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "@typescript-eslint",
-				"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/base",
+				"importerName": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/base",
 				"importerPath": "CLEANED"
 			}
 		}
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/eslint-recommended",
+		"name": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/eslint-recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -3589,7 +3665,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/eslint-recommended#overrides[0]",
+		"name": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended » ./configs/eslint-recommended#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -3608,7 +3684,9 @@
 				{
 					"includes": [
 						"*.ts",
-						"*.tsx"
+						"*.tsx",
+						"*.mts",
+						"*.cts"
 					],
 					"excludes": null
 				}
@@ -3641,7 +3719,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended",
+		"name": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -3664,7 +3742,6 @@
 			"@typescript-eslint/adjacent-overload-signatures": "error",
 			"@typescript-eslint/ban-ts-comment": "error",
 			"@typescript-eslint/ban-types": "error",
-			"@typescript-eslint/explicit-module-boundary-types": "warn",
 			"no-array-constructor": "off",
 			"@typescript-eslint/no-array-constructor": "error",
 			"no-empty-function": "off",
@@ -3675,11 +3752,14 @@
 			"no-extra-semi": "off",
 			"@typescript-eslint/no-extra-semi": "error",
 			"@typescript-eslint/no-inferrable-types": "error",
+			"no-loss-of-precision": "off",
+			"@typescript-eslint/no-loss-of-precision": "error",
 			"@typescript-eslint/no-misused-new": "error",
 			"@typescript-eslint/no-namespace": "error",
 			"@typescript-eslint/no-non-null-asserted-optional-chain": "error",
 			"@typescript-eslint/no-non-null-assertion": "warn",
 			"@typescript-eslint/no-this-alias": "error",
+			"@typescript-eslint/no-unnecessary-type-constraint": "error",
 			"no-unused-vars": "off",
 			"@typescript-eslint/no-unused-vars": "warn",
 			"@typescript-eslint/no-var-requires": "error",
@@ -3690,7 +3770,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
+		"name": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -3713,7 +3793,7 @@
 			"error": null,
 			"filePath": "CLEANED",
 			"id": "@typescript-eslint/parser",
-			"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
+			"importerName": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
 			"importerPath": "CLEANED"
 		},
 		"parserOptions": {
@@ -3724,14 +3804,14 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "@typescript-eslint",
-				"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
+				"importerName": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/base",
 				"importerPath": "CLEANED"
 			}
 		}
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/eslint-recommended",
+		"name": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/eslint-recommended",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -3753,7 +3833,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/eslint-recommended#overrides[0]",
+		"name": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking » ./configs/eslint-recommended#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -3772,7 +3852,9 @@
 				{
 					"includes": [
 						"*.ts",
-						"*.tsx"
+						"*.tsx",
+						"*.mts",
+						"*.cts"
 					],
 					"excludes": null
 				}
@@ -3805,7 +3887,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"name": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0] » plugin:@typescript-eslint/recommended-requiring-type-checking",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -3832,11 +3914,11 @@
 			"@typescript-eslint/no-implied-eval": "error",
 			"@typescript-eslint/no-misused-promises": "error",
 			"@typescript-eslint/no-unnecessary-type-assertion": "error",
+			"@typescript-eslint/no-unsafe-argument": "error",
 			"@typescript-eslint/no-unsafe-assignment": "error",
 			"@typescript-eslint/no-unsafe-call": "error",
 			"@typescript-eslint/no-unsafe-member-access": "error",
 			"@typescript-eslint/no-unsafe-return": "error",
-			"@typescript-eslint/prefer-regexp-exec": "error",
 			"require-await": "off",
 			"@typescript-eslint/require-await": "error",
 			"@typescript-eslint/restrict-plus-operands": "error",
@@ -3846,7 +3928,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0] » plugin:import/typescript",
+		"name": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0] » plugin:import/typescript",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -3872,7 +3954,6 @@
 			"import/extensions": [
 				".ts",
 				".tsx",
-				".d.ts",
 				".js",
 				".jsx"
 			],
@@ -3883,8 +3964,7 @@
 			"import/parsers": {
 				"@typescript-eslint/parser": [
 					".ts",
-					".tsx",
-					".d.ts"
+					".tsx"
 				]
 			},
 			"import/resolver": {
@@ -3892,7 +3972,6 @@
 					"extensions": [
 						".ts",
 						".tsx",
-						".d.ts",
 						".js",
 						".jsx"
 					]
@@ -3902,7 +3981,7 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0]",
+		"name": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"AND": [
@@ -3925,7 +4004,7 @@
 			"error": null,
 			"filePath": "CLEANED",
 			"id": "@typescript-eslint/parser",
-			"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0]",
+			"importerName": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0]",
 			"importerPath": "CLEANED"
 		},
 		"parserOptions": {
@@ -3936,19 +4015,18 @@
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "@typescript-eslint",
-				"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0]",
+				"importerName": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0]",
 				"importerPath": "CLEANED"
 			},
 			"import": {
 				"error": null,
 				"filePath": "CLEANED",
 				"id": "import",
-				"importerName": "--config#overrides[11] » plugin:evelyn/typescript#overrides[0]",
+				"importerName": "--config#overrides[10] » plugin:evelyn/typescript#overrides[0]",
 				"importerPath": "CLEANED"
 			}
 		},
 		"rules": {
-			"@typescript-eslint/member-ordering": "error",
 			"@typescript-eslint/consistent-type-assertions": [
 				"error",
 				{
@@ -3965,253 +4043,11 @@
 	},
 	{
 		"type": "config",
-		"name": "--config#overrides[11]",
+		"name": "--config#overrides[10]",
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
 				"typescript"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[12] » plugin:evelyn/vue » plugin:evelyn/babel",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"vue"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"parser": {
-			"error": null,
-			"filePath": "CLEANED",
-			"id": "@babel/eslint-parser",
-			"importerName": "--config#overrides[12] » plugin:evelyn/vue » plugin:evelyn/babel",
-			"importerPath": "CLEANED"
-		}
-	},
-	{
-		"type": "implicit-processor",
-		"name": "--config#overrides[12] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\essential.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\base.js#processors[\"vue/.vue\"]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"AND": [
-				{
-					"includes": [
-						"vue"
-					],
-					"excludes": null
-				},
-				{
-					"includes": [
-						"*.vue"
-					],
-					"excludes": null
-				}
-			],
-			"basePath": "CLEANED"
-		},
-		"processor": "vue/.vue"
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[12] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\essential.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\base.js",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"vue"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"env": {
-			"browser": true,
-			"es6": true
-		},
-		"parser": {
-			"error": null,
-			"filePath": "CLEANED",
-			"id": "C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\vue-eslint-parser\\index.js",
-			"importerName": "--config#overrides[12] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\essential.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\base.js",
-			"importerPath": "CLEANED"
-		},
-		"parserOptions": {
-			"ecmaVersion": 2020,
-			"sourceType": "module"
-		},
-		"plugins": {
-			"vue": {
-				"error": null,
-				"filePath": "CLEANED",
-				"id": "vue",
-				"importerName": "--config#overrides[12] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\essential.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\base.js",
-				"importerPath": "CLEANED"
-			}
-		},
-		"rules": {
-			"vue/comment-directive": "error",
-			"vue/experimental-script-setup-vars": "error",
-			"vue/jsx-uses-vars": "error"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[12] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\essential.js",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"vue"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"rules": {
-			"vue/no-arrow-functions-in-watch": "error",
-			"vue/no-async-in-computed-properties": "error",
-			"vue/no-custom-modifiers-on-v-model": "error",
-			"vue/no-dupe-keys": "error",
-			"vue/no-dupe-v-else-if": "error",
-			"vue/no-duplicate-attributes": "error",
-			"vue/no-multiple-template-root": "error",
-			"vue/no-mutating-props": "error",
-			"vue/no-parsing-error": "error",
-			"vue/no-reserved-keys": "error",
-			"vue/no-shared-component-data": "error",
-			"vue/no-side-effects-in-computed-properties": "error",
-			"vue/no-template-key": "error",
-			"vue/no-textarea-mustache": "error",
-			"vue/no-unused-components": "error",
-			"vue/no-unused-vars": "error",
-			"vue/no-use-v-if-with-v-for": "error",
-			"vue/no-v-for-template-key": "error",
-			"vue/no-v-model-argument": "error",
-			"vue/require-component-is": "error",
-			"vue/require-prop-type-constructor": "error",
-			"vue/require-render-return": "error",
-			"vue/require-v-for-key": "error",
-			"vue/require-valid-default-prop": "error",
-			"vue/return-in-computed-property": "error",
-			"vue/use-v-on-exact": "error",
-			"vue/valid-template-root": "error",
-			"vue/valid-v-bind-sync": "error",
-			"vue/valid-v-bind": "error",
-			"vue/valid-v-cloak": "error",
-			"vue/valid-v-else-if": "error",
-			"vue/valid-v-else": "error",
-			"vue/valid-v-for": "error",
-			"vue/valid-v-html": "error",
-			"vue/valid-v-if": "error",
-			"vue/valid-v-model": "error",
-			"vue/valid-v-on": "error",
-			"vue/valid-v-once": "error",
-			"vue/valid-v-pre": "error",
-			"vue/valid-v-show": "error",
-			"vue/valid-v-slot": "error",
-			"vue/valid-v-text": "error"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[12] » plugin:evelyn/vue » plugin:vue/recommended » C:\\Users\\micro\\Coding\\evelynhathaway\\eslint-plugin-evelyn\\node_modules\\eslint-plugin-vue\\lib\\configs\\strongly-recommended.js",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"vue"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"rules": {
-			"vue/attribute-hyphenation": "warn",
-			"vue/component-definition-name-casing": "warn",
-			"vue/html-closing-bracket-newline": "warn",
-			"vue/html-closing-bracket-spacing": "warn",
-			"vue/html-end-tags": "warn",
-			"vue/html-indent": "warn",
-			"vue/html-quotes": "warn",
-			"vue/html-self-closing": "warn",
-			"vue/max-attributes-per-line": "warn",
-			"vue/multiline-html-element-content-newline": "warn",
-			"vue/mustache-interpolation-spacing": "warn",
-			"vue/no-multi-spaces": "warn",
-			"vue/no-spaces-around-equal-signs-in-attribute": "warn",
-			"vue/no-template-shadow": "warn",
-			"vue/one-component-per-file": "warn",
-			"vue/prop-name-casing": "warn",
-			"vue/require-default-prop": "warn",
-			"vue/require-prop-types": "warn",
-			"vue/singleline-html-element-content-newline": "warn",
-			"vue/v-bind-style": "warn",
-			"vue/v-on-style": "warn",
-			"vue/v-slot-style": "warn"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[12] » plugin:evelyn/vue » plugin:vue/recommended",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"vue"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		},
-		"rules": {
-			"vue/attributes-order": "warn",
-			"vue/component-tags-order": "warn",
-			"vue/no-lone-template": "warn",
-			"vue/no-multiple-slot-args": "warn",
-			"vue/no-v-html": "warn",
-			"vue/order-in-components": "warn",
-			"vue/this-in-template": "warn"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[12] » plugin:evelyn/vue",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"vue"
-			],
-			"excludes": null,
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[12] » plugin:evelyn/vue#overrides[0]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"AND": [
-				{
-					"includes": [
-						"vue"
-					],
-					"excludes": null
-				},
-				{
-					"includes": [
-						"**/*.vue"
-					],
-					"excludes": null
-				}
-			],
-			"basePath": "CLEANED"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[12]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"includes": [
-				"vue"
 			],
 			"excludes": null,
 			"basePath": "CLEANED"
