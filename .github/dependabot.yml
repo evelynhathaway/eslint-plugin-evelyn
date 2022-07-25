@@ -2,10 +2,12 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
+    ignore:
+      - dependency-type: development
     schedule:
-      interval: "daily"
+      interval: "weekly"
     commit-message:
-      prefix: "Upgrade(prod):"
+      prefix: "Upgrade(npm):"
       prefix-development: "Upgrade(dev):"
     reviewers:
       - "evelynhathaway"
