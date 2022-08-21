@@ -1,5 +1,13 @@
 # Changelog
 
+## v8.1.0
+
+**[`v8.0.1...v8.1.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v8.0.1...v8.1.0)** - **2022-08-21**
+
+### ⚡ Improvement
+
+- Disable no-unnecessary-type-constraint for TSX files [`2b7a7fa`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/2b7a7fa)
+
 ## v8.0.1
 
 **[`v8.0.0...v8.0.1`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v8.0.0...v8.0.1)** - **2022-08-21**
