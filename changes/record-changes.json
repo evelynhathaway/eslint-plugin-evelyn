@@ -330,7 +330,7 @@
 		"filePath": "CLEANED",
 		"criteria": null,
 		"env": {
-			"es2021": true,
+			"es2022": true,
 			"node": true,
 			"browser": true,
 			"worker": true,
@@ -342,6 +342,8 @@
 				"!**/.*.cjs",
 				"!**/.*.mjs",
 				"!**/.*.ts",
+				"!**/.*.cts",
+				"!**/.*.mts",
 				"!**/.*.jsx",
 				"!**/.*.tsx"
 			],
@@ -349,7 +351,7 @@
 			"loose": false
 		},
 		"parserOptions": {
-			"ecmaVersion": 2021,
+			"ecmaVersion": 2022,
 			"sourceType": "module"
 		},
 		"plugins": {
@@ -678,6 +680,8 @@
 						".mjs",
 						".jsx",
 						".ts",
+						".cts",
+						".mts",
 						".tsx"
 					]
 				},
@@ -697,7 +701,7 @@
 		"filePath": "CLEANED",
 		"criteria": {
 			"includes": [
-				"**/*.{js,cjs,mjs,jsx,ts,tsx}"
+				"**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}"
 			],
 			"excludes": null,
 			"basePath": "CLEANED"
@@ -1456,7 +1460,7 @@
 			"basePath": "CLEANED"
 		},
 		"env": {
-			"es2021": true,
+			"es2022": true,
 			"node": true,
 			"browser": true,
 			"worker": true,
@@ -1468,6 +1472,8 @@
 				"!**/.*.cjs",
 				"!**/.*.mjs",
 				"!**/.*.ts",
+				"!**/.*.cts",
+				"!**/.*.mts",
 				"!**/.*.jsx",
 				"!**/.*.tsx"
 			],
@@ -1475,7 +1481,7 @@
 			"loose": false
 		},
 		"parserOptions": {
-			"ecmaVersion": 2021,
+			"ecmaVersion": 2022,
 			"sourceType": "module"
 		},
 		"plugins": {
@@ -1804,6 +1810,8 @@
 						".mjs",
 						".jsx",
 						".ts",
+						".cts",
+						".mts",
 						".tsx"
 					]
 				},
@@ -1831,7 +1839,7 @@
 				},
 				{
 					"includes": [
-						"**/*.{js,cjs,mjs,jsx,ts,tsx}"
+						"**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}"
 					],
 					"excludes": null
 				}
@@ -1884,7 +1892,13 @@
 				"error",
 				"always",
 				{
-					"ignorePackages": true
+					"ignorePackages": true,
+					"pattern": {
+						"ts": "never",
+						"cts": "never",
+						"mts": "never",
+						"tsx": "never"
+					}
 				}
 			]
 		}
@@ -1903,7 +1917,7 @@
 				},
 				{
 					"includes": [
-						"**/*.cjs"
+						"**/*.{cjs,cts}"
 					],
 					"excludes": null
 				}
@@ -1912,31 +1926,6 @@
 		},
 		"rules": {
 			"unicorn/prefer-module": "off"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[2] » plugin:evelyn/esm#overrides[1]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"AND": [
-				{
-					"includes": [
-						"esm"
-					],
-					"excludes": null
-				},
-				{
-					"includes": [
-						"**/*.{ts,tsx}"
-					],
-					"excludes": null
-				}
-			],
-			"basePath": "CLEANED"
-		},
-		"rules": {
-			"import/no-unresolved": "off"
 		}
 	},
 	{
@@ -3562,7 +3551,7 @@
 				},
 				{
 					"includes": [
-						"**/*.{ts,tsx}"
+						"**/*.{ts,tsx,cts,mts}"
 					],
 					"excludes": null
 				}
@@ -3584,7 +3573,7 @@
 				},
 				{
 					"includes": [
-						"**/*.{ts,tsx}"
+						"**/*.{ts,tsx,cts,mts}"
 					],
 					"excludes": null
 				},
@@ -3638,7 +3627,7 @@
 				},
 				{
 					"includes": [
-						"**/*.{ts,tsx}"
+						"**/*.{ts,tsx,cts,mts}"
 					],
 					"excludes": null
 				}
@@ -3679,7 +3668,7 @@
 				},
 				{
 					"includes": [
-						"**/*.{ts,tsx}"
+						"**/*.{ts,tsx,cts,mts}"
 					],
 					"excludes": null
 				}
@@ -3701,7 +3690,7 @@
 				},
 				{
 					"includes": [
-						"**/*.{ts,tsx}"
+						"**/*.{ts,tsx,cts,mts}"
 					],
 					"excludes": null
 				},
@@ -3755,7 +3744,7 @@
 				},
 				{
 					"includes": [
-						"**/*.{ts,tsx}"
+						"**/*.{ts,tsx,cts,mts}"
 					],
 					"excludes": null
 				}
@@ -3806,7 +3795,7 @@
 				},
 				{
 					"includes": [
-						"**/*.{ts,tsx}"
+						"**/*.{ts,tsx,cts,mts}"
 					],
 					"excludes": null
 				}
@@ -3847,7 +3836,7 @@
 				},
 				{
 					"includes": [
-						"**/*.{ts,tsx}"
+						"**/*.{ts,tsx,cts,mts}"
 					],
 					"excludes": null
 				}
@@ -3869,7 +3858,7 @@
 				},
 				{
 					"includes": [
-						"**/*.{ts,tsx}"
+						"**/*.{ts,tsx,cts,mts}"
 					],
 					"excludes": null
 				},
@@ -3923,7 +3912,7 @@
 				},
 				{
 					"includes": [
-						"**/*.{ts,tsx}"
+						"**/*.{ts,tsx,cts,mts}"
 					],
 					"excludes": null
 				}
@@ -3964,7 +3953,7 @@
 				},
 				{
 					"includes": [
-						"**/*.{ts,tsx}"
+						"**/*.{ts,tsx,cts,mts}"
 					],
 					"excludes": null
 				}
@@ -4017,7 +4006,7 @@
 				},
 				{
 					"includes": [
-						"**/*.{ts,tsx}"
+						"**/*.{ts,tsx,cts,mts}"
 					],
 					"excludes": null
 				}
