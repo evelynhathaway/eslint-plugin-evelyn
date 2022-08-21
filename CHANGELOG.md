@@ -1,5 +1,27 @@
 # Changelog
 
+## v8.0.0
+
+**[`v7.0.0...v8.0.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v7.0.0...v8.0.0)** - **2022-08-21**
+
+### 💥 Breaking
+
+- Lint .mts and .cts files [`fe2f22a`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/fe2f22a)
+- Reenable no-unresolved for TypeScript ESM, disable requiring TS extensions in imports [`04bc69a`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/04bc69a)
+
+### ⚡ Improvement
+
+- Bump parser options to ES2022 [`bb9a6c9`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/bb9a6c9)
+
+### 🐛 Fix
+
+- Add missing peer dependency for TypeScript import resolver [`ac10db0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/ac10db0)
+
+### 🧹 Internal
+
+- Explicitly tell Dependabot to widen versions, simplify CI caching [`893978d`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/893978d)
+- Switch from ignore to allow in dependabot config [`a074697`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/a074697)
+
 ## v7.0.0
 
 **[`v6.2.1...v7.0.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v6.2.1...v7.0.0)** - **2022-07-25**
