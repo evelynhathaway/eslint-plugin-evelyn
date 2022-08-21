@@ -1,5 +1,13 @@
 # Changelog
 
+## v8.0.1
+
+**[`v8.0.0...v8.0.1`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v8.0.0...v8.0.1)** - **2022-08-21**
+
+### 📄 Documentation
+
+- Add TypeScript import resolve to documented dependencies [`6ca14e5`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/6ca14e5)
+
 ## v8.0.0
 
 **[`v7.0.0...v8.0.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v7.0.0...v8.0.0)** - **2022-08-21**
