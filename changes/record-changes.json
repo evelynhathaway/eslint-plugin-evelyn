@@ -330,7 +330,7 @@
 		"filePath": "CLEANED",
 		"criteria": null,
 		"env": {
-			"es2021": true,
+			"es2022": true,
 			"node": true,
 			"browser": true,
 			"worker": true,
@@ -351,7 +351,7 @@
 			"loose": false
 		},
 		"parserOptions": {
-			"ecmaVersion": 2021,
+			"ecmaVersion": 2022,
 			"sourceType": "module"
 		},
 		"plugins": {
@@ -1460,7 +1460,7 @@
 			"basePath": "CLEANED"
 		},
 		"env": {
-			"es2021": true,
+			"es2022": true,
 			"node": true,
 			"browser": true,
 			"worker": true,
@@ -1481,7 +1481,7 @@
 			"loose": false
 		},
 		"parserOptions": {
-			"ecmaVersion": 2021,
+			"ecmaVersion": 2022,
 			"sourceType": "module"
 		},
 		"plugins": {
