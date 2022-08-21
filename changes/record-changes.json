@@ -4057,6 +4057,31 @@
 	},
 	{
 		"type": "config",
+		"name": "--config#overrides[10] » plugin:evelyn/typescript#overrides[1]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.tsx"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		},
+		"rules": {
+			"@typescript-eslint/no-unnecessary-type-constraint": "off"
+		}
+	},
+	{
+		"type": "config",
 		"name": "--config#overrides[10]",
 		"filePath": "CLEANED",
 		"criteria": {
