@@ -221,19 +221,19 @@ The script is used to track the changes to the final array over time using the p
 
 See the `peerDependencies` in [package.json](./package.json) for recommended dependency version ranges.
 
-| Name                                                            | Peer Dependencies                                                                             |
-| --------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [babel](./lib/configs/babel.js)                                 | @babel/eslint-parser                                                                          |
-| [default](./lib/configs/default.js)                             | eslint-plugin-unicorn, eslint-plugin-import, eslint-plugin-regexp                             |
-| [esm](./lib/configs/esm.js)                                     | eslint-plugin-unicorn, eslint-plugin-import                                                   |
-| [jest](./lib/configs/jest.js)                                   | eslint-plugin-node, eslint-plugin-jest                                                        |
-| [jsx](./lib/configs/jsx.js)                                     | eslint-plugin-jsx-a11y                                                                        |
-| [mocha](./lib/configs/mocha.js)                                 | eslint-plugin-node, eslint-plugin-mocha                                                       |
-| [node](./lib/configs/node.js)                                   | eslint-plugin-node                                                                            |
-| [react](./lib/configs/react.js)                                 | eslint-plugin-react, eslint-plugin-jsx-a11y, eslint-plugin-react-hooks, eslint-plugin-import  |
-| [testing-library](./lib/configs/testing-library.js)             | eslint-plugin-testing-library                                                                 |
-| [testing-library-react](./lib/configs/testing-library-react.js) | eslint-plugin-testing-library                                                                 |
-| [typescript](./lib/configs/typescript.js)                       | @typescript-eslint/eslint-plugin, @typescript-eslint/parser, typescript, eslint-plugin-import |
+| Name                                                            | Peer Dependencies                                                                                                                |
+| --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| [babel](./lib/configs/babel.js)                                 | @babel/eslint-parser                                                                                                             |
+| [default](./lib/configs/default.js)                             | eslint-plugin-unicorn, eslint-plugin-import, eslint-plugin-regexp                                                                |
+| [esm](./lib/configs/esm.js)                                     | eslint-plugin-unicorn, eslint-plugin-import                                                                                      |
+| [jest](./lib/configs/jest.js)                                   | eslint-plugin-node, eslint-plugin-jest                                                                                           |
+| [jsx](./lib/configs/jsx.js)                                     | eslint-plugin-jsx-a11y                                                                                                           |
+| [mocha](./lib/configs/mocha.js)                                 | eslint-plugin-node, eslint-plugin-mocha                                                                                          |
+| [node](./lib/configs/node.js)                                   | eslint-plugin-node                                                                                                               |
+| [react](./lib/configs/react.js)                                 | eslint-plugin-react, eslint-plugin-jsx-a11y, eslint-plugin-react-hooks, eslint-plugin-import                                     |
+| [testing-library](./lib/configs/testing-library.js)             | eslint-plugin-testing-library                                                                                                    |
+| [testing-library-react](./lib/configs/testing-library-react.js) | eslint-plugin-testing-library                                                                                                    |
+| [typescript](./lib/configs/typescript.js)                       | @typescript-eslint/eslint-plugin, @typescript-eslint/parser, typescript, eslint-plugin-import, eslint-import-resolver-typescript |
 
 ---
 
