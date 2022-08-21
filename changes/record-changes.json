@@ -1892,7 +1892,13 @@
 				"error",
 				"always",
 				{
-					"ignorePackages": true
+					"ignorePackages": true,
+					"pattern": {
+						"ts": "never",
+						"cts": "never",
+						"mts": "never",
+						"tsx": "never"
+					}
 				}
 			]
 		}
@@ -1920,31 +1926,6 @@
 		},
 		"rules": {
 			"unicorn/prefer-module": "off"
-		}
-	},
-	{
-		"type": "config",
-		"name": "--config#overrides[2] » plugin:evelyn/esm#overrides[1]",
-		"filePath": "CLEANED",
-		"criteria": {
-			"AND": [
-				{
-					"includes": [
-						"esm"
-					],
-					"excludes": null
-				},
-				{
-					"includes": [
-						"**/*.{ts,tsx}"
-					],
-					"excludes": null
-				}
-			],
-			"basePath": "CLEANED"
-		},
-		"rules": {
-			"import/no-unresolved": "off"
 		}
 	},
 	{
