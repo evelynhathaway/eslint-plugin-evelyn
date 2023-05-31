@@ -1,5 +1,17 @@
 # Changelog
 
+## v9.0.0
+
+**[`v8.1.0...v9.0.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v8.1.0...v9.0.0)** - **2023-05-31**
+
+### 💥 Breaking
+
+- Update peer deps, node range, improve formatting rules and their TypeScript support [`198a7d9`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/198a7d9)
+
+### 🧹 Internal
+
+- Use Node.js v18 in CI [`91277eb`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/91277eb)
+
 ## v8.1.0
 
 **[`v8.0.1...v8.1.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v8.0.1...v8.1.0)** - **2022-08-21**
