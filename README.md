@@ -4,7 +4,7 @@
 
 # ESLint Plugin Evelyn
 
-**ESLint plugin for my projects with my preferred code style and bugfixes**
+**ESLint plugin for my projects with my preferred code style**
 
 [![npm version](https://badgen.net/npm/v/eslint-plugin-evelyn?icon=npm)](https://www.npmjs.com/package/eslint-plugin-evelyn)
 [![check status](https://badgen.net/github/checks/evelynhathaway/eslint-plugin-evelyn/main?icon=github)](https://github.com/evelynhathaway/eslint-plugin-evelyn/actions)
@@ -145,8 +145,6 @@ Make sure to remove any references to old ESLint plugins or configs and replace 
 
 ## Testing
 
-Any Mocha-compatible tests can be added.
-
 ```bash
 # Install dependencies
 npm install
@@ -157,10 +155,6 @@ npm run link
 # Run all tests!
 npm run test
 ```
-
-### Rule Tests
-
-You can use ESLint's rule tester if you change the require statements to match [the public API](https://eslint.org/docs/developer-guide/nodejs-api#ruletester).
 
 ### Final Config Array Tests
 
@@ -237,7 +231,7 @@ See the `peerDependencies` in [package.json](./package.json) for recommended dep
 
 ---
 
-## Semantic versioning policy
+## Semantic Versioning Policy
 
 This plugin follows semantic versioning [a-la-ESLint](https://github.com/eslint/eslint#semantic-versioning-policy).
 

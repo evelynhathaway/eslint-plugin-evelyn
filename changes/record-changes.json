@@ -132,6 +132,8 @@
 			"unicorn/no-invalid-remove-event-listener": "error",
 			"unicorn/no-keyword-prefix": "off",
 			"unicorn/no-lonely-if": "error",
+			"no-negated-condition": "off",
+			"unicorn/no-negated-condition": "error",
 			"no-nested-ternary": "off",
 			"unicorn/no-nested-ternary": "error",
 			"unicorn/no-new-array": "error",
@@ -142,6 +144,8 @@
 			"unicorn/no-static-only-class": "error",
 			"unicorn/no-thenable": "error",
 			"unicorn/no-this-assignment": "error",
+			"unicorn/no-typeof-undefined": "error",
+			"unicorn/no-unnecessary-await": "error",
 			"unicorn/no-unreadable-array-destructuring": "error",
 			"unicorn/no-unreadable-iife": "error",
 			"unicorn/no-unsafe-regex": "off",
@@ -161,7 +165,8 @@
 			"unicorn/prefer-array-flat-map": "error",
 			"unicorn/prefer-array-index-of": "error",
 			"unicorn/prefer-array-some": "error",
-			"unicorn/prefer-at": "off",
+			"unicorn/prefer-at": "error",
+			"unicorn/prefer-blob-reading-methods": "error",
 			"unicorn/prefer-code-point": "error",
 			"unicorn/prefer-date-now": "error",
 			"unicorn/prefer-default-parameters": "error",
@@ -169,7 +174,7 @@
 			"unicorn/prefer-dom-node-dataset": "error",
 			"unicorn/prefer-dom-node-remove": "error",
 			"unicorn/prefer-dom-node-text-content": "error",
-			"unicorn/prefer-event-target": "off",
+			"unicorn/prefer-event-target": "error",
 			"unicorn/prefer-export-from": "error",
 			"unicorn/prefer-includes": "error",
 			"unicorn/prefer-json-parse-buffer": "off",
@@ -190,8 +195,9 @@
 			"unicorn/prefer-reflect-apply": "error",
 			"unicorn/prefer-regexp-test": "error",
 			"unicorn/prefer-set-has": "error",
+			"unicorn/prefer-set-size": "error",
 			"unicorn/prefer-spread": "error",
-			"unicorn/prefer-string-replace-all": "off",
+			"unicorn/prefer-string-replace-all": "error",
 			"unicorn/prefer-string-slice": "error",
 			"unicorn/prefer-string-starts-ends-with": "error",
 			"unicorn/prefer-string-trim-start-end": "error",
@@ -205,6 +211,7 @@
 			"unicorn/require-number-to-fixed-digits-argument": "error",
 			"unicorn/require-post-message-target-origin": "off",
 			"unicorn/string-content": "off",
+			"unicorn/switch-case-braces": "error",
 			"unicorn/template-indent": "error",
 			"unicorn/text-encoding-identifier-case": "error",
 			"unicorn/throw-new-error": "error"
@@ -428,10 +435,15 @@
 					"maxBOF": 0
 				}
 			],
+			"block-spacing": [
+				"error",
+				"never"
+			],
 			"object-curly-spacing": [
 				"error",
 				"never"
 			],
+			"brace-style": "error",
 			"padded-blocks": [
 				"error",
 				"never"
@@ -448,6 +460,8 @@
 				"error",
 				"always"
 			],
+			"func-call-spacing": "error",
+			"keyword-spacing": "error",
 			"arrow-spacing": [
 				"error",
 				{
@@ -471,6 +485,7 @@
 					"after": true
 				}
 			],
+			"space-infix-ops": "error",
 			"no-multi-spaces": "error",
 			"no-useless-rename": "error",
 			"prefer-destructuring": "error",
@@ -478,7 +493,8 @@
 				"error",
 				"double",
 				{
-					"avoidEscape": true
+					"avoidEscape": true,
+					"allowTemplateLiterals": true
 				}
 			],
 			"jsx-quotes": [
@@ -551,10 +567,17 @@
 			"no-fallthrough": [
 				"error",
 				{
-					"commentPattern": "falls?\\s?through|break"
+					"commentPattern": "falls?\\s?through|break",
+					"allowEmptyCase": false
 				}
 			],
 			"no-process-exit": "off",
+			"regexp/prefer-range": [
+				"error",
+				{
+					"target": "alphanumeric"
+				}
+			],
 			"unicorn/prefer-module": "off",
 			"unicorn/no-array-for-each": "off",
 			"unicorn/no-null": "off",
@@ -607,7 +630,7 @@
 						"pascalCase": true
 					},
 					"ignore": [
-						"^[A-Z_]+\\.[a-z\\.\\-]+$"
+						"^[A-Z][a-zA-Z]+\\.[a-z\\.\\-]+$"
 					]
 				}
 			],
@@ -636,7 +659,8 @@
 					],
 					"alphabetize": {
 						"order": "asc",
-						"caseInsensitive": true
+						"caseInsensitive": true,
+						"orderImportKind": "ignore"
 					},
 					"pathGroups": [
 						{
@@ -648,6 +672,7 @@
 					"pathGroupsExcludedImportTypes": [
 						"builtin"
 					],
+					"distinctGroup": true,
 					"warnOnUnassignedImports": false
 				}
 			],
@@ -1238,6 +1263,8 @@
 			"unicorn/no-invalid-remove-event-listener": "error",
 			"unicorn/no-keyword-prefix": "off",
 			"unicorn/no-lonely-if": "error",
+			"no-negated-condition": "off",
+			"unicorn/no-negated-condition": "error",
 			"no-nested-ternary": "off",
 			"unicorn/no-nested-ternary": "error",
 			"unicorn/no-new-array": "error",
@@ -1248,6 +1275,8 @@
 			"unicorn/no-static-only-class": "error",
 			"unicorn/no-thenable": "error",
 			"unicorn/no-this-assignment": "error",
+			"unicorn/no-typeof-undefined": "error",
+			"unicorn/no-unnecessary-await": "error",
 			"unicorn/no-unreadable-array-destructuring": "error",
 			"unicorn/no-unreadable-iife": "error",
 			"unicorn/no-unsafe-regex": "off",
@@ -1267,7 +1296,8 @@
 			"unicorn/prefer-array-flat-map": "error",
 			"unicorn/prefer-array-index-of": "error",
 			"unicorn/prefer-array-some": "error",
-			"unicorn/prefer-at": "off",
+			"unicorn/prefer-at": "error",
+			"unicorn/prefer-blob-reading-methods": "error",
 			"unicorn/prefer-code-point": "error",
 			"unicorn/prefer-date-now": "error",
 			"unicorn/prefer-default-parameters": "error",
@@ -1275,7 +1305,7 @@
 			"unicorn/prefer-dom-node-dataset": "error",
 			"unicorn/prefer-dom-node-remove": "error",
 			"unicorn/prefer-dom-node-text-content": "error",
-			"unicorn/prefer-event-target": "off",
+			"unicorn/prefer-event-target": "error",
 			"unicorn/prefer-export-from": "error",
 			"unicorn/prefer-includes": "error",
 			"unicorn/prefer-json-parse-buffer": "off",
@@ -1296,8 +1326,9 @@
 			"unicorn/prefer-reflect-apply": "error",
 			"unicorn/prefer-regexp-test": "error",
 			"unicorn/prefer-set-has": "error",
+			"unicorn/prefer-set-size": "error",
 			"unicorn/prefer-spread": "error",
-			"unicorn/prefer-string-replace-all": "off",
+			"unicorn/prefer-string-replace-all": "error",
 			"unicorn/prefer-string-slice": "error",
 			"unicorn/prefer-string-starts-ends-with": "error",
 			"unicorn/prefer-string-trim-start-end": "error",
@@ -1311,6 +1342,7 @@
 			"unicorn/require-number-to-fixed-digits-argument": "error",
 			"unicorn/require-post-message-target-origin": "off",
 			"unicorn/string-content": "off",
+			"unicorn/switch-case-braces": "error",
 			"unicorn/template-indent": "error",
 			"unicorn/text-encoding-identifier-case": "error",
 			"unicorn/throw-new-error": "error"
@@ -1558,10 +1590,15 @@
 					"maxBOF": 0
 				}
 			],
+			"block-spacing": [
+				"error",
+				"never"
+			],
 			"object-curly-spacing": [
 				"error",
 				"never"
 			],
+			"brace-style": "error",
 			"padded-blocks": [
 				"error",
 				"never"
@@ -1578,6 +1615,8 @@
 				"error",
 				"always"
 			],
+			"func-call-spacing": "error",
+			"keyword-spacing": "error",
 			"arrow-spacing": [
 				"error",
 				{
@@ -1601,6 +1640,7 @@
 					"after": true
 				}
 			],
+			"space-infix-ops": "error",
 			"no-multi-spaces": "error",
 			"no-useless-rename": "error",
 			"prefer-destructuring": "error",
@@ -1608,7 +1648,8 @@
 				"error",
 				"double",
 				{
-					"avoidEscape": true
+					"avoidEscape": true,
+					"allowTemplateLiterals": true
 				}
 			],
 			"jsx-quotes": [
@@ -1681,10 +1722,17 @@
 			"no-fallthrough": [
 				"error",
 				{
-					"commentPattern": "falls?\\s?through|break"
+					"commentPattern": "falls?\\s?through|break",
+					"allowEmptyCase": false
 				}
 			],
 			"no-process-exit": "off",
+			"regexp/prefer-range": [
+				"error",
+				{
+					"target": "alphanumeric"
+				}
+			],
 			"unicorn/prefer-module": "off",
 			"unicorn/no-array-for-each": "off",
 			"unicorn/no-null": "off",
@@ -1737,7 +1785,7 @@
 						"pascalCase": true
 					},
 					"ignore": [
-						"^[A-Z_]+\\.[a-z\\.\\-]+$"
+						"^[A-Z][a-zA-Z]+\\.[a-z\\.\\-]+$"
 					]
 				}
 			],
@@ -1766,7 +1814,8 @@
 					],
 					"alphabetize": {
 						"order": "asc",
-						"caseInsensitive": true
+						"caseInsensitive": true,
+						"orderImportKind": "ignore"
 					},
 					"pathGroups": [
 						{
@@ -1778,6 +1827,7 @@
 					"pathGroupsExcludedImportTypes": [
 						"builtin"
 					],
+					"distinctGroup": true,
 					"warnOnUnassignedImports": false
 				}
 			],
@@ -1900,7 +1950,8 @@
 						"tsx": "never"
 					}
 				}
-			]
+			],
+			"import/no-named-as-default-member": "off"
 		}
 	},
 	{
@@ -1988,6 +2039,7 @@
 		},
 		"rules": {
 			"jest/expect-expect": "warn",
+			"jest/no-alias-methods": "error",
 			"jest/no-commented-out-tests": "warn",
 			"jest/no-conditional-expect": "error",
 			"jest/no-deprecated-functions": "error",
@@ -1998,7 +2050,6 @@
 			"jest/no-identical-title": "error",
 			"jest/no-interpolation-in-snapshots": "error",
 			"jest/no-jasmine-globals": "error",
-			"jest/no-jest-import": "error",
 			"jest/no-mocks-import": "error",
 			"jest/no-standalone-expect": "error",
 			"jest/no-test-prefixes": "error",
@@ -2041,6 +2092,9 @@
 			],
 			"excludes": null,
 			"basePath": "CLEANED"
+		},
+		"env": {
+			"jest/globals": true
 		},
 		"plugins": {
 			"jest": {
@@ -2191,6 +2245,7 @@
 		},
 		"rules": {
 			"jsx-a11y/alt-text": "error",
+			"jsx-a11y/anchor-ambiguous-text": "off",
 			"jsx-a11y/anchor-has-content": "error",
 			"jsx-a11y/anchor-is-valid": "error",
 			"jsx-a11y/aria-activedescendant-has-tabindex": "error",
@@ -2923,6 +2978,7 @@
 		},
 		"rules": {
 			"jsx-a11y/alt-text": "error",
+			"jsx-a11y/anchor-ambiguous-text": "off",
 			"jsx-a11y/anchor-has-content": "error",
 			"jsx-a11y/anchor-is-valid": "error",
 			"jsx-a11y/aria-activedescendant-has-tabindex": "error",
@@ -4052,7 +4108,104 @@
 				{
 					"ignoreRestSiblings": true
 				}
-			]
+			],
+			"@typescript-eslint/type-annotation-spacing": "error",
+			"@typescript-eslint/member-delimiter-style": "error",
+			"block-spacing": "off",
+			"@typescript-eslint/block-spacing": [
+				"error",
+				"never"
+			],
+			"brace-style": "off",
+			"@typescript-eslint/brace-style": "error",
+			"comma-dangle": "off",
+			"@typescript-eslint/comma-dangle": [
+				"error",
+				{
+					"arrays": "always-multiline",
+					"objects": "always-multiline",
+					"imports": "always-multiline",
+					"exports": "always-multiline",
+					"functions": "only-multiline",
+					"enums": "always-multiline",
+					"generics": "always-multiline",
+					"tuples": "always-multiline"
+				}
+			],
+			"comma-spacing": "off",
+			"@typescript-eslint/comma-spacing": [
+				"error",
+				{
+					"before": false,
+					"after": true
+				}
+			],
+			"func-call-spacing": "off",
+			"@typescript-eslint/func-call-spacing": "error",
+			"indent": "off",
+			"@typescript-eslint/indent": [
+				"error",
+				"tab",
+				{
+					"SwitchCase": 1,
+					"ignoredNodes": [
+						"JSXElement",
+						"JSXElement > *",
+						"JSXAttribute",
+						"JSXIdentifier",
+						"JSXNamespacedName",
+						"JSXMemberExpression",
+						"JSXSpreadAttribute",
+						"JSXExpressionContainer",
+						"JSXOpeningElement",
+						"JSXClosingElement",
+						"JSXFragment",
+						"JSXOpeningFragment",
+						"JSXClosingFragment",
+						"JSXText",
+						"JSXEmptyExpression",
+						"JSXSpreadChild"
+					],
+					"flatTernaryExpressions": false,
+					"offsetTernaryExpressions": false,
+					"ignoreComments": false
+				}
+			],
+			"key-spacing": "off",
+			"@typescript-eslint/key-spacing": "error",
+			"keyword-spacing": "off",
+			"@typescript-eslint/keyword-spacing": "error",
+			"object-curly-spacing": "off",
+			"@typescript-eslint/object-curly-spacing": [
+				"error",
+				"never"
+			],
+			"quotes": "off",
+			"@typescript-eslint/quotes": [
+				"error",
+				"double",
+				{
+					"avoidEscape": true,
+					"allowTemplateLiterals": true
+				}
+			],
+			"semi": "off",
+			"@typescript-eslint/semi": [
+				"error",
+				"always"
+			],
+			"space-before-blocks": "off",
+			"@typescript-eslint/space-before-blocks": [
+				"error",
+				"always"
+			],
+			"space-before-function-paren": "off",
+			"@typescript-eslint/space-before-function-paren": [
+				"error",
+				"always"
+			],
+			"space-infix-ops": "off",
+			"@typescript-eslint/space-infix-ops": "error"
 		}
 	},
 	{
@@ -4078,6 +4231,31 @@
 		},
 		"rules": {
 			"@typescript-eslint/no-unnecessary-type-constraint": "off"
+		}
+	},
+	{
+		"type": "config",
+		"name": "--config#overrides[10] » plugin:evelyn/typescript#overrides[2]",
+		"filePath": "CLEANED",
+		"criteria": {
+			"AND": [
+				{
+					"includes": [
+						"typescript"
+					],
+					"excludes": null
+				},
+				{
+					"includes": [
+						"**/*.test.{ts,mts,cts,tsx}"
+					],
+					"excludes": null
+				}
+			],
+			"basePath": "CLEANED"
+		},
+		"rules": {
+			"@typescript-eslint/no-empty-function": "off"
 		}
 	},
 	{
