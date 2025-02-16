@@ -77,25 +77,22 @@ export default tseslint.config(
 
 ```js
 import eslintPluginEvelyn from "eslint-plugin-evelyn";
-import {ignores} from "eslint-plugin-evelyn/files";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
+  // Optionally add global ignore file patterns
 	{
 		ignores: [
-			...ignores,
 			"my-optional-ignored-pattern",
 		],
-		extends: [
-			...eslintPluginEvelyn.configs.base,
-			...eslintPluginEvelyn.configs.react,
-			...eslintPluginEvelyn.configs.esm,
-			...eslintPluginEvelyn.configs.next,
-			...eslintPluginEvelyn.configs.typescript,
-			...eslintPluginEvelyn.configs.jest,
-			...eslintPluginEvelyn.configs.testingLibraryReact,
-		],
 	},
+	...eslintPluginEvelyn.configs.base,
+	...eslintPluginEvelyn.configs.esm,
+	...eslintPluginEvelyn.configs.react,
+	...eslintPluginEvelyn.configs.next,
+	...eslintPluginEvelyn.configs.typescript,
+	...eslintPluginEvelyn.configs.jest,
+	...eslintPluginEvelyn.configs.testingLibraryReact,
 );
 ```
 
