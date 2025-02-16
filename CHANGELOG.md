@@ -1,5 +1,17 @@
 # Changelog
 
+## v10.0.0
+
+**[`v9.0.0...v10.0.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v9.0.0...v10.0.0)** - **2025-02-16**
+
+### 💥 Breaking
+
+- Upgrade to ESLint v9, flat config, bump peerDependencies, use eslint-stylistic rules, remove babel; mocha; and jsx configs, add next config, remove record-changes, refine lint rule options, require Node v20+ [`a5af3a5`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/a5af3a5)
+
+### 🧹 Internal
+
+- Downgrade semantic-release to a version with a commit-analyzer version compatible with conventional-changelog-evelyn [`a2d6828`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/a2d6828)
+
 ## v9.0.0
 
 **[`v8.1.0...v9.0.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v8.1.0...v9.0.0)** - **2023-05-31**
