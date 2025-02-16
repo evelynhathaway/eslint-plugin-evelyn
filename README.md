@@ -8,170 +8,132 @@
 
 [![npm version](https://badgen.net/npm/v/eslint-plugin-evelyn?icon=npm)](https://www.npmjs.com/package/eslint-plugin-evelyn)
 [![check status](https://badgen.net/github/checks/evelynhathaway/eslint-plugin-evelyn/main?icon=github)](https://github.com/evelynhathaway/eslint-plugin-evelyn/actions)
-[![configs: 11](https://badgen.net/badge/configs/11/blue)](#configs)
 [![license: MIT](https://badgen.net/badge/license/MIT/blue)](/LICENSE)
 
 </div>
 
 ## Description
 
-These are my configs and code related to maintaining ESLint scripts.
+These are my boilerplate ESLint flat configs.
 
 My code style is very opinionated, so I only use this package on my projects. However, others are welcome to use, copy, or fork this project.
 
 ## Installation
 
-Save this project to your dev dependencies. If you are using an version on npm older than v7.0.0, you will have to
-install peer dependencies manually.
+Save this project to your dev dependencies.
 
 ```bash
 npm install --save-dev eslint-plugin-evelyn
 ```
 
-### Peer Dependencies
-
-npm may warn about any missing peer dependencies when installing this plugin.
-
-```bash
-npm WARN eslint-plugin-evelyn@x.x.x requires a peer of eslint-plugin-xxxxx@^x.x.x but none is installed. You must install peer dependencies yourself.
-```
-
-If you are using and loading a [config](#configs) that requires one of the mentioned dependencies, add the plugin as a dev dependency that satisfies the specified version range. Otherwise, you can safely ignore these messages.
-
-ESLint always resolves and loads plugins when the configs are extended in the top-level config, but only resolves plugins in an override once a file matches its glob pattern.
+If you are using an `--legacy-peer-deps`, you will have to install peer dependencies manually. See the
+`peerDependencies` in [package.json](./package.json) for recommended dependency version ranges.
 
 ## Usage
 
-Include as many configs as you'd like to use in your config. Extend them in the order that they should be applied, in order of importance, lowest to highest.
+Include as many configs as you'd like to use in your config. Extend them in the order that they should be applied, in
+order of importance, lowest to highest.
 
 ### Configs Applied to All Files
 
-**`.eslintrc`**
+**`eslint.config.js`**
 
-```json
-{
-    "plugins": [
-        "evelyn"
-    ],
+```js
+import eslintPluginEvelyn from "eslint-plugin-evelyn";
 
-    "extends": [
-        "plugin:evelyn/default",
-        "plugin:evelyn/node"
-    ]
-}
+export default [
+	...eslintPluginEvelyn.configs.base,
+	...eslintPluginEvelyn.configs.node,
+];
 ```
 
 ### Configs applied to a specific path
 
-Requires eslint `>=6.0.0`.
+`tseslint.config` offers support for `extends`, which is similar can be used with `files` similarly to ESLint legacy config's
+`overrides`.
 
-**`.eslintrc`**
-
-```json
-{
-    "plugins": [
-        "evelyn"
-    ],
-
-    "extends": [
-        "plugin:evelyn/default"
-    ],
-
-    "overrides": [
-        {
-            "files": [
-                "src/**/*.js"
-            ],
-            "extends": [
-                "plugin:evelyn/node"
-            ]
-        }
-    ]
-}
-```
-
-### TypeScript React App Example
-
-**`.eslintrc.js`**
+**`eslint.config.js`**
 
 ```js
-module.exports = {
-	"plugins": [
-		"@evelyn",
-	],
+import eslintPluginEvelyn from "eslint-plugin-evelyn";
+import tseslint from "typescript-eslint";
 
-	"extends": [
-		"plugin:@evelyn/default",
-		"plugin:@evelyn/node",
-		"plugin:@evelyn/react",
-		"plugin:@evelyn/typescript",
-	],
+export default tseslint.config(
+	...eslintPluginEvelyn.configs.base,
+	{
+		files: [
+			"src/**/*.js",
+		],
+		extends: [
+			...eslintPluginEvelyn.configs.node,
+		],
+	},
+);
+```
 
-	"ignorePatterns": [
-		"build",
-		"coverage",
-	],
+### ESM TypeScript Next.js React App Example
 
-	"overrides": [
-		{
-			"files": [
-				"**/*.test.{ts,tsx}",
-				"**/__tests__/**/*.{ts,tsx}",
-			],
-			"extends": [
-				"plugin:@evelyn/jest",
-				"plugin:@evelyn/testing-library-react",
-			],
-		},
-	],
-};
+**`eslint.config.js`**
 
+```js
+import eslintPluginEvelyn from "eslint-plugin-evelyn";
+import {ignores} from "eslint-plugin-evelyn/files";
+import tseslint from "typescript-eslint";
+
+export default tseslint.config(
+	{
+		ignores: [
+			...ignores,
+			"my-optional-ignored-pattern",
+		],
+		extends: [
+			...eslintPluginEvelyn.configs.base,
+			...eslintPluginEvelyn.configs.react,
+			...eslintPluginEvelyn.configs.esm,
+			...eslintPluginEvelyn.configs.next,
+			...eslintPluginEvelyn.configs.typescript,
+			...eslintPluginEvelyn.configs.jest,
+			...eslintPluginEvelyn.configs.testingLibraryReact,
+		],
+	},
+);
 ```
 
 **`package.json`** (snippet)
 
-Make sure to remove any references to old ESLint plugins or configs and replace the lint script with `eslint ./`.
+Make sure to remove any references to old ESLint plugins or configs and replace the lint script with `eslint`.
 
 ```json
 {
   "name": "my-app",
+  "type": "module",
   "...": "...",
   "scripts": {
     "...": "...",
-    "lint": "eslint ./"
+    "lint": "eslint"
   }
 }
 ```
 
-## Testing
+**`tsconfig.json`** (snippet)
 
-```bash
-# Install dependencies
-npm install
-# Symlink itself into node_modules for ESLint
-# As of eslint-plugin-evelyn v3.0.0, this is done fully automatically
-npm run link
+Strict TypeScript config is recommended for type safety. Consider `allowImportingTsExtensions` or
+`rewriteRelativeImportExtensions` for ESM.
 
-# Run all tests!
-npm run test
+```json
+{
+  "compilerOptions": {
+    "strict": true,
+    "allowImportingTsExtensions": true,
+    "...": "..."
+  }
+  "...": "..."
+}
 ```
-
-### Final Config Array Tests
-
-[final-config-array.eslintrc.js](./test/final-config-array.eslintrc.js) tests to make sure all modules and configs load properly. Without this test, if a parser or plugin doesn't load and is never used to lint a file, ESLint won't report the error.
 
 ## Linting
 
-This plugin uses itself to lint so we must make sure the working copy of `eslint-plugin-evelyn` is in `node_modules`. Only ESLint should require it from there.
-
 ```bash
-# Install dependencies
-npm install
-# Symlink itself into node_modules for ESLint
-# As of eslint-plugin-evelyn v3.0.0, this is done fully automatically
-npm run link
-
-# Run lint!
 npm run lint
 ```
 
@@ -181,53 +143,19 @@ npm run lint
 - Use the `--debug` ESLint CLI flag for determining things like the modules that get loaded
 - Use the `--print-config` ESLint CLI flag for a minimal computed config
 
-### Saving the Entire Computed Config Array
-
-Run the default export from the `save-config.js` file from inside the config file to output to monkey-patch ESLint. This works on this project as well as any package that has eslint-plugin-evelyn `>=1.0.0` as a dependency.
-
-`.eslintrc.js`
-
-```js
-require("eslint-plugin-evelyn/lib/util/save-config")();
-
-
-// The rest of your config file
-// [...]
-```
-
-This saves the config array that is usually partially outputted to the console during execution with the `--debug` flag.
-
-```bash
-$ npx eslint --debug
-# [...]
-eslint:cascading-config-array-factory Configuration was determined: ConfigArray [...]
-```
-
-## Recording Changes to the Final Config Array
-
-[record-changes.eslintrc.js](./changes/record-changes.eslintrc.js) saves the final config array to [record-changes.json](./changes/record-changes.json) with paths removed.
-
-The script is used to track the changes to the final array over time using the pre-commit git hook. This is helpful in reviewing pull requests.
-
 ---
 
 ## Configs
 
-See the `peerDependencies` in [package.json](./package.json) for recommended dependency version ranges.
-
-| Name                                                            | Peer Dependencies                                                                                                                |
-| --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| [babel](./lib/configs/babel.js)                                 | @babel/eslint-parser                                                                                                             |
-| [default](./lib/configs/default.js)                             | eslint-plugin-unicorn, eslint-plugin-import, eslint-plugin-regexp                                                                |
-| [esm](./lib/configs/esm.js)                                     | eslint-plugin-unicorn, eslint-plugin-import                                                                                      |
-| [jest](./lib/configs/jest.js)                                   | eslint-plugin-node, eslint-plugin-jest                                                                                           |
-| [jsx](./lib/configs/jsx.js)                                     | eslint-plugin-jsx-a11y                                                                                                           |
-| [mocha](./lib/configs/mocha.js)                                 | eslint-plugin-node, eslint-plugin-mocha                                                                                          |
-| [node](./lib/configs/node.js)                                   | eslint-plugin-node                                                                                                               |
-| [react](./lib/configs/react.js)                                 | eslint-plugin-react, eslint-plugin-jsx-a11y, eslint-plugin-react-hooks, eslint-plugin-import                                     |
-| [testing-library](./lib/configs/testing-library.js)             | eslint-plugin-testing-library                                                                                                    |
-| [testing-library-react](./lib/configs/testing-library-react.js) | eslint-plugin-testing-library                                                                                                    |
-| [typescript](./lib/configs/typescript.js)                       | @typescript-eslint/eslint-plugin, @typescript-eslint/parser, typescript, eslint-plugin-import, eslint-import-resolver-typescript |
+- [base](./lib/configs/base.js)
+- [esm](./lib/configs/esm.js)
+- [jest](./lib/configs/jest.js)
+- [next](./lib/configs/next.js)
+- [node](./lib/configs/node.js)
+- [react](./lib/configs/react.js)
+- [testing-library](./lib/configs/testing-library.js)
+- [testing-library-react](./lib/configs/testing-library-react.js)
+- [typescript](./lib/configs/typescript.js)
 
 ---
 
