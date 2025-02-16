@@ -1,5 +1,13 @@
 # Changelog
 
+## v10.0.1
+
+**[`v10.0.0...v10.0.1`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v10.0.0...v10.0.1)** - **2025-02-16**
+
+### 🐛 Fix
+
+- Correctly use ESLint global ignore patterns [`ff32c84`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/ff32c84)
+
 ## v10.0.0
 
 **[`v9.0.0...v10.0.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v9.0.0...v10.0.0)** - **2025-02-16**
