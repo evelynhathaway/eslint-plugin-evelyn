@@ -1,5 +1,17 @@
 # Changelog
 
+## v11.0.0
+
+**[`v10.1.0...v11.0.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v10.1.0...v11.0.0)** - **2025-02-18**
+
+### 💥 Breaking
+
+- Make React and Next.js configs apply to non-JSX file extensions to check code like server actions and custom hooks [#183](https://github.com/evelynhathaway/eslint-plugin-evelyn/issues/183) [`6211328`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/6211328)
+
+### 📦 Package
+
+- **dev:** Upgrade in range packages and conventional-changelog-evelyn, fix issue link in changelog [`c08a4f9`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/c08a4f9)
+
 ## v10.1.0
 
 **[`v10.0.1...v10.1.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v10.0.1...v10.1.0)** - **2025-02-18**
