@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-evelyn",
-  "version": "10.0.1",
+  "version": "10.1.0",
   "description": "ESLint plugin for my projects with my preferred code style and bugfixes",
   "keywords": [
     "eslint",

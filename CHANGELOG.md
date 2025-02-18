@@ -1,5 +1,19 @@
 # Changelog
 
+## v10.1.0
+
+**[`v10.0.1...v10.1.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v10.0.1...v10.1.0)** - **2025-02-18**
+
+### ⚡ Improvement
+
+- Disable @next/next/no-html-link-for-pages Next.js Page Router rule [#186](https://github.com/evelynhathaway/eslint-plugin-evelyn/issues186) [`159f65d`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/159f65d)
+- Disable @typescript-eslint/consistent-type-definitions [`f027463`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/f027463)
+- Disable @typescript-eslint/prefer-nullish-coalescing [#184](https://github.com/evelynhathaway/eslint-plugin-evelyn/issues184) [`5523571`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/5523571)
+
+### 📦 Package
+
+- **dev:** Upgrade semantic-release and conventional-changelog-evelyn [`5531cd2`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/5531cd2)
+
 ## v10.0.1
 
 **[`v10.0.0...v10.0.1`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v10.0.0...v10.0.1)** - **2025-02-16**
