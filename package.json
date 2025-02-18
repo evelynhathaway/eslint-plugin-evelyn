@@ -49,9 +49,9 @@
     "@semantic-release/git": "^10.0.1",
     "@stylistic/eslint-plugin": "^3.1.0",
     "commitlint": "^19.7.1",
-    "conventional-changelog-evelyn": "^2.0.0",
+    "conventional-changelog-evelyn": "^2.0.1",
     "eslint": "^9.20.1",
-    "eslint-import-resolver-typescript": "^3.8.0",
+    "eslint-import-resolver-typescript": "^3.8.2",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jest": "^28.11.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -67,7 +67,7 @@
     "semantic-release": "^24.2.3",
     "sort-package-json": "^2.14.0",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.24.0"
+    "typescript-eslint": "^8.24.1"
   },
   "peerDependencies": {
     "@next/eslint-plugin-next": "^15.0.0",

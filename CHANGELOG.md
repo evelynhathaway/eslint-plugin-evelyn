@@ -6,9 +6,9 @@
 
 ### ⚡ Improvement
 
-- Disable @next/next/no-html-link-for-pages Next.js Page Router rule [#186](https://github.com/evelynhathaway/eslint-plugin-evelyn/issues186) [`159f65d`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/159f65d)
+- Disable @next/next/no-html-link-for-pages Next.js Page Router rule [#186](https://github.com/evelynhathaway/eslint-plugin-evelyn/issues/186) [`159f65d`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/159f65d)
 - Disable @typescript-eslint/consistent-type-definitions [`f027463`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/f027463)
-- Disable @typescript-eslint/prefer-nullish-coalescing [#184](https://github.com/evelynhathaway/eslint-plugin-evelyn/issues184) [`5523571`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/5523571)
+- Disable @typescript-eslint/prefer-nullish-coalescing [#184](https://github.com/evelynhathaway/eslint-plugin-evelyn/issues/184) [`5523571`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/5523571)
 
 ### 📦 Package
 
