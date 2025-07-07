@@ -1,5 +1,13 @@
 # Changelog
 
+## v11.0.1
+
+**[`v11.0.0...v11.0.1`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v11.0.0...v11.0.1)** - **2025-07-07**
+
+### 🐛 Fix
+
+- Use import plugin reference from the flat config to support eslint-plugin-import@2.32.0 [`b1d2e43`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/b1d2e43)
+
 ## v11.0.0
 
 **[`v10.1.0...v11.0.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v10.1.0...v11.0.0)** - **2025-02-18**
