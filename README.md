@@ -49,16 +49,16 @@ export default [
 
 ### Configs applied to a specific path
 
-`tseslint.config` offers support for `extends`, which is similar can be used with `files` similarly to ESLint legacy config's
+`defineConfig` offers support for `extends`, which is similar can be used with `files` similarly to ESLint legacy config's
 `overrides`.
 
 **`eslint.config.js`**
 
 ```js
 import eslintPluginEvelyn from "eslint-plugin-evelyn";
-import tseslint from "typescript-eslint";
+import {defineConfig} from "eslint/config";
 
-export default tseslint.config(
+export default defineConfig(
 	...eslintPluginEvelyn.configs.base,
 	{
 		files: [
@@ -77,9 +77,9 @@ export default tseslint.config(
 
 ```js
 import eslintPluginEvelyn from "eslint-plugin-evelyn";
-import tseslint from "typescript-eslint";
+import {defineConfig} from "eslint/config";
 
-export default tseslint.config(
+export default defineConfig(
   // Optionally add global ignore file patterns
 	{
 		ignores: [
