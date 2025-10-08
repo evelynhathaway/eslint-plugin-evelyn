@@ -1,5 +1,13 @@
 # Changelog
 
+## v12.0.1
+
+**[`v12.0.0...v12.0.1`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v12.0.0...v12.0.1)** - **2025-10-08**
+
+### 🐛 Fix
+
+- Use flat React hooks plugin config [`c159a81`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/c159a81)
+
 ## v12.0.0
 
 **[`v11.0.1...v12.0.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v11.0.1...v12.0.0)** - **2025-10-08**
