@@ -1,5 +1,14 @@
 # Changelog
 
+## v12.0.0
+
+**[`v11.0.1...v12.0.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v11.0.1...v12.0.0)** - **2025-10-08**
+
+### 💥 Breaking
+
+- Upgrade dependencies, use `defineConfig` instead of `tseslint.config` [`37eb9d8`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/37eb9d8)
+- Use `@typescript-eslint/consistent-type-imports` rule for TypeScript files [`45b0092`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/45b0092)
+
 ## v11.0.1
 
 **[`v11.0.0...v11.0.1`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v11.0.0...v11.0.1)** - **2025-07-07**
