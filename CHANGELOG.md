@@ -1,5 +1,13 @@
 # Changelog
 
+## v12.1.0
+
+**[`v12.0.2...v12.1.0`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v12.0.2...v12.1.0)** - **2025-10-14**
+
+### ⚡ Improvement
+
+- Prefer fixing type imports with inline type attribution [`27fb658`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/27fb658)
+
 ## v12.0.2
 
 **[`v12.0.1...v12.0.2`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v12.0.1...v12.0.2)** - **2025-10-14**
