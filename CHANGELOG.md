@@ -1,5 +1,13 @@
 # Changelog
 
+## v12.0.2
+
+**[`v12.0.1...v12.0.2`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v12.0.1...v12.0.2)** - **2025-10-14**
+
+### 🐛 Fix
+
+- Remove deprecated JSX variant of no-multi-spaces [`b95449b`](https://github.com/evelynhathaway/eslint-plugin-evelyn/commit/b95449b)
+
 ## v12.0.1
 
 **[`v12.0.0...v12.0.1`](https://github.com/evelynhathaway/eslint-plugin-evelyn/compare/v12.0.0...v12.0.1)** - **2025-10-08**
